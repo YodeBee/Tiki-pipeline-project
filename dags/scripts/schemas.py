@@ -1,6 +1,5 @@
 from google.cloud import bigquery
 
-# Định nghĩa schema cho tất cả bảng
 SCHEMAS = {
     'fact_sales': [
         bigquery.SchemaField("product_id", "STRING", mode="REQUIRED"),
@@ -17,7 +16,7 @@ SCHEMAS = {
         bigquery.SchemaField("product_id", "STRING", mode="REQUIRED"),
         bigquery.SchemaField("sku", "STRING", mode="NULLABLE"),
         bigquery.SchemaField("name", "STRING", mode="NULLABLE"),
-        bigquery.SchemaField("brand_id", "STRING", mode="NULLABLE"),  # Chỉ giữ brand_id
+        bigquery.SchemaField("brand_id", "STRING", mode="NULLABLE"),  
         bigquery.SchemaField("availability", "INTEGER", mode="NULLABLE"),
         bigquery.SchemaField("is_tikinow", "BOOLEAN", mode="NULLABLE"),
         bigquery.SchemaField("is_authentic", "BOOLEAN", mode="NULLABLE"),
