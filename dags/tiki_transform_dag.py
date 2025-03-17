@@ -69,15 +69,15 @@ def transform_data(**kwargs):
         logging.error("DataFrame is None or empty after clean_data.")
         raise ValueError("DataFrame is None or empty after clean_data.")
 
-    # Định nghĩa danh sách cột từ schema
-    dim_product_cols = [field.name for field in SCHEMAS['dim_product']]  # ['product_id', 'sku', 'name', ...]
+  
+    dim_product_cols = [field.name for field in SCHEMAS['dim_product']] 
     fact_cols = ['id', 'seller_id', 'price', 'original_price', 'discount',
                  'discount_rate', 'quantity_sold', 'review_count', 'rating_average']
 
-    # Tạo fact_df
+   
     fact_df = df[[col for col in fact_cols if col in df.columns]].rename(columns={'id': 'product_id'}).drop_duplicates()
 
-    # Tạo dim_product_df: Đảm bảo bao gồm 'id' để rename thành 'product_id'
+ 
     dim_product_input_cols = ['id'] + [col for col in dim_product_cols if col != 'product_id' and col in df.columns]
     dim_product_df = df[dim_product_input_cols].rename(columns={'id': 'product_id'}).drop_duplicates(subset=['product_id'])
 
