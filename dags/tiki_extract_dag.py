@@ -186,7 +186,7 @@ def extract_category_data(category, bucket_name, raw_data_path, crawled_products
 
 with DAG(
     'tiki_extract_dag',
-    start_date=datetime(2025, 3, 7),
+    start_date=datetime(2025, 3, 1),
     schedule_interval=None,
     catchup=False,
     description='Extract raw data from Tiki API for multiple categories in parallel and save to GCS',
