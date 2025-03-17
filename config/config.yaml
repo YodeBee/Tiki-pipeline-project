@@ -1,11 +1,11 @@
 gcs:
-  bucket_name: "tiki-pipeline"
+  bucket_name: ""
   raw_data_path: "tiki_raw_data/"
   transformed_data_path: "tiki_transformed_data/"
   crawled_products_path: "tiki_crawled/crawled_products.json"
 
 bigquery:
-  project_id: "vietadc"
+  project_id: ""
   dataset_id: "tiki_dataset"
   table_names:
     fact_sales: "Fact_Sales"
