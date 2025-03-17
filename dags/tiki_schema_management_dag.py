@@ -56,7 +56,7 @@ def create_dataset_and_tables(**kwargs):
 
 with DAG(
     'tiki_schema_management_dag',
-    start_date=datetime(2025, 3, 7),
+    start_date=datetime(2025, 3, 1),
     schedule_interval=None,
     catchup=False,
     description='Manage BigQuery dataset and table schemas',
