@@ -69,7 +69,7 @@ def load_data(**kwargs):
 
 with DAG(
     'tiki_load_dag',
-    start_date=datetime(2025, 3, 7),
+    start_date=datetime(2025, 3, 1),
     schedule_interval=None,
     catchup=False,
     description='Load transformed data from GCS to BigQuery',
