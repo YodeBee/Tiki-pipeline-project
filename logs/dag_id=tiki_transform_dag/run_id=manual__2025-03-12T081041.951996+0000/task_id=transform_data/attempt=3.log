@@ -1,0 +1,125 @@
+[2025-03-12T08:24:37.495+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-12T08:24:37.518+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: tiki_transform_dag.transform_data manual__2025-03-12T08:10:41.951996+00:00 [queued]>
+[2025-03-12T08:24:37.529+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: tiki_transform_dag.transform_data manual__2025-03-12T08:10:41.951996+00:00 [queued]>
+[2025-03-12T08:24:37.530+0000] {taskinstance.py:2867} INFO - Starting attempt 3 of 4
+[2025-03-12T08:24:37.547+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): transform_data> on 2025-03-12 08:10:41.951996+00:00
+[2025-03-12T08:24:37.559+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1128) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-12T08:24:37.561+0000] {standard_task_runner.py:72} INFO - Started process 1130 to run task
+[2025-03-12T08:24:37.562+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'tiki_transform_dag', 'transform_data', 'manual__2025-03-12T08:10:41.951996+00:00', '--job-id', '721', '--raw', '--subdir', 'DAGS_FOLDER/tiki_transform_dag.py', '--cfg-path', '/tmp/tmpqgm22rga']
+[2025-03-12T08:24:37.563+0000] {standard_task_runner.py:105} INFO - Job 721: Subtask transform_data
+[2025-03-12T08:24:37.619+0000] {task_command.py:467} INFO - Running <TaskInstance: tiki_transform_dag.transform_data manual__2025-03-12T08:10:41.951996+00:00 [running]> on host 3905098656d4
+[2025-03-12T08:24:37.714+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='tiki_transform_dag' AIRFLOW_CTX_TASK_ID='transform_data' AIRFLOW_CTX_EXECUTION_DATE='2025-03-12T08:10:41.951996+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-12T08:10:41.951996+00:00'
+[2025-03-12T08:24:37.715+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-03-12T08:24:37.716+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-03-12T08:24:37.716+0000] {logging_mixin.py:190} INFO - Current task name:transform_data state:running start_date:2025-03-12 08:24:37.519315+00:00
+[2025-03-12T08:24:37.717+0000] {logging_mixin.py:190} INFO - Dag name:tiki_transform_dag and current dag run status:running
+[2025-03-12T08:24:37.717+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-03-12T08:24:49.107+0000] {tiki_transform_dag.py:58} INFO - Loaded raw data from tiki-pipeline/tiki_raw_data/raw_dien-gia-dung_20250312_080050.json, 2000 rows
+[2025-03-12T08:24:50.324+0000] {tiki_transform_dag.py:58} INFO - Loaded raw data from tiki-pipeline/tiki_raw_data/raw_dien-thoai-may-tinh-bang_20250312_074251.json, 361 rows
+[2025-03-12T08:24:53.046+0000] {tiki_transform_dag.py:58} INFO - Loaded raw data from tiki-pipeline/tiki_raw_data/raw_dien-tu-dien-lanh_20250312_080131.json, 2000 rows
+[2025-03-12T08:24:55.014+0000] {tiki_transform_dag.py:58} INFO - Loaded raw data from tiki-pipeline/tiki_raw_data/raw_dong-ho-va-trang-suc_20250312_074821.json, 2000 rows
+[2025-03-12T08:24:56.953+0000] {tiki_transform_dag.py:58} INFO - Loaded raw data from tiki-pipeline/tiki_raw_data/raw_lam-dep-suc-khoe_20250312_074839.json, 2000 rows
+[2025-03-12T08:24:58.954+0000] {tiki_transform_dag.py:58} INFO - Loaded raw data from tiki-pipeline/tiki_raw_data/raw_laptop-may-vi-tinh-linh-kien_20250312_080208.json, 2000 rows
+[2025-03-12T08:25:00.782+0000] {tiki_transform_dag.py:58} INFO - Loaded raw data from tiki-pipeline/tiki_raw_data/raw_sach_20250312_074828.json, 2000 rows
+[2025-03-12T08:25:02.674+0000] {tiki_transform_dag.py:58} INFO - Loaded raw data from tiki-pipeline/tiki_raw_data/raw_the-thao-da-ngoai_20250312_074838.json, 2000 rows
+[2025-03-12T08:25:05.515+0000] {tiki_transform_dag.py:58} INFO - Loaded raw data from tiki-pipeline/tiki_raw_data/raw_thiet-bi-kts-phu-kien-so_20250312_080232.json, 2000 rows
+[2025-03-12T08:25:07.560+0000] {tiki_transform_dag.py:58} INFO - Loaded raw data from tiki-pipeline/tiki_raw_data/raw_thoi-trang-nam_20250312_080215.json, 2000 rows
+[2025-03-12T08:25:09.365+0000] {tiki_transform_dag.py:58} INFO - Loaded raw data from tiki-pipeline/tiki_raw_data/raw_thoi-trang-nu_20250312_080217.json, 2000 rows
+[2025-03-12T08:25:09.396+0000] {tiki_transform_dag.py:68} INFO - After deduplication across all categories: 20357 rows
+[2025-03-12T08:25:09.401+0000] {taskinstance.py:3313} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/tiki_transform_dag.py", line 79, in transform_data
+    fact_df = df[[col for col in fact_cols if col in df.columns]].rename(columns={'id': 'product_id'}).drop_duplicates()
+                                                     ^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'columns'
+[2025-03-12T08:25:09.425+0000] {logging_mixin.py:190} INFO - Task instance in failure state
+[2025-03-12T08:25:09.426+0000] {logging_mixin.py:190} INFO - Task start:2025-03-12 08:24:37.519315+00:00 end:2025-03-12 08:25:09.424617+00:00 duration:31.905302
+[2025-03-12T08:25:09.426+0000] {logging_mixin.py:190} INFO - Task:<Task(PythonOperator): transform_data> dag:<DAG: tiki_transform_dag> dagrun:<DagRun tiki_transform_dag @ 2025-03-12 08:10:41.951996+00:00: manual__2025-03-12T08:10:41.951996+00:00, state:running, queued_at: 2025-03-12 08:10:41.981500+00:00. externally triggered: True>
+[2025-03-12T08:25:09.427+0000] {logging_mixin.py:190} INFO - Failure caused by 'NoneType' object has no attribute 'columns'
+[2025-03-12T08:25:09.428+0000] {taskinstance.py:1226} INFO - Marking task as UP_FOR_RETRY. dag_id=tiki_transform_dag, task_id=transform_data, run_id=manual__2025-03-12T08:10:41.951996+00:00, execution_date=20250312T081041, start_date=20250312T082437, end_date=20250312T082509
+[2025-03-12T08:25:09.470+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-03-12T08:25:09.471+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 721 for task transform_data ('NoneType' object has no attribute 'columns'; 1130)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3006, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 274, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3161, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3185, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/tiki_transform_dag.py", line 79, in transform_data
+    fact_df = df[[col for col in fact_cols if col in df.columns]].rename(columns={'id': 'product_id'}).drop_duplicates()
+                                                     ^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'columns'
+[2025-03-12T08:25:09.508+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-03-12T08:25:09.538+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-03-12T08:25:09.541+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

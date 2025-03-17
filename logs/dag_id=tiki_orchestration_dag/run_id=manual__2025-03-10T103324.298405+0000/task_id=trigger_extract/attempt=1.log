@@ -1,0 +1,43 @@
+[2025-03-10T10:33:28.902+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-10T10:33:28.953+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: tiki_orchestration_dag.trigger_extract manual__2025-03-10T10:33:24.298405+00:00 [queued]>
+[2025-03-10T10:33:28.981+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: tiki_orchestration_dag.trigger_extract manual__2025-03-10T10:33:24.298405+00:00 [queued]>
+[2025-03-10T10:33:28.982+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 2
+[2025-03-10T10:33:29.355+0000] {taskinstance.py:2890} INFO - Executing <Task(TriggerDagRunOperator): trigger_extract> on 2025-03-10 10:33:24.298405+00:00
+[2025-03-10T10:33:29.388+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=114) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-10T10:33:29.404+0000] {standard_task_runner.py:72} INFO - Started process 124 to run task
+[2025-03-10T10:33:29.397+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'tiki_orchestration_dag', 'trigger_extract', 'manual__2025-03-10T10:33:24.298405+00:00', '--job-id', '458', '--raw', '--subdir', 'DAGS_FOLDER/tiki_etl_orchestration.py', '--cfg-path', '/tmp/tmp9hts0n2t']
+[2025-03-10T10:33:29.412+0000] {standard_task_runner.py:105} INFO - Job 458: Subtask trigger_extract
+[2025-03-10T10:33:29.619+0000] {task_command.py:467} INFO - Running <TaskInstance: tiki_orchestration_dag.trigger_extract manual__2025-03-10T10:33:24.298405+00:00 [running]> on host 0c9fb3f19112
+[2025-03-10T10:33:29.918+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='tiki_orchestration_dag' AIRFLOW_CTX_TASK_ID='trigger_extract' AIRFLOW_CTX_EXECUTION_DATE='2025-03-10T10:33:24.298405+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-10T10:33:24.298405+00:00'
+[2025-03-10T10:33:29.922+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-03-10T10:33:29.923+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-03-10T10:33:29.924+0000] {logging_mixin.py:190} INFO - Current task name:trigger_extract state:running start_date:2025-03-10 10:33:28.954918+00:00
+[2025-03-10T10:33:29.925+0000] {logging_mixin.py:190} INFO - Dag name:tiki_orchestration_dag and current dag run status:running
+[2025-03-10T10:33:29.926+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-03-10T10:33:30.139+0000] {trigger_dagrun.py:257} INFO - Waiting for tiki_extract_dag on 2025-03-10 10:33:29.927545+00:00 to become allowed state ['success'] ...
+[2025-03-10T10:34:30.148+0000] {trigger_dagrun.py:257} INFO - Waiting for tiki_extract_dag on 2025-03-10 10:33:29.927545+00:00 to become allowed state ['success'] ...
+[2025-03-10T10:35:30.153+0000] {trigger_dagrun.py:257} INFO - Waiting for tiki_extract_dag on 2025-03-10 10:33:29.927545+00:00 to become allowed state ['success'] ...
+[2025-03-10T10:36:30.158+0000] {trigger_dagrun.py:257} INFO - Waiting for tiki_extract_dag on 2025-03-10 10:33:29.927545+00:00 to become allowed state ['success'] ...
+[2025-03-10T10:37:30.165+0000] {trigger_dagrun.py:257} INFO - Waiting for tiki_extract_dag on 2025-03-10 10:33:29.927545+00:00 to become allowed state ['success'] ...
+[2025-03-10T10:38:30.364+0000] {trigger_dagrun.py:257} INFO - Waiting for tiki_extract_dag on 2025-03-10 10:33:29.927545+00:00 to become allowed state ['success'] ...
+[2025-03-10T10:39:37.016+0000] {trigger_dagrun.py:257} INFO - Waiting for tiki_extract_dag on 2025-03-10 10:33:29.927545+00:00 to become allowed state ['success'] ...
+[2025-03-10T10:39:36.869+0000] {job.py:229} INFO - Heartbeat recovered after 20.53 seconds
+[2025-03-10T10:40:04.227+0000] {job.py:229} INFO - Heartbeat recovered after 21.93 seconds
+[2025-03-10T10:40:29.049+0000] {job.py:229} INFO - Heartbeat recovered after 24.86 seconds
+[2025-03-10T10:40:37.114+0000] {trigger_dagrun.py:257} INFO - Waiting for tiki_extract_dag on 2025-03-10 10:33:29.927545+00:00 to become allowed state ['success'] ...
+[2025-03-10T10:41:37.160+0000] {trigger_dagrun.py:257} INFO - Waiting for tiki_extract_dag on 2025-03-10 10:33:29.927545+00:00 to become allowed state ['success'] ...
+[2025-03-10T10:42:37.180+0000] {trigger_dagrun.py:257} INFO - Waiting for tiki_extract_dag on 2025-03-10 10:33:29.927545+00:00 to become allowed state ['success'] ...
+[2025-03-10T10:43:37.194+0000] {trigger_dagrun.py:257} INFO - Waiting for tiki_extract_dag on 2025-03-10 10:33:29.927545+00:00 to become allowed state ['success'] ...
+[2025-03-10T10:44:37.208+0000] {trigger_dagrun.py:257} INFO - Waiting for tiki_extract_dag on 2025-03-10 10:33:29.927545+00:00 to become allowed state ['success'] ...
+[2025-03-10T10:45:37.226+0000] {trigger_dagrun.py:271} INFO - tiki_extract_dag finished with allowed state success
+[2025-03-10T10:45:37.411+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-03-10T10:45:37.418+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=tiki_orchestration_dag, task_id=trigger_extract, run_id=manual__2025-03-10T10:33:24.298405+00:00, execution_date=20250310T103324, start_date=20250310T103328, end_date=20250310T104537
+[2025-03-10T10:45:37.537+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-03-10T10:45:37.538+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-03-10T10:45:37.539+0000] {logging_mixin.py:190} INFO - Dag name:tiki_orchestration_dag queued_at:2025-03-10 10:33:24.651203+00:00
+[2025-03-10T10:45:37.539+0000] {logging_mixin.py:190} INFO - Task hostname:0c9fb3f19112 operator:TriggerDagRunOperator
+[2025-03-10T10:45:37.661+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-03-10T10:45:37.886+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-03-10T10:45:37.891+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

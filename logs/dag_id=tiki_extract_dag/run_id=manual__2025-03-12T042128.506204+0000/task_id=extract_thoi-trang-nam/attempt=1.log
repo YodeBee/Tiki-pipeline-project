@@ -1,0 +1,83 @@
+[2025-03-12T04:21:52.210+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-12T04:21:52.327+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: tiki_extract_dag.extract_thoi-trang-nam manual__2025-03-12T04:21:28.506204+00:00 [queued]>
+[2025-03-12T04:21:52.361+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: tiki_extract_dag.extract_thoi-trang-nam manual__2025-03-12T04:21:28.506204+00:00 [queued]>
+[2025-03-12T04:21:52.369+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 4
+[2025-03-12T04:21:52.469+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): extract_thoi-trang-nam> on 2025-03-12 04:21:28.506204+00:00
+[2025-03-12T04:21:52.584+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=3851) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-12T04:21:52.652+0000] {standard_task_runner.py:72} INFO - Started process 3884 to run task
+[2025-03-12T04:21:52.739+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'tiki_extract_dag', 'extract_thoi-trang-nam', 'manual__2025-03-12T04:21:28.506204+00:00', '--job-id', '652', '--raw', '--subdir', 'DAGS_FOLDER/tiki_extract_dag.py', '--cfg-path', '/tmp/tmpjin7edhe']
+[2025-03-12T04:21:52.750+0000] {standard_task_runner.py:105} INFO - Job 652: Subtask extract_thoi-trang-nam
+[2025-03-12T04:21:53.406+0000] {task_command.py:467} INFO - Running <TaskInstance: tiki_extract_dag.extract_thoi-trang-nam manual__2025-03-12T04:21:28.506204+00:00 [running]> on host 5c8190d7da62
+[2025-03-12T04:22:01.543+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='tiki_extract_dag' AIRFLOW_CTX_TASK_ID='extract_thoi-trang-nam' AIRFLOW_CTX_EXECUTION_DATE='2025-03-12T04:21:28.506204+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-12T04:21:28.506204+00:00'
+[2025-03-12T04:22:01.545+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-03-12T04:22:01.546+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-03-12T04:22:01.551+0000] {logging_mixin.py:190} INFO - Current task name:extract_thoi-trang-nam state:running start_date:2025-03-12 04:21:52.332640+00:00
+[2025-03-12T04:22:01.590+0000] {logging_mixin.py:190} INFO - Dag name:tiki_extract_dag and current dag run status:running
+[2025-03-12T04:22:01.600+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-03-12T04:22:01.604+0000] {job.py:229} INFO - Heartbeat recovered after 10.56 seconds
+[2025-03-12T04:22:03.491+0000] {tiki_extract_dag.py:120} INFO - Starting crawl for category thoi-trang-nam
+[2025-03-12T04:22:04.448+0000] {tiki_extract_dag.py:127} INFO - Total pages for thoi-trang-nam: 50
+[2025-03-12T04:22:05.930+0000] {tiki_extract_dag.py:155} INFO - Extracted page 2/50 - thoi-trang-nam, total items: 80
+[2025-03-12T04:22:13.055+0000] {tiki_extract_dag.py:155} INFO - Extracted page 3/50 - thoi-trang-nam, total items: 120
+[2025-03-12T04:22:21.651+0000] {tiki_extract_dag.py:155} INFO - Extracted page 4/50 - thoi-trang-nam, total items: 160
+[2025-03-12T04:22:27.916+0000] {tiki_extract_dag.py:155} INFO - Extracted page 5/50 - thoi-trang-nam, total items: 200
+[2025-03-12T04:22:36.214+0000] {tiki_extract_dag.py:155} INFO - Extracted page 6/50 - thoi-trang-nam, total items: 240
+[2025-03-12T04:22:46.686+0000] {tiki_extract_dag.py:155} INFO - Extracted page 7/50 - thoi-trang-nam, total items: 280
+[2025-03-12T04:22:55.553+0000] {tiki_extract_dag.py:155} INFO - Extracted page 8/50 - thoi-trang-nam, total items: 320
+[2025-03-12T04:23:03.782+0000] {tiki_extract_dag.py:155} INFO - Extracted page 9/50 - thoi-trang-nam, total items: 360
+[2025-03-12T04:23:09.446+0000] {tiki_extract_dag.py:155} INFO - Extracted page 10/50 - thoi-trang-nam, total items: 400
+[2025-03-12T04:23:17.489+0000] {tiki_extract_dag.py:155} INFO - Extracted page 11/50 - thoi-trang-nam, total items: 440
+[2025-03-12T04:23:24.649+0000] {tiki_extract_dag.py:155} INFO - Extracted page 12/50 - thoi-trang-nam, total items: 480
+[2025-03-12T04:23:34.585+0000] {tiki_extract_dag.py:155} INFO - Extracted page 13/50 - thoi-trang-nam, total items: 520
+[2025-03-12T04:23:41.122+0000] {tiki_extract_dag.py:155} INFO - Extracted page 14/50 - thoi-trang-nam, total items: 560
+[2025-03-12T04:23:50.128+0000] {tiki_extract_dag.py:155} INFO - Extracted page 15/50 - thoi-trang-nam, total items: 600
+[2025-03-12T04:24:00.183+0000] {tiki_extract_dag.py:155} INFO - Extracted page 16/50 - thoi-trang-nam, total items: 640
+[2025-03-12T04:24:08.280+0000] {tiki_extract_dag.py:155} INFO - Extracted page 17/50 - thoi-trang-nam, total items: 680
+[2025-03-12T04:24:17.168+0000] {tiki_extract_dag.py:155} INFO - Extracted page 18/50 - thoi-trang-nam, total items: 720
+[2025-03-12T04:24:25.650+0000] {tiki_extract_dag.py:155} INFO - Extracted page 19/50 - thoi-trang-nam, total items: 760
+[2025-03-12T04:24:34.572+0000] {tiki_extract_dag.py:155} INFO - Extracted page 20/50 - thoi-trang-nam, total items: 800
+[2025-03-12T04:24:43.328+0000] {tiki_extract_dag.py:155} INFO - Extracted page 21/50 - thoi-trang-nam, total items: 840
+[2025-03-12T04:24:49.557+0000] {tiki_extract_dag.py:155} INFO - Extracted page 22/50 - thoi-trang-nam, total items: 880
+[2025-03-12T04:24:58.807+0000] {tiki_extract_dag.py:155} INFO - Extracted page 23/50 - thoi-trang-nam, total items: 920
+[2025-03-12T04:25:04.912+0000] {tiki_extract_dag.py:155} INFO - Extracted page 24/50 - thoi-trang-nam, total items: 960
+[2025-03-12T04:25:14.298+0000] {tiki_extract_dag.py:155} INFO - Extracted page 25/50 - thoi-trang-nam, total items: 1000
+[2025-03-12T04:25:23.677+0000] {tiki_extract_dag.py:155} INFO - Extracted page 26/50 - thoi-trang-nam, total items: 1040
+[2025-03-12T04:25:32.189+0000] {tiki_extract_dag.py:155} INFO - Extracted page 27/50 - thoi-trang-nam, total items: 1080
+[2025-03-12T04:25:42.711+0000] {tiki_extract_dag.py:155} INFO - Extracted page 28/50 - thoi-trang-nam, total items: 1120
+[2025-03-12T04:25:49.196+0000] {tiki_extract_dag.py:155} INFO - Extracted page 29/50 - thoi-trang-nam, total items: 1160
+[2025-03-12T04:25:57.034+0000] {tiki_extract_dag.py:155} INFO - Extracted page 30/50 - thoi-trang-nam, total items: 1200
+[2025-03-12T04:26:06.989+0000] {tiki_extract_dag.py:155} INFO - Extracted page 31/50 - thoi-trang-nam, total items: 1240
+[2025-03-12T04:26:16.458+0000] {tiki_extract_dag.py:155} INFO - Extracted page 32/50 - thoi-trang-nam, total items: 1280
+[2025-03-12T04:26:25.905+0000] {tiki_extract_dag.py:155} INFO - Extracted page 33/50 - thoi-trang-nam, total items: 1320
+[2025-03-12T04:26:32.999+0000] {tiki_extract_dag.py:155} INFO - Extracted page 34/50 - thoi-trang-nam, total items: 1360
+[2025-03-12T04:26:41.271+0000] {tiki_extract_dag.py:155} INFO - Extracted page 35/50 - thoi-trang-nam, total items: 1400
+[2025-03-12T04:26:47.218+0000] {tiki_extract_dag.py:155} INFO - Extracted page 36/50 - thoi-trang-nam, total items: 1440
+[2025-03-12T04:26:54.504+0000] {tiki_extract_dag.py:155} INFO - Extracted page 37/50 - thoi-trang-nam, total items: 1480
+[2025-03-12T04:27:01.684+0000] {tiki_extract_dag.py:155} INFO - Extracted page 38/50 - thoi-trang-nam, total items: 1520
+[2025-03-12T04:27:09.540+0000] {tiki_extract_dag.py:155} INFO - Extracted page 39/50 - thoi-trang-nam, total items: 1560
+[2025-03-12T04:27:16.771+0000] {tiki_extract_dag.py:155} INFO - Extracted page 40/50 - thoi-trang-nam, total items: 1600
+[2025-03-12T04:27:23.374+0000] {tiki_extract_dag.py:155} INFO - Extracted page 41/50 - thoi-trang-nam, total items: 1640
+[2025-03-12T04:27:32.903+0000] {tiki_extract_dag.py:155} INFO - Extracted page 42/50 - thoi-trang-nam, total items: 1680
+[2025-03-12T04:27:44.086+0000] {tiki_extract_dag.py:155} INFO - Extracted page 43/50 - thoi-trang-nam, total items: 1720
+[2025-03-12T04:27:51.483+0000] {tiki_extract_dag.py:155} INFO - Extracted page 44/50 - thoi-trang-nam, total items: 1760
+[2025-03-12T04:27:57.065+0000] {tiki_extract_dag.py:155} INFO - Extracted page 45/50 - thoi-trang-nam, total items: 1800
+[2025-03-12T04:28:05.913+0000] {tiki_extract_dag.py:155} INFO - Extracted page 46/50 - thoi-trang-nam, total items: 1840
+[2025-03-12T04:28:15.497+0000] {tiki_extract_dag.py:155} INFO - Extracted page 47/50 - thoi-trang-nam, total items: 1880
+[2025-03-12T04:28:21.220+0000] {tiki_extract_dag.py:155} INFO - Extracted page 48/50 - thoi-trang-nam, total items: 1920
+[2025-03-12T04:28:30.004+0000] {tiki_extract_dag.py:155} INFO - Extracted page 49/50 - thoi-trang-nam, total items: 1960
+[2025-03-12T04:28:37.071+0000] {tiki_extract_dag.py:155} INFO - Extracted page 50/50 - thoi-trang-nam, total items: 2000
+[2025-03-12T04:28:51.593+0000] {tiki_extract_dag.py:56} INFO - Updated crawled products at tiki-pipeline/tiki_crawled/crawled_products.json
+[2025-03-12T04:28:51.595+0000] {tiki_extract_dag.py:172} INFO - Uploaded raw data to tiki-pipeline/tiki_raw_data/raw_thoi-trang-nam_20250312_042844.json, total items: 2000
+[2025-03-12T04:28:51.937+0000] {tiki_extract_dag.py:183} INFO - Saved metadata to tiki-pipeline/metadata/extract_run_metadata_thoi-trang-nam_20250312_042844.json
+[2025-03-12T04:28:51.980+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-03-12T04:28:52.104+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-03-12T04:28:52.108+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=tiki_extract_dag, task_id=extract_thoi-trang-nam, run_id=manual__2025-03-12T04:21:28.506204+00:00, execution_date=20250312T042128, start_date=20250312T042152, end_date=20250312T042852
+[2025-03-12T04:28:52.216+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-03-12T04:28:52.217+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-03-12T04:28:52.218+0000] {logging_mixin.py:190} INFO - Dag name:tiki_extract_dag queued_at:2025-03-12 04:21:28.548433+00:00
+[2025-03-12T04:28:52.218+0000] {logging_mixin.py:190} INFO - Task hostname:5c8190d7da62 operator:PythonOperator
+[2025-03-12T04:28:52.280+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-03-12T04:28:52.385+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-03-12T04:28:52.390+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

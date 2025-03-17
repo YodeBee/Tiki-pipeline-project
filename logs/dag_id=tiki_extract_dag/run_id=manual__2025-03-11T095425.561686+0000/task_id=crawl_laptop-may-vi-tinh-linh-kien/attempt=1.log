@@ -1,0 +1,220 @@
+[2025-03-11T09:55:17.987+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-11T09:55:18.294+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: tiki_extract_dag.crawl_laptop-may-vi-tinh-linh-kien manual__2025-03-11T09:54:25.561686+00:00 [queued]>
+[2025-03-11T09:55:18.424+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: tiki_extract_dag.crawl_laptop-may-vi-tinh-linh-kien manual__2025-03-11T09:54:25.561686+00:00 [queued]>
+[2025-03-11T09:55:18.435+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 4
+[2025-03-11T09:55:18.948+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): crawl_laptop-may-vi-tinh-linh-kien> on 2025-03-11 09:54:25.561686+00:00
+[2025-03-11T09:55:19.205+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=753) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-11T09:55:19.437+0000] {standard_task_runner.py:72} INFO - Started process 796 to run task
+[2025-03-11T09:55:19.565+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'tiki_extract_dag', 'crawl_laptop-may-vi-tinh-linh-kien', 'manual__2025-03-11T09:54:25.561686+00:00', '--job-id', '586', '--raw', '--subdir', 'DAGS_FOLDER/tiki_extract_dag.py', '--cfg-path', '/tmp/tmpdk86crwt']
+[2025-03-11T09:55:19.601+0000] {standard_task_runner.py:105} INFO - Job 586: Subtask crawl_laptop-may-vi-tinh-linh-kien
+[2025-03-11T09:55:22.118+0000] {task_command.py:467} INFO - Running <TaskInstance: tiki_extract_dag.crawl_laptop-may-vi-tinh-linh-kien manual__2025-03-11T09:54:25.561686+00:00 [running]> on host 5c8190d7da62
+[2025-03-11T09:55:38.321+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='tiki_extract_dag' AIRFLOW_CTX_TASK_ID='crawl_laptop-may-vi-tinh-linh-kien' AIRFLOW_CTX_EXECUTION_DATE='2025-03-11T09:54:25.561686+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-11T09:54:25.561686+00:00'
+[2025-03-11T09:55:38.323+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-03-11T09:55:38.324+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-03-11T09:55:38.324+0000] {logging_mixin.py:190} INFO - Current task name:crawl_laptop-may-vi-tinh-linh-kien state:running start_date:2025-03-11 09:55:18.316259+00:00
+[2025-03-11T09:55:38.325+0000] {logging_mixin.py:190} INFO - Dag name:tiki_extract_dag and current dag run status:running
+[2025-03-11T09:55:38.331+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-03-11T09:55:41.353+0000] {tiki_extract_dag.py:139} INFO - Starting crawl for category laptop-may-vi-tinh-linh-kien (ID: 1846)
+[2025-03-11T09:55:41.357+0000] {tiki_extract_dag.py:141} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 1, 'limit': 40, 'category': '1846'}
+[2025-03-11T09:55:41.990+0000] {tiki_extract_dag.py:150} INFO - Total pages for laptop-may-vi-tinh-linh-kien: 50 (limited to 50)
+[2025-03-11T09:55:51.618+0000] {job.py:229} INFO - Heartbeat recovered after 11.84 seconds
+[2025-03-11T09:56:19.608+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 6910261 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T09:56:27.717+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 6910261 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T09:56:33.268+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 6910261 on attempt 3/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T09:56:33.433+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 6403893 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T09:56:39.911+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 6403893 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T09:56:48.530+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 6403893 on attempt 3/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T09:56:48.695+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 3054369 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T09:56:57.130+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 3054369 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T09:57:10.908+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 2, 'limit': 40, 'category': '1846'}
+[2025-03-11T09:57:20.906+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 275196131 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T09:57:26.609+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 275196131 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T09:57:34.750+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 275196131 on attempt 3/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T09:57:34.898+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 275190023 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T09:57:41.782+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 275190023 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T09:57:51.481+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 275190023 on attempt 3/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T09:57:51.788+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 274402217 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T09:57:58.217+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 274402217 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T09:58:22.087+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 107058325 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T09:58:27.848+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 107058325 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T09:58:37.637+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 107058325 on attempt 3/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T09:58:37.790+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 72680847 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T09:58:45.723+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 72680847 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T09:58:55.313+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 72680847 on attempt 3/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T09:58:55.489+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 68308284 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T09:59:00.651+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 68308284 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T09:59:19.589+0000] {tiki_extract_dag.py:183} INFO - Extracted page 2/50 for category laptop-may-vi-tinh-linh-kien, total items: 80
+[2025-03-11T09:59:37.092+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 3, 'limit': 40, 'category': '1846'}
+[2025-03-11T09:59:38.806+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 275210128 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T09:59:44.400+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 275210128 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T09:59:53.597+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 275210128 on attempt 3/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T09:59:53.744+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 275191477 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:00:20.226+0000] {tiki_extract_dag.py:183} INFO - Extracted page 3/50 for category laptop-may-vi-tinh-linh-kien, total items: 120
+[2025-03-11T10:00:35.839+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 4, 'limit': 40, 'category': '1846'}
+[2025-03-11T10:00:37.923+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 274931094 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:00:47.726+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 274931094 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:00:54.173+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 274931094 on attempt 3/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:00:54.342+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 273714191 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:01:15.025+0000] {tiki_extract_dag.py:183} INFO - Extracted page 4/50 for category laptop-may-vi-tinh-linh-kien, total items: 160
+[2025-03-11T10:01:30.291+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 5, 'limit': 40, 'category': '1846'}
+[2025-03-11T10:01:45.318+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 7095625 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:01:51.148+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 7095625 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:01:59.408+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 7095625 on attempt 3/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:01:59.571+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 2015907 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:02:08.704+0000] {tiki_extract_dag.py:183} INFO - Extracted page 5/50 for category laptop-may-vi-tinh-linh-kien, total items: 200
+[2025-03-11T10:02:23.928+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 6, 'limit': 40, 'category': '1846'}
+[2025-03-11T10:02:39.263+0000] {tiki_extract_dag.py:183} INFO - Extracted page 6/50 for category laptop-may-vi-tinh-linh-kien, total items: 240
+[2025-03-11T10:02:55.114+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 7, 'limit': 40, 'category': '1846'}
+[2025-03-11T10:02:56.424+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 275452721 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:03:24.509+0000] {tiki_extract_dag.py:183} INFO - Extracted page 7/50 for category laptop-may-vi-tinh-linh-kien, total items: 280
+[2025-03-11T10:03:41.672+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 8, 'limit': 40, 'category': '1846'}
+[2025-03-11T10:03:54.598+0000] {tiki_extract_dag.py:183} INFO - Extracted page 8/50 for category laptop-may-vi-tinh-linh-kien, total items: 320
+[2025-03-11T10:04:13.942+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 9, 'limit': 40, 'category': '1846'}
+[2025-03-11T10:04:26.459+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 3556747 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:04:32.819+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 3556747 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:04:42.149+0000] {tiki_extract_dag.py:183} INFO - Extracted page 9/50 for category laptop-may-vi-tinh-linh-kien, total items: 360
+[2025-03-11T10:04:59.214+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 10, 'limit': 40, 'category': '1846'}
+[2025-03-11T10:04:59.448+0000] {tiki_extract_dag.py:186} ERROR - API error at page 10 in category laptop-may-vi-tinh-linh-kien on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:05:21.232+0000] {tiki_extract_dag.py:183} INFO - Extracted page 10/50 for category laptop-may-vi-tinh-linh-kien, total items: 400
+[2025-03-11T10:05:37.603+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 11, 'limit': 40, 'category': '1846'}
+[2025-03-11T10:05:50.040+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 754246 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:05:59.936+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 754246 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:06:07.604+0000] {tiki_extract_dag.py:183} INFO - Extracted page 11/50 for category laptop-may-vi-tinh-linh-kien, total items: 440
+[2025-03-11T10:06:23.701+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 12, 'limit': 40, 'category': '1846'}
+[2025-03-11T10:06:32.700+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 74561265 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:06:42.131+0000] {tiki_extract_dag.py:183} INFO - Extracted page 12/50 for category laptop-may-vi-tinh-linh-kien, total items: 480
+[2025-03-11T10:07:00.953+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 13, 'limit': 40, 'category': '1846'}
+[2025-03-11T10:07:16.552+0000] {tiki_extract_dag.py:183} INFO - Extracted page 13/50 for category laptop-may-vi-tinh-linh-kien, total items: 520
+[2025-03-11T10:07:34.525+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 14, 'limit': 40, 'category': '1846'}
+[2025-03-11T10:07:45.284+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 80994611 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:07:52.148+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 80994611 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:08:00.600+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 80994611 on attempt 3/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:08:00.750+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 52489145 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:08:10.291+0000] {tiki_extract_dag.py:183} INFO - Extracted page 14/50 for category laptop-may-vi-tinh-linh-kien, total items: 560
+[2025-03-11T10:08:25.888+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 15, 'limit': 40, 'category': '1846'}
+[2025-03-11T10:08:40.040+0000] {tiki_extract_dag.py:183} INFO - Extracted page 15/50 for category laptop-may-vi-tinh-linh-kien, total items: 600
+[2025-03-11T10:08:58.185+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 16, 'limit': 40, 'category': '1846'}
+[2025-03-11T10:08:58.365+0000] {tiki_extract_dag.py:186} ERROR - API error at page 16 in category laptop-may-vi-tinh-linh-kien on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:09:17.932+0000] {tiki_extract_dag.py:183} INFO - Extracted page 16/50 for category laptop-may-vi-tinh-linh-kien, total items: 640
+[2025-03-11T10:09:37.035+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 17, 'limit': 40, 'category': '1846'}
+[2025-03-11T10:09:48.163+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 179509249 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:09:55.910+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 179509249 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:10:13.685+0000] {tiki_extract_dag.py:183} INFO - Extracted page 17/50 for category laptop-may-vi-tinh-linh-kien, total items: 680
+[2025-03-11T10:10:30.335+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 18, 'limit': 40, 'category': '1846'}
+[2025-03-11T10:10:46.850+0000] {tiki_extract_dag.py:183} INFO - Extracted page 18/50 for category laptop-may-vi-tinh-linh-kien, total items: 720
+[2025-03-11T10:11:02.810+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 19, 'limit': 40, 'category': '1846'}
+[2025-03-11T10:11:27.086+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=4, connect=5, read=4, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPSConnectionPool(host='tiki.vn', port=443): Read timed out. (read timeout=15)")': /api/v2/products/191575640
+[2025-03-11T10:11:37.145+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=3, connect=4, read=4, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f729b550260>: Failed to resolve 'tiki.vn' ([Errno -3] Temporary failure in name resolution)")': /api/v2/products/191575640
+[2025-03-11T10:11:49.158+0000] {connectionpool.py:868} WARNING - Retrying (Retry(total=2, connect=3, read=4, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f729b550140>: Failed to resolve 'tiki.vn' ([Errno -3] Temporary failure in name resolution)")': /api/v2/products/191575640
+[2025-03-11T10:12:02.050+0000] {tiki_extract_dag.py:183} INFO - Extracted page 19/50 for category laptop-may-vi-tinh-linh-kien, total items: 760
+[2025-03-11T10:12:20.692+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 20, 'limit': 40, 'category': '1846'}
+[2025-03-11T10:12:29.053+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 273391121 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:12:38.244+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 273391121 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:12:44.279+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 273391121 on attempt 3/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:12:44.437+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 273329318 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:12:56.744+0000] {tiki_extract_dag.py:183} INFO - Extracted page 20/50 for category laptop-may-vi-tinh-linh-kien, total items: 800
+[2025-03-11T10:13:15.832+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 21, 'limit': 40, 'category': '1846'}
+[2025-03-11T10:13:28.903+0000] {tiki_extract_dag.py:183} INFO - Extracted page 21/50 for category laptop-may-vi-tinh-linh-kien, total items: 840
+[2025-03-11T10:13:43.957+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 22, 'limit': 40, 'category': '1846'}
+[2025-03-11T10:13:44.302+0000] {tiki_extract_dag.py:186} ERROR - API error at page 22 in category laptop-may-vi-tinh-linh-kien on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:14:11.297+0000] {tiki_extract_dag.py:183} INFO - Extracted page 22/50 for category laptop-may-vi-tinh-linh-kien, total items: 880
+[2025-03-11T10:14:27.913+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 23, 'limit': 40, 'category': '1846'}
+[2025-03-11T10:14:33.331+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 252172447 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:14:40.922+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 252172447 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:14:58.414+0000] {tiki_extract_dag.py:183} INFO - Extracted page 23/50 for category laptop-may-vi-tinh-linh-kien, total items: 920
+[2025-03-11T10:15:16.442+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 24, 'limit': 40, 'category': '1846'}
+[2025-03-11T10:15:36.024+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 8319455 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:15:46.182+0000] {tiki_extract_dag.py:183} INFO - Extracted page 24/50 for category laptop-may-vi-tinh-linh-kien, total items: 960
+[2025-03-11T10:16:05.424+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 25, 'limit': 40, 'category': '1846'}
+[2025-03-11T10:16:19.280+0000] {tiki_extract_dag.py:183} INFO - Extracted page 25/50 for category laptop-may-vi-tinh-linh-kien, total items: 1000
+[2025-03-11T10:16:35.389+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 26, 'limit': 40, 'category': '1846'}
+[2025-03-11T10:16:35.549+0000] {tiki_extract_dag.py:186} ERROR - API error at page 26 in category laptop-may-vi-tinh-linh-kien on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:16:42.659+0000] {tiki_extract_dag.py:186} ERROR - API error at page 26 in category laptop-may-vi-tinh-linh-kien on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:17:03.670+0000] {tiki_extract_dag.py:183} INFO - Extracted page 26/50 for category laptop-may-vi-tinh-linh-kien, total items: 1040
+[2025-03-11T10:17:19.905+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 27, 'limit': 40, 'category': '1846'}
+[2025-03-11T10:17:30.316+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 59384148 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:17:37.113+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 59384148 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:17:48.081+0000] {tiki_extract_dag.py:183} INFO - Extracted page 27/50 for category laptop-may-vi-tinh-linh-kien, total items: 1080
+[2025-03-11T10:18:03.276+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 28, 'limit': 40, 'category': '1846'}
+[2025-03-11T10:18:18.171+0000] {tiki_extract_dag.py:183} INFO - Extracted page 28/50 for category laptop-may-vi-tinh-linh-kien, total items: 1120
+[2025-03-11T10:18:35.784+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 29, 'limit': 40, 'category': '1846'}
+[2025-03-11T10:18:35.957+0000] {tiki_extract_dag.py:186} ERROR - API error at page 29 in category laptop-may-vi-tinh-linh-kien on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:18:41.844+0000] {tiki_extract_dag.py:186} ERROR - API error at page 29 in category laptop-may-vi-tinh-linh-kien on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:19:01.728+0000] {tiki_extract_dag.py:183} INFO - Extracted page 29/50 for category laptop-may-vi-tinh-linh-kien, total items: 1160
+[2025-03-11T10:19:17.847+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 30, 'limit': 40, 'category': '1846'}
+[2025-03-11T10:19:31.289+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 134578048 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:19:39.235+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 134578048 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:19:44.685+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 134578048 on attempt 3/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:19:44.908+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 125433959 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:19:58.120+0000] {tiki_extract_dag.py:183} INFO - Extracted page 30/50 for category laptop-may-vi-tinh-linh-kien, total items: 1200
+[2025-03-11T10:20:13.317+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 31, 'limit': 40, 'category': '1846'}
+[2025-03-11T10:20:28.351+0000] {tiki_extract_dag.py:183} INFO - Extracted page 31/50 for category laptop-may-vi-tinh-linh-kien, total items: 1240
+[2025-03-11T10:20:46.193+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 32, 'limit': 40, 'category': '1846'}
+[2025-03-11T10:21:01.854+0000] {tiki_extract_dag.py:183} INFO - Extracted page 32/50 for category laptop-may-vi-tinh-linh-kien, total items: 1280
+[2025-03-11T10:21:19.124+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 33, 'limit': 40, 'category': '1846'}
+[2025-03-11T10:21:28.953+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 192642490 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:21:34.949+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 192642490 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:21:42.027+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 192642490 on attempt 3/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:21:42.211+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 192156146 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:21:54.828+0000] {tiki_extract_dag.py:183} INFO - Extracted page 33/50 for category laptop-may-vi-tinh-linh-kien, total items: 1320
+[2025-03-11T10:22:13.413+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 34, 'limit': 40, 'category': '1846'}
+[2025-03-11T10:22:31.011+0000] {tiki_extract_dag.py:183} INFO - Extracted page 34/50 for category laptop-may-vi-tinh-linh-kien, total items: 1360
+[2025-03-11T10:22:49.817+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 35, 'limit': 40, 'category': '1846'}
+[2025-03-11T10:23:05.728+0000] {tiki_extract_dag.py:183} INFO - Extracted page 35/50 for category laptop-may-vi-tinh-linh-kien, total items: 1400
+[2025-03-11T10:23:25.442+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 36, 'limit': 40, 'category': '1846'}
+[2025-03-11T10:23:30.185+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 275530790 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:23:37.419+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 275530790 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:23:42.904+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 275530790 on attempt 3/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:23:43.073+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 252566338 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:24:02.758+0000] {tiki_extract_dag.py:183} INFO - Extracted page 36/50 for category laptop-may-vi-tinh-linh-kien, total items: 1440
+[2025-03-11T10:24:20.802+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 37, 'limit': 40, 'category': '1846'}
+[2025-03-11T10:24:32.600+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 193597454 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:24:41.316+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 193597454 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:24:53.524+0000] {tiki_extract_dag.py:183} INFO - Extracted page 37/50 for category laptop-may-vi-tinh-linh-kien, total items: 1480
+[2025-03-11T10:25:08.891+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 38, 'limit': 40, 'category': '1846'}
+[2025-03-11T10:25:23.409+0000] {tiki_extract_dag.py:183} INFO - Extracted page 38/50 for category laptop-may-vi-tinh-linh-kien, total items: 1520
+[2025-03-11T10:25:41.495+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 39, 'limit': 40, 'category': '1846'}
+[2025-03-11T10:25:42.989+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 275910471 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:26:07.636+0000] {tiki_extract_dag.py:183} INFO - Extracted page 39/50 for category laptop-may-vi-tinh-linh-kien, total items: 1560
+[2025-03-11T10:26:26.953+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 40, 'limit': 40, 'category': '1846'}
+[2025-03-11T10:26:37.491+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 98900531 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:26:42.878+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 98900531 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:26:58.413+0000] {tiki_extract_dag.py:183} INFO - Extracted page 40/50 for category laptop-may-vi-tinh-linh-kien, total items: 1600
+[2025-03-11T10:27:16.092+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 41, 'limit': 40, 'category': '1846'}
+[2025-03-11T10:27:35.513+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 575519 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:27:43.383+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 575519 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T10:27:53.236+0000] {tiki_extract_dag.py:183} INFO - Extracted page 41/50 for category laptop-may-vi-tinh-linh-kien, total items: 1640
+[2025-03-11T10:28:11.388+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 42, 'limit': 40, 'category': '1846'}
+[2025-03-11T10:28:24.048+0000] {tiki_extract_dag.py:183} INFO - Extracted page 42/50 for category laptop-may-vi-tinh-linh-kien, total items: 1680
+[2025-03-11T10:28:39.176+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 43, 'limit': 40, 'category': '1846'}
+[2025-03-11T10:28:52.193+0000] {tiki_extract_dag.py:183} INFO - Extracted page 43/50 for category laptop-may-vi-tinh-linh-kien, total items: 1720
+[2025-03-11T10:29:12.069+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 44, 'limit': 40, 'category': '1846'}
+[2025-03-11T10:29:24.286+0000] {tiki_extract_dag.py:183} INFO - Extracted page 44/50 for category laptop-may-vi-tinh-linh-kien, total items: 1760
+[2025-03-11T10:29:41.025+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 45, 'limit': 40, 'category': '1846'}
+[2025-03-11T10:29:52.783+0000] {tiki_extract_dag.py:183} INFO - Extracted page 45/50 for category laptop-may-vi-tinh-linh-kien, total items: 1800
+[2025-03-11T10:30:09.004+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 46, 'limit': 40, 'category': '1846'}
+[2025-03-11T10:30:21.348+0000] {tiki_extract_dag.py:183} INFO - Extracted page 46/50 for category laptop-may-vi-tinh-linh-kien, total items: 1840
+[2025-03-11T10:30:39.500+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 47, 'limit': 40, 'category': '1846'}
+[2025-03-11T10:30:52.728+0000] {tiki_extract_dag.py:183} INFO - Extracted page 47/50 for category laptop-may-vi-tinh-linh-kien, total items: 1880
+[2025-03-11T10:31:07.752+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 48, 'limit': 40, 'category': '1846'}
+[2025-03-11T10:31:19.643+0000] {tiki_extract_dag.py:183} INFO - Extracted page 48/50 for category laptop-may-vi-tinh-linh-kien, total items: 1920
+[2025-03-11T10:31:38.920+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 49, 'limit': 40, 'category': '1846'}
+[2025-03-11T10:31:52.143+0000] {tiki_extract_dag.py:183} INFO - Extracted page 49/50 for category laptop-may-vi-tinh-linh-kien, total items: 1960
+[2025-03-11T10:32:08.001+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 50, 'limit': 40, 'category': '1846'}
+[2025-03-11T10:32:20.517+0000] {tiki_extract_dag.py:183} INFO - Extracted page 50/50 for category laptop-may-vi-tinh-linh-kien, total items: 2000
+[2025-03-11T10:32:51.771+0000] {tiki_extract_dag.py:50} INFO - Updated crawled products at tiki-pipeline/tiki_crawled/crawled_products.json
+[2025-03-11T10:32:51.775+0000] {tiki_extract_dag.py:206} INFO - Uploaded raw data to tiki-pipeline/raw_data/laptop-may-vi-tinh-linh-kien_20250311_103240.json, total items: 2000
+[2025-03-11T10:32:52.185+0000] {tiki_extract_dag.py:218} INFO - Saved metadata to tiki-pipeline/metadata/laptop-may-vi-tinh-linh-kien_extract_run_metadata_20250311_103240.json
+[2025-03-11T10:32:52.231+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-03-11T10:32:53.423+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-03-11T10:32:53.446+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=tiki_extract_dag, task_id=crawl_laptop-may-vi-tinh-linh-kien, run_id=manual__2025-03-11T09:54:25.561686+00:00, execution_date=20250311T095425, start_date=20250311T095518, end_date=20250311T103253
+[2025-03-11T10:32:54.012+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-03-11T10:32:54.015+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-03-11T10:32:54.017+0000] {logging_mixin.py:190} INFO - Dag name:tiki_extract_dag queued_at:2025-03-11 09:54:25.681807+00:00
+[2025-03-11T10:32:54.018+0000] {logging_mixin.py:190} INFO - Task hostname:5c8190d7da62 operator:PythonOperator
+[2025-03-11T10:32:54.974+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-03-11T10:33:14.560+0000] {standard_task_runner.py:217} INFO - Process not found (most likely exited), stop collecting metrics
+[2025-03-11T10:33:14.595+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-03-11T10:33:14.606+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

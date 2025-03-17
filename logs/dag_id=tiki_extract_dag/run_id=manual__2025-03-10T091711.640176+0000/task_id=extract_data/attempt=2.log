@@ -1,0 +1,238 @@
+[2025-03-10T09:45:21.084+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-10T09:45:21.116+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: tiki_extract_dag.extract_data manual__2025-03-10T09:17:11.640176+00:00 [queued]>
+[2025-03-10T09:45:21.143+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: tiki_extract_dag.extract_data manual__2025-03-10T09:17:11.640176+00:00 [queued]>
+[2025-03-10T09:45:21.145+0000] {taskinstance.py:2867} INFO - Starting attempt 2 of 4
+[2025-03-10T09:45:21.174+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): extract_data> on 2025-03-10 09:17:11.640176+00:00
+[2025-03-10T09:45:21.191+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=2093) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-10T09:45:21.193+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'tiki_extract_dag', 'extract_data', 'manual__2025-03-10T09:17:11.640176+00:00', '--job-id', '395', '--raw', '--subdir', 'DAGS_FOLDER/tiki_extract_dag.py', '--cfg-path', '/tmp/tmpxop60auk']
+[2025-03-10T09:45:21.194+0000] {standard_task_runner.py:72} INFO - Started process 2095 to run task
+[2025-03-10T09:45:21.194+0000] {standard_task_runner.py:105} INFO - Job 395: Subtask extract_data
+[2025-03-10T09:45:21.287+0000] {task_command.py:467} INFO - Running <TaskInstance: tiki_extract_dag.extract_data manual__2025-03-10T09:17:11.640176+00:00 [running]> on host c77555d100c4
+[2025-03-10T09:45:21.722+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='tiki_extract_dag' AIRFLOW_CTX_TASK_ID='extract_data' AIRFLOW_CTX_EXECUTION_DATE='2025-03-10T09:17:11.640176+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-10T09:17:11.640176+00:00'
+[2025-03-10T09:45:21.723+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-03-10T09:45:21.724+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-03-10T09:45:21.725+0000] {logging_mixin.py:190} INFO - Current task name:extract_data state:running start_date:2025-03-10 09:45:21.118666+00:00
+[2025-03-10T09:45:21.725+0000] {logging_mixin.py:190} INFO - Dag name:tiki_extract_dag and current dag run status:running
+[2025-03-10T09:45:21.725+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-03-10T09:45:22.347+0000] {tiki_extract_dag.py:144} INFO - Starting crawl for category lam-dep-suc-khoe (ID: 1520)
+[2025-03-10T09:45:22.348+0000] {tiki_extract_dag.py:147} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 1, 'limit': 50, 'category': '1520'}
+[2025-03-10T09:45:22.965+0000] {tiki_extract_dag.py:156} INFO - Total pages for lam-dep-suc-khoe: 50 (limited to 50)
+[2025-03-10T09:45:34.538+0000] {tiki_extract_dag.py:169} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 2, 'limit': 50, 'category': '1520'}
+[2025-03-10T09:45:46.938+0000] {tiki_extract_dag.py:188} INFO - Extracted page 2/50 for category lam-dep-suc-khoe, total items: 80
+[2025-03-10T09:45:57.507+0000] {tiki_extract_dag.py:169} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 3, 'limit': 50, 'category': '1520'}
+[2025-03-10T09:46:09.141+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 435317: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T09:46:09.308+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 389688: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T09:46:09.454+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 284446: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T09:46:09.455+0000] {tiki_extract_dag.py:188} INFO - Extracted page 3/50 for category lam-dep-suc-khoe, total items: 120
+[2025-03-10T09:46:21.549+0000] {tiki_extract_dag.py:169} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 4, 'limit': 50, 'category': '1520'}
+[2025-03-10T09:46:21.691+0000] {tiki_extract_dag.py:191} ERROR - API error at page 4 in category lam-dep-suc-khoe: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T09:46:21.691+0000] {tiki_extract_dag.py:144} INFO - Starting crawl for category dien-thoai-may-tinh-bang (ID: 1789)
+[2025-03-10T09:46:21.692+0000] {tiki_extract_dag.py:147} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 1, 'limit': 50, 'category': '1789'}
+[2025-03-10T09:46:21.862+0000] {tiki_extract_dag.py:194} ERROR - Failed to crawl category dien-thoai-may-tinh-bang: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T09:46:21.863+0000] {tiki_extract_dag.py:144} INFO - Starting crawl for category laptop-may-vi-tinh-linh-kien (ID: 1846)
+[2025-03-10T09:46:21.863+0000] {tiki_extract_dag.py:147} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 1, 'limit': 50, 'category': '1846'}
+[2025-03-10T09:46:22.003+0000] {tiki_extract_dag.py:194} ERROR - Failed to crawl category laptop-may-vi-tinh-linh-kien: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T09:46:22.003+0000] {tiki_extract_dag.py:144} INFO - Starting crawl for category dien-gia-dung (ID: 1882)
+[2025-03-10T09:46:22.004+0000] {tiki_extract_dag.py:147} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 1, 'limit': 50, 'category': '1882'}
+[2025-03-10T09:46:22.143+0000] {tiki_extract_dag.py:194} ERROR - Failed to crawl category dien-gia-dung: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T09:46:22.143+0000] {tiki_extract_dag.py:144} INFO - Starting crawl for category sach (ID: 8322)
+[2025-03-10T09:46:22.144+0000] {tiki_extract_dag.py:147} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 1, 'limit': 50, 'category': '8322'}
+[2025-03-10T09:46:22.303+0000] {tiki_extract_dag.py:194} ERROR - Failed to crawl category sach: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T09:46:22.304+0000] {tiki_extract_dag.py:144} INFO - Starting crawl for category thiet-bi-kts-phu-kien-so (ID: 1815)
+[2025-03-10T09:46:22.305+0000] {tiki_extract_dag.py:147} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 1, 'limit': 50, 'category': '1815'}
+[2025-03-10T09:46:22.712+0000] {tiki_extract_dag.py:156} INFO - Total pages for thiet-bi-kts-phu-kien-so: 50 (limited to 50)
+[2025-03-10T09:46:36.207+0000] {tiki_extract_dag.py:169} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 2, 'limit': 50, 'category': '1815'}
+[2025-03-10T09:46:48.085+0000] {tiki_extract_dag.py:188} INFO - Extracted page 2/50 for category thiet-bi-kts-phu-kien-so, total items: 200
+[2025-03-10T09:47:00.152+0000] {tiki_extract_dag.py:169} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 3, 'limit': 50, 'category': '1815'}
+[2025-03-10T09:47:14.217+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 20560382: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T09:47:14.358+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 19772753: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T09:47:14.503+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 10784603: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T09:47:14.894+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 2054629: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T09:47:15.056+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 1998347: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T09:47:15.199+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 126003: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T09:47:15.200+0000] {tiki_extract_dag.py:188} INFO - Extracted page 3/50 for category thiet-bi-kts-phu-kien-so, total items: 240
+[2025-03-10T09:47:27.192+0000] {tiki_extract_dag.py:169} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 4, 'limit': 50, 'category': '1815'}
+[2025-03-10T09:47:40.089+0000] {tiki_extract_dag.py:188} INFO - Extracted page 4/50 for category thiet-bi-kts-phu-kien-so, total items: 280
+[2025-03-10T09:47:54.114+0000] {tiki_extract_dag.py:169} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 5, 'limit': 50, 'category': '1815'}
+[2025-03-10T09:48:07.298+0000] {tiki_extract_dag.py:188} INFO - Extracted page 5/50 for category thiet-bi-kts-phu-kien-so, total items: 320
+[2025-03-10T09:48:19.224+0000] {tiki_extract_dag.py:169} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 6, 'limit': 50, 'category': '1815'}
+[2025-03-10T09:48:32.627+0000] {tiki_extract_dag.py:188} INFO - Extracted page 6/50 for category thiet-bi-kts-phu-kien-so, total items: 360
+[2025-03-10T09:48:46.842+0000] {tiki_extract_dag.py:169} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 7, 'limit': 50, 'category': '1815'}
+[2025-03-10T09:49:00.213+0000] {tiki_extract_dag.py:188} INFO - Extracted page 7/50 for category thiet-bi-kts-phu-kien-so, total items: 400
+[2025-03-10T09:49:13.575+0000] {tiki_extract_dag.py:169} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 8, 'limit': 50, 'category': '1815'}
+[2025-03-10T09:49:27.006+0000] {tiki_extract_dag.py:188} INFO - Extracted page 8/50 for category thiet-bi-kts-phu-kien-so, total items: 440
+[2025-03-10T09:49:38.648+0000] {tiki_extract_dag.py:169} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 9, 'limit': 50, 'category': '1815'}
+[2025-03-10T09:49:50.947+0000] {tiki_extract_dag.py:188} INFO - Extracted page 9/50 for category thiet-bi-kts-phu-kien-so, total items: 480
+[2025-03-10T09:50:03.268+0000] {tiki_extract_dag.py:169} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 10, 'limit': 50, 'category': '1815'}
+[2025-03-10T09:50:16.254+0000] {tiki_extract_dag.py:188} INFO - Extracted page 10/50 for category thiet-bi-kts-phu-kien-so, total items: 520
+[2025-03-10T09:50:28.584+0000] {tiki_extract_dag.py:169} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 11, 'limit': 50, 'category': '1815'}
+[2025-03-10T09:50:42.281+0000] {tiki_extract_dag.py:188} INFO - Extracted page 11/50 for category thiet-bi-kts-phu-kien-so, total items: 560
+[2025-03-10T09:50:56.695+0000] {tiki_extract_dag.py:169} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 12, 'limit': 50, 'category': '1815'}
+[2025-03-10T09:51:10.224+0000] {tiki_extract_dag.py:188} INFO - Extracted page 12/50 for category thiet-bi-kts-phu-kien-so, total items: 600
+[2025-03-10T09:51:21.477+0000] {tiki_extract_dag.py:169} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 13, 'limit': 50, 'category': '1815'}
+[2025-03-10T09:51:34.197+0000] {tiki_extract_dag.py:188} INFO - Extracted page 13/50 for category thiet-bi-kts-phu-kien-so, total items: 640
+[2025-03-10T09:51:44.809+0000] {tiki_extract_dag.py:169} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 14, 'limit': 50, 'category': '1815'}
+[2025-03-10T09:51:58.534+0000] {tiki_extract_dag.py:188} INFO - Extracted page 14/50 for category thiet-bi-kts-phu-kien-so, total items: 680
+[2025-03-10T09:52:09.142+0000] {tiki_extract_dag.py:169} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 15, 'limit': 50, 'category': '1815'}
+[2025-03-10T09:52:21.548+0000] {tiki_extract_dag.py:188} INFO - Extracted page 15/50 for category thiet-bi-kts-phu-kien-so, total items: 720
+[2025-03-10T09:52:33.328+0000] {tiki_extract_dag.py:169} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 16, 'limit': 50, 'category': '1815'}
+[2025-03-10T09:52:45.349+0000] {tiki_extract_dag.py:188} INFO - Extracted page 16/50 for category thiet-bi-kts-phu-kien-so, total items: 760
+[2025-03-10T09:52:58.567+0000] {tiki_extract_dag.py:169} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 17, 'limit': 50, 'category': '1815'}
+[2025-03-10T09:53:12.047+0000] {tiki_extract_dag.py:188} INFO - Extracted page 17/50 for category thiet-bi-kts-phu-kien-so, total items: 800
+[2025-03-10T09:53:23.260+0000] {tiki_extract_dag.py:169} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 18, 'limit': 50, 'category': '1815'}
+[2025-03-10T09:53:37.022+0000] {tiki_extract_dag.py:188} INFO - Extracted page 18/50 for category thiet-bi-kts-phu-kien-so, total items: 840
+[2025-03-10T09:53:50.245+0000] {tiki_extract_dag.py:169} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 19, 'limit': 50, 'category': '1815'}
+[2025-03-10T09:54:01.881+0000] {tiki_extract_dag.py:188} INFO - Extracted page 19/50 for category thiet-bi-kts-phu-kien-so, total items: 880
+[2025-03-10T09:54:12.560+0000] {tiki_extract_dag.py:169} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 20, 'limit': 50, 'category': '1815'}
+[2025-03-10T09:54:25.749+0000] {tiki_extract_dag.py:188} INFO - Extracted page 20/50 for category thiet-bi-kts-phu-kien-so, total items: 920
+[2025-03-10T09:54:36.775+0000] {tiki_extract_dag.py:169} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 21, 'limit': 50, 'category': '1815'}
+[2025-03-10T09:54:49.637+0000] {tiki_extract_dag.py:188} INFO - Extracted page 21/50 for category thiet-bi-kts-phu-kien-so, total items: 960
+[2025-03-10T09:55:00.799+0000] {tiki_extract_dag.py:169} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 22, 'limit': 50, 'category': '1815'}
+[2025-03-10T09:55:12.345+0000] {tiki_extract_dag.py:188} INFO - Extracted page 22/50 for category thiet-bi-kts-phu-kien-so, total items: 1000
+[2025-03-10T09:55:25.484+0000] {tiki_extract_dag.py:169} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 23, 'limit': 50, 'category': '1815'}
+[2025-03-10T09:55:38.770+0000] {tiki_extract_dag.py:188} INFO - Extracted page 23/50 for category thiet-bi-kts-phu-kien-so, total items: 1040
+[2025-03-10T09:55:50.055+0000] {tiki_extract_dag.py:169} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 24, 'limit': 50, 'category': '1815'}
+[2025-03-10T09:56:03.042+0000] {tiki_extract_dag.py:188} INFO - Extracted page 24/50 for category thiet-bi-kts-phu-kien-so, total items: 1080
+[2025-03-10T09:56:14.864+0000] {tiki_extract_dag.py:169} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 25, 'limit': 50, 'category': '1815'}
+[2025-03-10T09:56:28.816+0000] {tiki_extract_dag.py:188} INFO - Extracted page 25/50 for category thiet-bi-kts-phu-kien-so, total items: 1120
+[2025-03-10T09:56:39.930+0000] {tiki_extract_dag.py:169} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 26, 'limit': 50, 'category': '1815'}
+[2025-03-10T09:56:53.872+0000] {tiki_extract_dag.py:188} INFO - Extracted page 26/50 for category thiet-bi-kts-phu-kien-so, total items: 1160
+[2025-03-10T09:57:06.218+0000] {tiki_extract_dag.py:169} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 27, 'limit': 50, 'category': '1815'}
+[2025-03-10T09:57:19.361+0000] {tiki_extract_dag.py:188} INFO - Extracted page 27/50 for category thiet-bi-kts-phu-kien-so, total items: 1200
+[2025-03-10T09:57:29.570+0000] {tiki_extract_dag.py:169} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 28, 'limit': 50, 'category': '1815'}
+[2025-03-10T09:57:42.755+0000] {tiki_extract_dag.py:188} INFO - Extracted page 28/50 for category thiet-bi-kts-phu-kien-so, total items: 1240
+[2025-03-10T09:57:54.365+0000] {tiki_extract_dag.py:169} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 29, 'limit': 50, 'category': '1815'}
+[2025-03-10T09:58:08.168+0000] {tiki_extract_dag.py:188} INFO - Extracted page 29/50 for category thiet-bi-kts-phu-kien-so, total items: 1280
+[2025-03-10T09:58:20.741+0000] {tiki_extract_dag.py:169} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 30, 'limit': 50, 'category': '1815'}
+[2025-03-10T09:58:33.869+0000] {tiki_extract_dag.py:188} INFO - Extracted page 30/50 for category thiet-bi-kts-phu-kien-so, total items: 1320
+[2025-03-10T09:58:45.530+0000] {tiki_extract_dag.py:169} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 31, 'limit': 50, 'category': '1815'}
+[2025-03-10T09:58:58.828+0000] {tiki_extract_dag.py:188} INFO - Extracted page 31/50 for category thiet-bi-kts-phu-kien-so, total items: 1360
+[2025-03-10T09:59:09.399+0000] {tiki_extract_dag.py:169} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 32, 'limit': 50, 'category': '1815'}
+[2025-03-10T09:59:21.643+0000] {tiki_extract_dag.py:188} INFO - Extracted page 32/50 for category thiet-bi-kts-phu-kien-so, total items: 1400
+[2025-03-10T09:59:31.855+0000] {tiki_extract_dag.py:169} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 33, 'limit': 50, 'category': '1815'}
+[2025-03-10T09:59:44.563+0000] {tiki_extract_dag.py:188} INFO - Extracted page 33/50 for category thiet-bi-kts-phu-kien-so, total items: 1440
+[2025-03-10T09:59:57.957+0000] {tiki_extract_dag.py:169} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 34, 'limit': 50, 'category': '1815'}
+[2025-03-10T10:00:11.237+0000] {tiki_extract_dag.py:188} INFO - Extracted page 34/50 for category thiet-bi-kts-phu-kien-so, total items: 1480
+[2025-03-10T10:00:26.171+0000] {tiki_extract_dag.py:169} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 35, 'limit': 50, 'category': '1815'}
+[2025-03-10T10:00:38.172+0000] {tiki_extract_dag.py:188} INFO - Extracted page 35/50 for category thiet-bi-kts-phu-kien-so, total items: 1520
+[2025-03-10T10:00:50.710+0000] {tiki_extract_dag.py:169} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 36, 'limit': 50, 'category': '1815'}
+[2025-03-10T10:01:04.684+0000] {tiki_extract_dag.py:188} INFO - Extracted page 36/50 for category thiet-bi-kts-phu-kien-so, total items: 1560
+[2025-03-10T10:01:18.673+0000] {tiki_extract_dag.py:169} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 37, 'limit': 50, 'category': '1815'}
+[2025-03-10T10:01:34.602+0000] {tiki_extract_dag.py:188} INFO - Extracted page 37/50 for category thiet-bi-kts-phu-kien-so, total items: 1600
+[2025-03-10T10:01:45.027+0000] {tiki_extract_dag.py:169} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 38, 'limit': 50, 'category': '1815'}
+[2025-03-10T10:01:58.040+0000] {tiki_extract_dag.py:188} INFO - Extracted page 38/50 for category thiet-bi-kts-phu-kien-so, total items: 1640
+[2025-03-10T10:02:09.505+0000] {tiki_extract_dag.py:169} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 39, 'limit': 50, 'category': '1815'}
+[2025-03-10T10:02:21.488+0000] {tiki_extract_dag.py:188} INFO - Extracted page 39/50 for category thiet-bi-kts-phu-kien-so, total items: 1680
+[2025-03-10T10:02:35.119+0000] {tiki_extract_dag.py:169} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 40, 'limit': 50, 'category': '1815'}
+[2025-03-10T10:02:48.085+0000] {tiki_extract_dag.py:188} INFO - Extracted page 40/50 for category thiet-bi-kts-phu-kien-so, total items: 1720
+[2025-03-10T10:03:01.978+0000] {tiki_extract_dag.py:169} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 41, 'limit': 50, 'category': '1815'}
+[2025-03-10T10:03:15.332+0000] {tiki_extract_dag.py:188} INFO - Extracted page 41/50 for category thiet-bi-kts-phu-kien-so, total items: 1760
+[2025-03-10T10:03:28.988+0000] {tiki_extract_dag.py:169} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 42, 'limit': 50, 'category': '1815'}
+[2025-03-10T10:03:42.663+0000] {tiki_extract_dag.py:188} INFO - Extracted page 42/50 for category thiet-bi-kts-phu-kien-so, total items: 1800
+[2025-03-10T10:03:54.403+0000] {tiki_extract_dag.py:169} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 43, 'limit': 50, 'category': '1815'}
+[2025-03-10T10:04:06.950+0000] {tiki_extract_dag.py:188} INFO - Extracted page 43/50 for category thiet-bi-kts-phu-kien-so, total items: 1840
+[2025-03-10T10:04:18.126+0000] {tiki_extract_dag.py:169} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 44, 'limit': 50, 'category': '1815'}
+[2025-03-10T10:04:20.871+0000] {taskinstance.py:3313} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/tiki_extract_dag.py", line 184, in extract_data
+    parsed_item = parse_product(item, detailed_item)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/tiki_extract_dag.py", line 90, in parse_product
+    'seller_product_id': str(detailed_item.get('current_seller', {}).get('product_id', '')),
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+[2025-03-10T10:04:21.018+0000] {logging_mixin.py:190} INFO - Task instance in failure state
+[2025-03-10T10:04:21.019+0000] {logging_mixin.py:190} INFO - Task start:2025-03-10 09:45:21.118666+00:00 end:2025-03-10 10:04:21.007828+00:00 duration:1139.889162
+[2025-03-10T10:04:21.022+0000] {logging_mixin.py:190} INFO - Task:<Task(PythonOperator): extract_data> dag:<DAG: tiki_extract_dag> dagrun:<DagRun tiki_extract_dag @ 2025-03-10 09:17:11.640176+00:00: manual__2025-03-10T09:17:11.640176+00:00, state:running, queued_at: 2025-03-10 09:17:11.667672+00:00. externally triggered: True>
+[2025-03-10T10:04:21.023+0000] {logging_mixin.py:190} INFO - Failure caused by 'NoneType' object has no attribute 'get'
+[2025-03-10T10:04:21.024+0000] {taskinstance.py:1226} INFO - Marking task as UP_FOR_RETRY. dag_id=tiki_extract_dag, task_id=extract_data, run_id=manual__2025-03-10T09:17:11.640176+00:00, execution_date=20250310T091711, start_date=20250310T094521, end_date=20250310T100421
+[2025-03-10T10:04:21.118+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-03-10T10:04:21.122+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 395 for task extract_data ('NoneType' object has no attribute 'get'; 2095)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3006, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 274, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3161, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3185, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/tiki_extract_dag.py", line 184, in extract_data
+    parsed_item = parse_product(item, detailed_item)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/tiki_extract_dag.py", line 90, in parse_product
+    'seller_product_id': str(detailed_item.get('current_seller', {}).get('product_id', '')),
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+[2025-03-10T10:04:21.178+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-03-10T10:04:21.268+0000] {standard_task_runner.py:217} INFO - Process not found (most likely exited), stop collecting metrics
+[2025-03-10T10:04:21.279+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-03-10T10:04:21.281+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

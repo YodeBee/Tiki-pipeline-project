@@ -1,0 +1,139 @@
+[2025-03-08T05:48:36.767+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-08T05:48:36.808+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: tiki_extract_dag.extract_data manual__2025-03-08T05:48:32.249756+00:00 [queued]>
+[2025-03-08T05:48:36.828+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: tiki_extract_dag.extract_data manual__2025-03-08T05:48:32.249756+00:00 [queued]>
+[2025-03-08T05:48:36.830+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2025-03-08T05:48:36.870+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): extract_data> on 2025-03-08 05:48:32.249756+00:00
+[2025-03-08T05:48:36.885+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=90) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-08T05:48:36.888+0000] {standard_task_runner.py:72} INFO - Started process 92 to run task
+[2025-03-08T05:48:36.888+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'tiki_extract_dag', 'extract_data', 'manual__2025-03-08T05:48:32.249756+00:00', '--job-id', '50', '--raw', '--subdir', 'DAGS_FOLDER/tiki_extract_dag.py', '--cfg-path', '/tmp/tmpwyhwdqxh']
+[2025-03-08T05:48:36.890+0000] {standard_task_runner.py:105} INFO - Job 50: Subtask extract_data
+[2025-03-08T05:48:36.976+0000] {task_command.py:467} INFO - Running <TaskInstance: tiki_extract_dag.extract_data manual__2025-03-08T05:48:32.249756+00:00 [running]> on host 4dc18dee7126
+[2025-03-08T05:48:37.886+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='tiki_extract_dag' AIRFLOW_CTX_TASK_ID='extract_data' AIRFLOW_CTX_EXECUTION_DATE='2025-03-08T05:48:32.249756+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-08T05:48:32.249756+00:00'
+[2025-03-08T05:48:37.888+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-03-08T05:48:37.888+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-03-08T05:48:37.889+0000] {logging_mixin.py:190} INFO - Current task name:extract_data state:running start_date:2025-03-08 05:48:36.809949+00:00
+[2025-03-08T05:48:37.890+0000] {logging_mixin.py:190} INFO - Dag name:tiki_extract_dag and current dag run status:running
+[2025-03-08T05:48:37.891+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-03-08T05:48:38.737+0000] {crawl_data.py:101} INFO - Crawling category lam-dep-suc-khoe with 10 pages
+[2025-03-08T05:48:39.124+0000] {crawl_data.py:118} INFO - Extracted page 1 - lam-dep-suc-khoe, 10 items, total extracted: 0
+[2025-03-08T05:48:41.595+0000] {crawl_data.py:118} INFO - Extracted page 2 - lam-dep-suc-khoe, 10 items, total extracted: 0
+[2025-03-08T05:48:45.236+0000] {crawl_data.py:118} INFO - Extracted page 3 - lam-dep-suc-khoe, 10 items, total extracted: 0
+[2025-03-08T05:48:48.541+0000] {crawl_data.py:118} INFO - Extracted page 4 - lam-dep-suc-khoe, 10 items, total extracted: 0
+[2025-03-08T05:48:53.192+0000] {crawl_data.py:118} INFO - Extracted page 5 - lam-dep-suc-khoe, 10 items, total extracted: 0
+[2025-03-08T05:48:57.265+0000] {crawl_data.py:118} INFO - Extracted page 6 - lam-dep-suc-khoe, 10 items, total extracted: 0
+[2025-03-08T05:49:01.608+0000] {crawl_data.py:118} INFO - Extracted page 7 - lam-dep-suc-khoe, 10 items, total extracted: 0
+[2025-03-08T05:49:05.397+0000] {crawl_data.py:118} INFO - Extracted page 8 - lam-dep-suc-khoe, 10 items, total extracted: 0
+[2025-03-08T05:49:08.908+0000] {crawl_data.py:118} INFO - Extracted page 9 - lam-dep-suc-khoe, 10 items, total extracted: 0
+[2025-03-08T05:49:12.779+0000] {crawl_data.py:118} INFO - Extracted page 10 - lam-dep-suc-khoe, 10 items, total extracted: 0
+[2025-03-08T05:49:14.873+0000] {crawl_data.py:101} INFO - Crawling category dien-thoai-may-tinh-bang with 10 pages
+[2025-03-08T05:49:15.117+0000] {crawl_data.py:118} INFO - Extracted page 1 - dien-thoai-may-tinh-bang, 10 items, total extracted: 0
+[2025-03-08T05:49:17.796+0000] {crawl_data.py:118} INFO - Extracted page 2 - dien-thoai-may-tinh-bang, 10 items, total extracted: 0
+[2025-03-08T05:49:20.265+0000] {crawl_data.py:118} INFO - Extracted page 3 - dien-thoai-may-tinh-bang, 10 items, total extracted: 0
+[2025-03-08T05:49:23.372+0000] {crawl_data.py:118} INFO - Extracted page 4 - dien-thoai-may-tinh-bang, 10 items, total extracted: 0
+[2025-03-08T05:49:26.111+0000] {crawl_data.py:118} INFO - Extracted page 5 - dien-thoai-may-tinh-bang, 10 items, total extracted: 1
+[2025-03-08T05:49:31.194+0000] {crawl_data.py:118} INFO - Extracted page 6 - dien-thoai-may-tinh-bang, 10 items, total extracted: 1
+[2025-03-08T05:49:34.603+0000] {crawl_data.py:118} INFO - Extracted page 7 - dien-thoai-may-tinh-bang, 10 items, total extracted: 1
+[2025-03-08T05:49:38.476+0000] {crawl_data.py:118} INFO - Extracted page 8 - dien-thoai-may-tinh-bang, 10 items, total extracted: 1
+[2025-03-08T05:49:41.593+0000] {crawl_data.py:118} INFO - Extracted page 9 - dien-thoai-may-tinh-bang, 10 items, total extracted: 1
+[2025-03-08T05:49:46.201+0000] {crawl_data.py:118} INFO - Extracted page 10 - dien-thoai-may-tinh-bang, 10 items, total extracted: 1
+[2025-03-08T05:49:48.366+0000] {crawl_data.py:101} INFO - Crawling category laptop-may-vi-tinh-linh-kien with 10 pages
+[2025-03-08T05:49:48.785+0000] {crawl_data.py:118} INFO - Extracted page 1 - laptop-may-vi-tinh-linh-kien, 10 items, total extracted: 1
+[2025-03-08T05:49:53.003+0000] {crawl_data.py:118} INFO - Extracted page 2 - laptop-may-vi-tinh-linh-kien, 10 items, total extracted: 1
+[2025-03-08T05:49:56.678+0000] {crawl_data.py:118} INFO - Extracted page 3 - laptop-may-vi-tinh-linh-kien, 10 items, total extracted: 1
+[2025-03-08T05:50:00.706+0000] {crawl_data.py:118} INFO - Extracted page 4 - laptop-may-vi-tinh-linh-kien, 10 items, total extracted: 1
+[2025-03-08T05:50:05.763+0000] {crawl_data.py:118} INFO - Extracted page 5 - laptop-may-vi-tinh-linh-kien, 10 items, total extracted: 1
+[2025-03-08T05:50:08.661+0000] {crawl_data.py:118} INFO - Extracted page 6 - laptop-may-vi-tinh-linh-kien, 10 items, total extracted: 1
+[2025-03-08T05:50:13.976+0000] {crawl_data.py:118} INFO - Extracted page 7 - laptop-may-vi-tinh-linh-kien, 10 items, total extracted: 1
+[2025-03-08T05:50:17.406+0000] {crawl_data.py:118} INFO - Extracted page 8 - laptop-may-vi-tinh-linh-kien, 10 items, total extracted: 1
+[2025-03-08T05:50:20.709+0000] {crawl_data.py:118} INFO - Extracted page 9 - laptop-may-vi-tinh-linh-kien, 10 items, total extracted: 1
+[2025-03-08T05:50:24.130+0000] {crawl_data.py:118} INFO - Extracted page 10 - laptop-may-vi-tinh-linh-kien, 10 items, total extracted: 1
+[2025-03-08T05:50:27.576+0000] {crawl_data.py:101} INFO - Crawling category dien-gia-dung with 10 pages
+[2025-03-08T05:50:27.926+0000] {crawl_data.py:118} INFO - Extracted page 1 - dien-gia-dung, 10 items, total extracted: 1
+[2025-03-08T05:50:31.463+0000] {crawl_data.py:118} INFO - Extracted page 2 - dien-gia-dung, 10 items, total extracted: 1
+[2025-03-08T05:50:35.674+0000] {crawl_data.py:118} INFO - Extracted page 3 - dien-gia-dung, 10 items, total extracted: 1
+[2025-03-08T05:50:38.993+0000] {crawl_data.py:118} INFO - Extracted page 4 - dien-gia-dung, 10 items, total extracted: 1
+[2025-03-08T05:50:43.529+0000] {crawl_data.py:118} INFO - Extracted page 5 - dien-gia-dung, 10 items, total extracted: 1
+[2025-03-08T05:50:48.463+0000] {crawl_data.py:118} INFO - Extracted page 6 - dien-gia-dung, 10 items, total extracted: 1
+[2025-03-08T05:50:51.002+0000] {crawl_data.py:118} INFO - Extracted page 7 - dien-gia-dung, 10 items, total extracted: 1
+[2025-03-08T05:50:54.326+0000] {crawl_data.py:118} INFO - Extracted page 8 - dien-gia-dung, 10 items, total extracted: 2
+[2025-03-08T05:50:58.886+0000] {crawl_data.py:118} INFO - Extracted page 9 - dien-gia-dung, 10 items, total extracted: 2
+[2025-03-08T05:51:01.283+0000] {crawl_data.py:118} INFO - Extracted page 10 - dien-gia-dung, 10 items, total extracted: 2
+[2025-03-08T05:51:03.480+0000] {crawl_data.py:101} INFO - Crawling category sach with 10 pages
+[2025-03-08T05:51:03.892+0000] {crawl_data.py:118} INFO - Extracted page 1 - sach, 10 items, total extracted: 2
+[2025-03-08T05:51:07.230+0000] {crawl_data.py:118} INFO - Extracted page 2 - sach, 10 items, total extracted: 2
+[2025-03-08T05:51:09.836+0000] {crawl_data.py:118} INFO - Extracted page 3 - sach, 10 items, total extracted: 2
+[2025-03-08T05:51:12.819+0000] {crawl_data.py:118} INFO - Extracted page 4 - sach, 10 items, total extracted: 2
+[2025-03-08T05:51:17.146+0000] {crawl_data.py:118} INFO - Extracted page 5 - sach, 10 items, total extracted: 2
+[2025-03-08T05:51:21.416+0000] {crawl_data.py:118} INFO - Extracted page 6 - sach, 10 items, total extracted: 2
+[2025-03-08T05:51:23.916+0000] {crawl_data.py:118} INFO - Extracted page 7 - sach, 10 items, total extracted: 2
+[2025-03-08T05:51:28.095+0000] {crawl_data.py:118} INFO - Extracted page 8 - sach, 10 items, total extracted: 2
+[2025-03-08T05:51:32.945+0000] {crawl_data.py:118} INFO - Extracted page 9 - sach, 10 items, total extracted: 2
+[2025-03-08T05:51:37.228+0000] {crawl_data.py:118} INFO - Extracted page 10 - sach, 10 items, total extracted: 2
+[2025-03-08T05:51:41.686+0000] {crawl_data.py:101} INFO - Crawling category thiet-bi-kts-phu-kien-so with 10 pages
+[2025-03-08T05:51:42.029+0000] {crawl_data.py:118} INFO - Extracted page 1 - thiet-bi-kts-phu-kien-so, 10 items, total extracted: 2
+[2025-03-08T05:51:47.303+0000] {crawl_data.py:118} INFO - Extracted page 2 - thiet-bi-kts-phu-kien-so, 10 items, total extracted: 2
+[2025-03-08T05:51:51.055+0000] {crawl_data.py:118} INFO - Extracted page 3 - thiet-bi-kts-phu-kien-so, 10 items, total extracted: 2
+[2025-03-08T05:51:53.835+0000] {crawl_data.py:118} INFO - Extracted page 4 - thiet-bi-kts-phu-kien-so, 10 items, total extracted: 3
+[2025-03-08T05:51:56.494+0000] {crawl_data.py:118} INFO - Extracted page 5 - thiet-bi-kts-phu-kien-so, 10 items, total extracted: 3
+[2025-03-08T05:51:59.008+0000] {crawl_data.py:118} INFO - Extracted page 6 - thiet-bi-kts-phu-kien-so, 10 items, total extracted: 3
+[2025-03-08T05:52:04.033+0000] {crawl_data.py:118} INFO - Extracted page 7 - thiet-bi-kts-phu-kien-so, 10 items, total extracted: 3
+[2025-03-08T05:52:06.282+0000] {crawl_data.py:118} INFO - Extracted page 8 - thiet-bi-kts-phu-kien-so, 10 items, total extracted: 3
+[2025-03-08T05:52:08.909+0000] {crawl_data.py:118} INFO - Extracted page 9 - thiet-bi-kts-phu-kien-so, 10 items, total extracted: 3
+[2025-03-08T05:52:11.580+0000] {crawl_data.py:118} INFO - Extracted page 10 - thiet-bi-kts-phu-kien-so, 10 items, total extracted: 3
+[2025-03-08T05:52:14.164+0000] {crawl_data.py:101} INFO - Crawling category thoi-trang-nu with 10 pages
+[2025-03-08T05:52:14.586+0000] {crawl_data.py:118} INFO - Extracted page 1 - thoi-trang-nu, 10 items, total extracted: 3
+[2025-03-08T05:52:19.121+0000] {crawl_data.py:118} INFO - Extracted page 2 - thoi-trang-nu, 10 items, total extracted: 3
+[2025-03-08T05:52:21.519+0000] {crawl_data.py:118} INFO - Extracted page 3 - thoi-trang-nu, 10 items, total extracted: 3
+[2025-03-08T05:52:24.108+0000] {crawl_data.py:118} INFO - Extracted page 4 - thoi-trang-nu, 10 items, total extracted: 3
+[2025-03-08T05:52:28.697+0000] {crawl_data.py:118} INFO - Extracted page 5 - thoi-trang-nu, 10 items, total extracted: 3
+[2025-03-08T05:52:31.013+0000] {crawl_data.py:118} INFO - Extracted page 6 - thoi-trang-nu, 10 items, total extracted: 3
+[2025-03-08T05:52:36.239+0000] {crawl_data.py:118} INFO - Extracted page 7 - thoi-trang-nu, 10 items, total extracted: 3
+[2025-03-08T05:52:38.568+0000] {crawl_data.py:118} INFO - Extracted page 8 - thoi-trang-nu, 10 items, total extracted: 3
+[2025-03-08T05:52:41.717+0000] {crawl_data.py:118} INFO - Extracted page 9 - thoi-trang-nu, 10 items, total extracted: 3
+[2025-03-08T05:52:46.153+0000] {crawl_data.py:118} INFO - Extracted page 10 - thoi-trang-nu, 10 items, total extracted: 3
+[2025-03-08T05:52:49.623+0000] {crawl_data.py:101} INFO - Crawling category thoi-trang-nam with 10 pages
+[2025-03-08T05:52:50.050+0000] {crawl_data.py:118} INFO - Extracted page 1 - thoi-trang-nam, 10 items, total extracted: 3
+[2025-03-08T05:52:54.746+0000] {crawl_data.py:118} INFO - Extracted page 2 - thoi-trang-nam, 10 items, total extracted: 3
+[2025-03-08T05:52:59.082+0000] {crawl_data.py:118} INFO - Extracted page 3 - thoi-trang-nam, 10 items, total extracted: 3
+[2025-03-08T05:53:04.357+0000] {crawl_data.py:118} INFO - Extracted page 4 - thoi-trang-nam, 10 items, total extracted: 3
+[2025-03-08T05:53:09.513+0000] {crawl_data.py:118} INFO - Extracted page 5 - thoi-trang-nam, 10 items, total extracted: 3
+[2025-03-08T05:53:13.422+0000] {crawl_data.py:118} INFO - Extracted page 6 - thoi-trang-nam, 10 items, total extracted: 3
+[2025-03-08T05:53:16.254+0000] {crawl_data.py:118} INFO - Extracted page 7 - thoi-trang-nam, 10 items, total extracted: 3
+[2025-03-08T05:53:19.722+0000] {crawl_data.py:118} INFO - Extracted page 8 - thoi-trang-nam, 10 items, total extracted: 3
+[2025-03-08T05:53:23.322+0000] {crawl_data.py:118} INFO - Extracted page 9 - thoi-trang-nam, 10 items, total extracted: 3
+[2025-03-08T05:53:28.303+0000] {crawl_data.py:118} INFO - Extracted page 10 - thoi-trang-nam, 10 items, total extracted: 3
+[2025-03-08T05:53:30.908+0000] {crawl_data.py:101} INFO - Crawling category dong-ho-va-trang-suc with 10 pages
+[2025-03-08T05:53:31.357+0000] {crawl_data.py:118} INFO - Extracted page 1 - dong-ho-va-trang-suc, 10 items, total extracted: 3
+[2025-03-08T05:53:36.186+0000] {crawl_data.py:118} INFO - Extracted page 2 - dong-ho-va-trang-suc, 10 items, total extracted: 3
+[2025-03-08T05:53:40.665+0000] {crawl_data.py:118} INFO - Extracted page 3 - dong-ho-va-trang-suc, 10 items, total extracted: 3
+[2025-03-08T05:53:45.545+0000] {crawl_data.py:118} INFO - Extracted page 4 - dong-ho-va-trang-suc, 10 items, total extracted: 3
+[2025-03-08T05:53:49.564+0000] {crawl_data.py:118} INFO - Extracted page 5 - dong-ho-va-trang-suc, 10 items, total extracted: 3
+[2025-03-08T05:53:54.131+0000] {crawl_data.py:118} INFO - Extracted page 6 - dong-ho-va-trang-suc, 10 items, total extracted: 3
+[2025-03-08T05:53:56.850+0000] {crawl_data.py:118} INFO - Extracted page 7 - dong-ho-va-trang-suc, 10 items, total extracted: 3
+[2025-03-08T05:54:02.136+0000] {crawl_data.py:118} INFO - Extracted page 8 - dong-ho-va-trang-suc, 10 items, total extracted: 3
+[2025-03-08T05:54:05.236+0000] {crawl_data.py:118} INFO - Extracted page 9 - dong-ho-va-trang-suc, 10 items, total extracted: 3
+[2025-03-08T05:54:08.172+0000] {crawl_data.py:118} INFO - Extracted page 10 - dong-ho-va-trang-suc, 10 items, total extracted: 3
+[2025-03-08T05:54:11.310+0000] {crawl_data.py:101} INFO - Crawling category dien-tu-dien-lanh with 10 pages
+[2025-03-08T05:54:11.470+0000] {crawl_data.py:118} INFO - Extracted page 1 - dien-tu-dien-lanh, 10 items, total extracted: 3
+[2025-03-08T05:54:14.149+0000] {crawl_data.py:118} INFO - Extracted page 2 - dien-tu-dien-lanh, 10 items, total extracted: 3
+[2025-03-08T05:54:18.506+0000] {crawl_data.py:118} INFO - Extracted page 3 - dien-tu-dien-lanh, 10 items, total extracted: 3
+[2025-03-08T05:54:21.592+0000] {crawl_data.py:118} INFO - Extracted page 4 - dien-tu-dien-lanh, 10 items, total extracted: 3
+[2025-03-08T05:54:26.596+0000] {crawl_data.py:118} INFO - Extracted page 5 - dien-tu-dien-lanh, 10 items, total extracted: 3
+[2025-03-08T05:54:29.272+0000] {crawl_data.py:118} INFO - Extracted page 6 - dien-tu-dien-lanh, 10 items, total extracted: 3
+[2025-03-08T05:54:32.039+0000] {crawl_data.py:118} INFO - Extracted page 7 - dien-tu-dien-lanh, 10 items, total extracted: 3
+[2025-03-08T05:54:35.125+0000] {crawl_data.py:118} INFO - Extracted page 8 - dien-tu-dien-lanh, 10 items, total extracted: 3
+[2025-03-08T05:54:39.757+0000] {crawl_data.py:118} INFO - Extracted page 9 - dien-tu-dien-lanh, 10 items, total extracted: 3
+[2025-03-08T05:54:43.469+0000] {crawl_data.py:118} INFO - Extracted page 10 - dien-tu-dien-lanh, 10 items, total extracted: 3
+[2025-03-08T05:54:50.577+0000] {crawl_data.py:135} INFO - Uploaded raw data to tiki-data/tiki_raw_data/raw_20250308_055448.json, total items: 3
+[2025-03-08T05:54:50.608+0000] {python.py:240} INFO - Done. Returned value was: tiki_raw_data/raw_20250308_055448.json
+[2025-03-08T05:54:50.643+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-03-08T05:54:50.644+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=tiki_extract_dag, task_id=extract_data, run_id=manual__2025-03-08T05:48:32.249756+00:00, execution_date=20250308T054832, start_date=20250308T054836, end_date=20250308T055450
+[2025-03-08T05:54:50.691+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-03-08T05:54:50.692+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-03-08T05:54:50.693+0000] {logging_mixin.py:190} INFO - Dag name:tiki_extract_dag queued_at:2025-03-08 05:48:32.303944+00:00
+[2025-03-08T05:54:50.694+0000] {logging_mixin.py:190} INFO - Task hostname:4dc18dee7126 operator:PythonOperator
+[2025-03-08T05:54:50.753+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-03-08T05:54:50.785+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-03-08T05:54:50.789+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

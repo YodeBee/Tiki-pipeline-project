@@ -1,0 +1,493 @@
+[2025-03-09T10:47:20.565+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-09T10:47:20.597+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: tiki_extract_dag.extract_data manual__2025-03-09T10:47:16.261763+00:00 [queued]>
+[2025-03-09T10:47:20.613+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: tiki_extract_dag.extract_data manual__2025-03-09T10:47:16.261763+00:00 [queued]>
+[2025-03-09T10:47:20.615+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2025-03-09T10:47:20.646+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): extract_data> on 2025-03-09 10:47:16.261763+00:00
+[2025-03-09T10:47:20.662+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=84) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-09T10:47:20.667+0000] {standard_task_runner.py:72} INFO - Started process 86 to run task
+[2025-03-09T10:47:20.666+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'tiki_extract_dag', 'extract_data', 'manual__2025-03-09T10:47:16.261763+00:00', '--job-id', '124', '--raw', '--subdir', 'DAGS_FOLDER/tiki_extract_dag.py', '--cfg-path', '/tmp/tmp_8r3rsn7']
+[2025-03-09T10:47:20.673+0000] {standard_task_runner.py:105} INFO - Job 124: Subtask extract_data
+[2025-03-09T10:47:20.773+0000] {task_command.py:467} INFO - Running <TaskInstance: tiki_extract_dag.extract_data manual__2025-03-09T10:47:16.261763+00:00 [running]> on host 4dc18dee7126
+[2025-03-09T10:47:21.322+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='tiki_extract_dag' AIRFLOW_CTX_TASK_ID='extract_data' AIRFLOW_CTX_EXECUTION_DATE='2025-03-09T10:47:16.261763+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-09T10:47:16.261763+00:00'
+[2025-03-09T10:47:21.324+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-03-09T10:47:21.325+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-03-09T10:47:21.326+0000] {logging_mixin.py:190} INFO - Current task name:extract_data state:running start_date:2025-03-09 10:47:20.599117+00:00
+[2025-03-09T10:47:21.327+0000] {logging_mixin.py:190} INFO - Dag name:tiki_extract_dag and current dag run status:running
+[2025-03-09T10:47:21.328+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-03-09T10:47:21.415+0000] {tiki_extract_dag.py:28} INFO - Loaded categories: ['lam-dep-suc-khoe', 'dien-thoai-may-tinh-bang', 'laptop-may-vi-tinh-linh-kien', 'dien-gia-dung', 'sach', 'thiet-bi-kts-phu-kien-so', 'thoi-trang-nu', 'thoi-trang-nam', 'dong-ho-va-trang-suc', 'dien-tu-dien-lanh']
+[2025-03-09T10:47:21.416+0000] {tiki_extract_dag.py:29} INFO - Execution date: 2025-03-09 10:47:16.261763+00:00
+[2025-03-09T10:47:22.279+0000] {crawl_data.py:106} INFO - Crawling category lam-dep-suc-khoe with 5 pages
+[2025-03-09T10:47:22.915+0000] {crawl_data.py:128} INFO - Skipped product 276003962 due to duplicate
+[2025-03-09T10:47:22.916+0000] {crawl_data.py:128} INFO - Skipped product 275970393 due to duplicate
+[2025-03-09T10:47:22.917+0000] {crawl_data.py:128} INFO - Skipped product 273598230 due to duplicate
+[2025-03-09T10:47:22.918+0000] {crawl_data.py:128} INFO - Skipped product 191680827 due to duplicate
+[2025-03-09T10:47:22.919+0000] {crawl_data.py:128} INFO - Skipped product 186434710 due to duplicate
+[2025-03-09T10:47:22.920+0000] {crawl_data.py:128} INFO - Skipped product 179988643 due to duplicate
+[2025-03-09T10:47:22.921+0000] {crawl_data.py:128} INFO - Skipped product 171564906 due to duplicate
+[2025-03-09T10:47:22.921+0000] {crawl_data.py:128} INFO - Skipped product 168562118 due to duplicate
+[2025-03-09T10:47:22.922+0000] {crawl_data.py:128} INFO - Skipped product 133245970 due to duplicate
+[2025-03-09T10:47:22.923+0000] {crawl_data.py:128} INFO - Skipped product 128912879 due to duplicate
+[2025-03-09T10:47:22.924+0000] {crawl_data.py:128} INFO - Skipped product 127026903 due to duplicate
+[2025-03-09T10:47:22.925+0000] {crawl_data.py:128} INFO - Skipped product 118708687 due to duplicate
+[2025-03-09T10:47:22.926+0000] {crawl_data.py:128} INFO - Skipped product 108535251 due to duplicate
+[2025-03-09T10:47:22.927+0000] {crawl_data.py:128} INFO - Skipped product 95253531 due to duplicate
+[2025-03-09T10:47:22.928+0000] {crawl_data.py:128} INFO - Skipped product 93078800 due to duplicate
+[2025-03-09T10:47:22.928+0000] {crawl_data.py:128} INFO - Skipped product 91565733 due to duplicate
+[2025-03-09T10:47:22.929+0000] {crawl_data.py:128} INFO - Skipped product 72644676 due to duplicate
+[2025-03-09T10:47:22.930+0000] {crawl_data.py:128} INFO - Skipped product 25108217 due to duplicate
+[2025-03-09T10:47:22.931+0000] {crawl_data.py:128} INFO - Skipped product 22254660 due to duplicate
+[2025-03-09T10:47:22.932+0000] {crawl_data.py:128} INFO - Skipped product 22052325 due to duplicate
+[2025-03-09T10:47:22.933+0000] {crawl_data.py:128} INFO - Skipped product 20541866 due to duplicate
+[2025-03-09T10:47:22.934+0000] {crawl_data.py:128} INFO - Skipped product 14115539 due to duplicate
+[2025-03-09T10:47:22.935+0000] {crawl_data.py:128} INFO - Skipped product 10298023 due to duplicate
+[2025-03-09T10:47:22.936+0000] {crawl_data.py:128} INFO - Skipped product 10071383 due to duplicate
+[2025-03-09T10:47:22.937+0000] {crawl_data.py:128} INFO - Skipped product 6874429 due to duplicate
+[2025-03-09T10:47:22.938+0000] {crawl_data.py:128} INFO - Skipped product 5902685 due to duplicate
+[2025-03-09T10:47:22.939+0000] {crawl_data.py:128} INFO - Skipped product 5560235 due to duplicate
+[2025-03-09T10:47:22.940+0000] {crawl_data.py:128} INFO - Skipped product 3554629 due to duplicate
+[2025-03-09T10:47:22.941+0000] {crawl_data.py:128} INFO - Skipped product 2042227 due to duplicate
+[2025-03-09T10:47:22.942+0000] {crawl_data.py:128} INFO - Skipped product 1672211 due to duplicate
+[2025-03-09T10:47:22.943+0000] {crawl_data.py:128} INFO - Skipped product 1672157 due to duplicate
+[2025-03-09T10:47:22.944+0000] {crawl_data.py:128} INFO - Skipped product 1672155 due to duplicate
+[2025-03-09T10:47:22.944+0000] {crawl_data.py:128} INFO - Skipped product 1672153 due to duplicate
+[2025-03-09T10:47:22.945+0000] {crawl_data.py:128} INFO - Skipped product 1634983 due to duplicate
+[2025-03-09T10:47:22.946+0000] {crawl_data.py:128} INFO - Skipped product 1634981 due to duplicate
+[2025-03-09T10:47:22.947+0000] {crawl_data.py:128} INFO - Skipped product 1537315 due to duplicate
+[2025-03-09T10:47:22.948+0000] {crawl_data.py:128} INFO - Skipped product 767101 due to duplicate
+[2025-03-09T10:47:22.949+0000] {crawl_data.py:128} INFO - Skipped product 632680 due to duplicate
+[2025-03-09T10:47:22.950+0000] {crawl_data.py:128} INFO - Skipped product 385654 due to duplicate
+[2025-03-09T10:47:22.951+0000] {crawl_data.py:128} INFO - Skipped product 385582 due to duplicate
+[2025-03-09T10:47:22.952+0000] {crawl_data.py:131} INFO - Extracted page 1 - lam-dep-suc-khoe, 40 items, total extracted: 0
+[2025-03-09T10:47:26.592+0000] {crawl_data.py:128} INFO - Skipped product 276540526 due to duplicate
+[2025-03-09T10:47:26.593+0000] {crawl_data.py:128} INFO - Skipped product 275969670 due to duplicate
+[2025-03-09T10:47:26.594+0000] {crawl_data.py:128} INFO - Skipped product 274884816 due to duplicate
+[2025-03-09T10:47:26.595+0000] {crawl_data.py:128} INFO - Skipped product 273201159 due to duplicate
+[2025-03-09T10:47:26.596+0000] {crawl_data.py:128} INFO - Skipped product 260844985 due to duplicate
+[2025-03-09T10:47:26.597+0000] {crawl_data.py:128} INFO - Skipped product 214230523 due to duplicate
+[2025-03-09T10:47:26.598+0000] {crawl_data.py:128} INFO - Skipped product 195927144 due to duplicate
+[2025-03-09T10:47:26.599+0000] {crawl_data.py:128} INFO - Skipped product 193583705 due to duplicate
+[2025-03-09T10:47:26.600+0000] {crawl_data.py:128} INFO - Skipped product 182457734 due to duplicate
+[2025-03-09T10:47:26.601+0000] {crawl_data.py:128} INFO - Skipped product 176672113 due to duplicate
+[2025-03-09T10:47:26.603+0000] {crawl_data.py:128} INFO - Skipped product 174071718 due to duplicate
+[2025-03-09T10:47:26.604+0000] {crawl_data.py:128} INFO - Skipped product 153599393 due to duplicate
+[2025-03-09T10:47:26.605+0000] {crawl_data.py:128} INFO - Skipped product 137534886 due to duplicate
+[2025-03-09T10:47:26.606+0000] {crawl_data.py:128} INFO - Skipped product 133245977 due to duplicate
+[2025-03-09T10:47:26.607+0000] {crawl_data.py:128} INFO - Skipped product 132353050 due to duplicate
+[2025-03-09T10:47:26.608+0000] {crawl_data.py:128} INFO - Skipped product 117926982 due to duplicate
+[2025-03-09T10:47:26.609+0000] {crawl_data.py:128} INFO - Skipped product 103341055 due to duplicate
+[2025-03-09T10:47:26.609+0000] {crawl_data.py:128} INFO - Skipped product 73574991 due to duplicate
+[2025-03-09T10:47:26.611+0000] {crawl_data.py:128} INFO - Skipped product 72790514 due to duplicate
+[2025-03-09T10:47:26.612+0000] {crawl_data.py:128} INFO - Skipped product 68832828 due to duplicate
+[2025-03-09T10:47:26.613+0000] {crawl_data.py:128} INFO - Skipped product 56218973 due to duplicate
+[2025-03-09T10:47:26.614+0000] {crawl_data.py:128} INFO - Skipped product 54865932 due to duplicate
+[2025-03-09T10:47:26.615+0000] {crawl_data.py:128} INFO - Skipped product 54058503 due to duplicate
+[2025-03-09T10:47:26.616+0000] {crawl_data.py:128} INFO - Skipped product 52758862 due to duplicate
+[2025-03-09T10:47:26.617+0000] {crawl_data.py:128} INFO - Skipped product 35031098 due to duplicate
+[2025-03-09T10:47:26.618+0000] {crawl_data.py:128} INFO - Skipped product 33785195 due to duplicate
+[2025-03-09T10:47:26.619+0000] {crawl_data.py:128} INFO - Skipped product 33597687 due to duplicate
+[2025-03-09T10:47:26.620+0000] {crawl_data.py:128} INFO - Skipped product 25917926 due to duplicate
+[2025-03-09T10:47:26.621+0000] {crawl_data.py:128} INFO - Skipped product 11949005 due to duplicate
+[2025-03-09T10:47:26.622+0000] {crawl_data.py:128} INFO - Skipped product 10278713 due to duplicate
+[2025-03-09T10:47:26.623+0000] {crawl_data.py:128} INFO - Skipped product 3265121 due to duplicate
+[2025-03-09T10:47:26.624+0000] {crawl_data.py:128} INFO - Skipped product 2042221 due to duplicate
+[2025-03-09T10:47:26.625+0000] {crawl_data.py:128} INFO - Skipped product 1687625 due to duplicate
+[2025-03-09T10:47:26.626+0000] {crawl_data.py:128} INFO - Skipped product 1081764 due to duplicate
+[2025-03-09T10:47:26.628+0000] {crawl_data.py:128} INFO - Skipped product 631525 due to duplicate
+[2025-03-09T10:47:26.629+0000] {crawl_data.py:128} INFO - Skipped product 631496 due to duplicate
+[2025-03-09T10:47:26.630+0000] {crawl_data.py:128} INFO - Skipped product 631034 due to duplicate
+[2025-03-09T10:47:26.631+0000] {crawl_data.py:128} INFO - Skipped product 385615 due to duplicate
+[2025-03-09T10:47:26.632+0000] {crawl_data.py:128} INFO - Skipped product 385614 due to duplicate
+[2025-03-09T10:47:26.633+0000] {crawl_data.py:128} INFO - Skipped product 385574 due to duplicate
+[2025-03-09T10:47:26.634+0000] {crawl_data.py:131} INFO - Extracted page 2 - lam-dep-suc-khoe, 40 items, total extracted: 0
+[2025-03-09T10:47:30.190+0000] {crawl_data.py:128} INFO - Skipped product 274948742 due to duplicate
+[2025-03-09T10:47:30.191+0000] {crawl_data.py:128} INFO - Skipped product 215539080 due to duplicate
+[2025-03-09T10:47:30.193+0000] {crawl_data.py:128} INFO - Skipped product 212219580 due to duplicate
+[2025-03-09T10:47:30.194+0000] {crawl_data.py:128} INFO - Skipped product 199009119 due to duplicate
+[2025-03-09T10:47:30.195+0000] {crawl_data.py:128} INFO - Skipped product 197922834 due to duplicate
+[2025-03-09T10:47:30.196+0000] {crawl_data.py:128} INFO - Skipped product 197920686 due to duplicate
+[2025-03-09T10:47:30.197+0000] {crawl_data.py:128} INFO - Skipped product 197378660 due to duplicate
+[2025-03-09T10:47:30.198+0000] {crawl_data.py:128} INFO - Skipped product 186288869 due to duplicate
+[2025-03-09T10:47:30.199+0000] {crawl_data.py:128} INFO - Skipped product 186270101 due to duplicate
+[2025-03-09T10:47:30.200+0000] {crawl_data.py:128} INFO - Skipped product 176756454 due to duplicate
+[2025-03-09T10:47:30.202+0000] {crawl_data.py:128} INFO - Skipped product 170491702 due to duplicate
+[2025-03-09T10:47:30.203+0000] {crawl_data.py:128} INFO - Skipped product 149460253 due to duplicate
+[2025-03-09T10:47:30.204+0000] {crawl_data.py:128} INFO - Skipped product 144228451 due to duplicate
+[2025-03-09T10:47:30.205+0000] {crawl_data.py:128} INFO - Skipped product 134592241 due to duplicate
+[2025-03-09T10:47:30.206+0000] {crawl_data.py:128} INFO - Skipped product 132081941 due to duplicate
+[2025-03-09T10:47:30.207+0000] {crawl_data.py:128} INFO - Skipped product 126945370 due to duplicate
+[2025-03-09T10:47:30.208+0000] {crawl_data.py:128} INFO - Skipped product 108535196 due to duplicate
+[2025-03-09T10:47:30.209+0000] {crawl_data.py:128} INFO - Skipped product 90331609 due to duplicate
+[2025-03-09T10:47:30.209+0000] {crawl_data.py:128} INFO - Skipped product 89441903 due to duplicate
+[2025-03-09T10:47:30.210+0000] {crawl_data.py:128} INFO - Skipped product 74306493 due to duplicate
+[2025-03-09T10:47:30.211+0000] {crawl_data.py:128} INFO - Skipped product 48291660 due to duplicate
+[2025-03-09T10:47:30.212+0000] {crawl_data.py:128} INFO - Skipped product 45319679 due to duplicate
+[2025-03-09T10:47:30.213+0000] {crawl_data.py:128} INFO - Skipped product 45319677 due to duplicate
+[2025-03-09T10:47:30.214+0000] {crawl_data.py:128} INFO - Skipped product 44878245 due to duplicate
+[2025-03-09T10:47:30.215+0000] {crawl_data.py:128} INFO - Skipped product 35226725 due to duplicate
+[2025-03-09T10:47:30.216+0000] {crawl_data.py:128} INFO - Skipped product 34480145 due to duplicate
+[2025-03-09T10:47:30.217+0000] {crawl_data.py:128} INFO - Skipped product 25074713 due to duplicate
+[2025-03-09T10:47:30.218+0000] {crawl_data.py:128} INFO - Skipped product 22052317 due to duplicate
+[2025-03-09T10:47:30.219+0000] {crawl_data.py:128} INFO - Skipped product 19805004 due to duplicate
+[2025-03-09T10:47:30.220+0000] {crawl_data.py:128} INFO - Skipped product 19616866 due to duplicate
+[2025-03-09T10:47:30.221+0000] {crawl_data.py:128} INFO - Skipped product 14423711 due to duplicate
+[2025-03-09T10:47:30.222+0000] {crawl_data.py:128} INFO - Skipped product 12082922 due to duplicate
+[2025-03-09T10:47:30.223+0000] {crawl_data.py:128} INFO - Skipped product 10758843 due to duplicate
+[2025-03-09T10:47:30.224+0000] {crawl_data.py:128} INFO - Skipped product 1313871 due to duplicate
+[2025-03-09T10:47:30.225+0000] {crawl_data.py:128} INFO - Skipped product 796867 due to duplicate
+[2025-03-09T10:47:30.226+0000] {crawl_data.py:128} INFO - Skipped product 580690 due to duplicate
+[2025-03-09T10:47:30.227+0000] {crawl_data.py:128} INFO - Skipped product 470430 due to duplicate
+[2025-03-09T10:47:30.228+0000] {crawl_data.py:128} INFO - Skipped product 435317 due to duplicate
+[2025-03-09T10:47:30.229+0000] {crawl_data.py:128} INFO - Skipped product 389688 due to duplicate
+[2025-03-09T10:47:30.230+0000] {crawl_data.py:128} INFO - Skipped product 284446 due to duplicate
+[2025-03-09T10:47:30.231+0000] {crawl_data.py:131} INFO - Extracted page 3 - lam-dep-suc-khoe, 40 items, total extracted: 0
+[2025-03-09T10:47:34.241+0000] {crawl_data.py:128} INFO - Skipped product 276396801 due to duplicate
+[2025-03-09T10:47:34.243+0000] {crawl_data.py:128} INFO - Skipped product 276258665 due to duplicate
+[2025-03-09T10:47:34.244+0000] {crawl_data.py:128} INFO - Skipped product 276257651 due to duplicate
+[2025-03-09T10:47:34.245+0000] {crawl_data.py:128} INFO - Skipped product 274317383 due to duplicate
+[2025-03-09T10:47:34.246+0000] {crawl_data.py:128} INFO - Skipped product 248523366 due to duplicate
+[2025-03-09T10:47:34.247+0000] {crawl_data.py:128} INFO - Skipped product 205080549 due to duplicate
+[2025-03-09T10:47:34.248+0000] {crawl_data.py:128} INFO - Skipped product 195969972 due to duplicate
+[2025-03-09T10:47:34.249+0000] {crawl_data.py:128} INFO - Skipped product 193879341 due to duplicate
+[2025-03-09T10:47:34.250+0000] {crawl_data.py:128} INFO - Skipped product 186305097 due to duplicate
+[2025-03-09T10:47:34.252+0000] {crawl_data.py:128} INFO - Skipped product 186270829 due to duplicate
+[2025-03-09T10:47:34.253+0000] {crawl_data.py:128} INFO - Skipped product 184793101 due to duplicate
+[2025-03-09T10:47:34.253+0000] {crawl_data.py:128} INFO - Skipped product 176672117 due to duplicate
+[2025-03-09T10:47:34.255+0000] {crawl_data.py:128} INFO - Skipped product 175814174 due to duplicate
+[2025-03-09T10:47:34.255+0000] {crawl_data.py:128} INFO - Skipped product 158762755 due to duplicate
+[2025-03-09T10:47:34.256+0000] {crawl_data.py:128} INFO - Skipped product 153597872 due to duplicate
+[2025-03-09T10:47:34.258+0000] {crawl_data.py:128} INFO - Skipped product 149467412 due to duplicate
+[2025-03-09T10:47:34.259+0000] {crawl_data.py:128} INFO - Skipped product 117793839 due to duplicate
+[2025-03-09T10:47:34.260+0000] {crawl_data.py:128} INFO - Skipped product 117147637 due to duplicate
+[2025-03-09T10:47:34.260+0000] {crawl_data.py:128} INFO - Skipped product 108535223 due to duplicate
+[2025-03-09T10:47:34.261+0000] {crawl_data.py:128} INFO - Skipped product 105821846 due to duplicate
+[2025-03-09T10:47:34.263+0000] {crawl_data.py:128} INFO - Skipped product 95175125 due to duplicate
+[2025-03-09T10:47:34.264+0000] {crawl_data.py:128} INFO - Skipped product 95127416 due to duplicate
+[2025-03-09T10:47:34.265+0000] {crawl_data.py:128} INFO - Skipped product 70662253 due to duplicate
+[2025-03-09T10:47:34.266+0000] {crawl_data.py:128} INFO - Skipped product 70633870 due to duplicate
+[2025-03-09T10:47:34.267+0000] {crawl_data.py:128} INFO - Skipped product 55613571 due to duplicate
+[2025-03-09T10:47:34.267+0000] {crawl_data.py:128} INFO - Skipped product 53296092 due to duplicate
+[2025-03-09T10:47:34.268+0000] {crawl_data.py:128} INFO - Skipped product 52730951 due to duplicate
+[2025-03-09T10:47:34.269+0000] {crawl_data.py:128} INFO - Skipped product 51540051 due to duplicate
+[2025-03-09T10:47:34.271+0000] {crawl_data.py:128} INFO - Skipped product 24910578 due to duplicate
+[2025-03-09T10:47:34.272+0000] {crawl_data.py:128} INFO - Skipped product 12081510 due to duplicate
+[2025-03-09T10:47:34.272+0000] {crawl_data.py:128} INFO - Skipped product 12053893 due to duplicate
+[2025-03-09T10:47:34.273+0000] {crawl_data.py:128} INFO - Skipped product 11368961 due to duplicate
+[2025-03-09T10:47:34.274+0000] {crawl_data.py:128} INFO - Skipped product 2738595 due to duplicate
+[2025-03-09T10:47:34.275+0000] {crawl_data.py:128} INFO - Skipped product 1754767 due to duplicate
+[2025-03-09T10:47:34.276+0000] {crawl_data.py:128} INFO - Skipped product 1529993 due to duplicate
+[2025-03-09T10:47:34.277+0000] {crawl_data.py:128} INFO - Skipped product 1313897 due to duplicate
+[2025-03-09T10:47:34.278+0000] {crawl_data.py:128} INFO - Skipped product 631959 due to duplicate
+[2025-03-09T10:47:34.279+0000] {crawl_data.py:128} INFO - Skipped product 631049 due to duplicate
+[2025-03-09T10:47:34.280+0000] {crawl_data.py:128} INFO - Skipped product 580515 due to duplicate
+[2025-03-09T10:47:34.280+0000] {crawl_data.py:128} INFO - Skipped product 385477 due to duplicate
+[2025-03-09T10:47:34.281+0000] {crawl_data.py:131} INFO - Extracted page 4 - lam-dep-suc-khoe, 40 items, total extracted: 0
+[2025-03-09T10:47:38.752+0000] {crawl_data.py:128} INFO - Skipped product 275926665 due to duplicate
+[2025-03-09T10:47:38.754+0000] {crawl_data.py:128} INFO - Skipped product 275428235 due to duplicate
+[2025-03-09T10:47:38.755+0000] {crawl_data.py:128} INFO - Skipped product 275419900 due to duplicate
+[2025-03-09T10:47:38.756+0000] {crawl_data.py:128} INFO - Skipped product 275304727 due to duplicate
+[2025-03-09T10:47:38.758+0000] {crawl_data.py:128} INFO - Skipped product 274948813 due to duplicate
+[2025-03-09T10:47:38.759+0000] {crawl_data.py:128} INFO - Skipped product 274440743 due to duplicate
+[2025-03-09T10:47:38.760+0000] {crawl_data.py:128} INFO - Skipped product 273825294 due to duplicate
+[2025-03-09T10:47:38.761+0000] {crawl_data.py:128} INFO - Skipped product 273250656 due to duplicate
+[2025-03-09T10:47:38.761+0000] {crawl_data.py:128} INFO - Skipped product 273243998 due to duplicate
+[2025-03-09T10:47:38.762+0000] {crawl_data.py:128} INFO - Skipped product 272113564 due to duplicate
+[2025-03-09T10:47:38.763+0000] {crawl_data.py:128} INFO - Skipped product 203110603 due to duplicate
+[2025-03-09T10:47:38.764+0000] {crawl_data.py:128} INFO - Skipped product 201816436 due to duplicate
+[2025-03-09T10:47:38.765+0000] {crawl_data.py:128} INFO - Skipped product 190630654 due to duplicate
+[2025-03-09T10:47:38.766+0000] {crawl_data.py:128} INFO - Skipped product 186633014 due to duplicate
+[2025-03-09T10:47:38.767+0000] {crawl_data.py:128} INFO - Skipped product 179953046 due to duplicate
+[2025-03-09T10:47:38.768+0000] {crawl_data.py:128} INFO - Skipped product 177424215 due to duplicate
+[2025-03-09T10:47:38.769+0000] {crawl_data.py:128} INFO - Skipped product 174481487 due to duplicate
+[2025-03-09T10:47:38.770+0000] {crawl_data.py:128} INFO - Skipped product 155398602 due to duplicate
+[2025-03-09T10:47:38.771+0000] {crawl_data.py:128} INFO - Skipped product 121367420 due to duplicate
+[2025-03-09T10:47:38.772+0000] {crawl_data.py:128} INFO - Skipped product 108535212 due to duplicate
+[2025-03-09T10:47:38.772+0000] {crawl_data.py:128} INFO - Skipped product 104791199 due to duplicate
+[2025-03-09T10:47:38.773+0000] {crawl_data.py:128} INFO - Skipped product 95735629 due to duplicate
+[2025-03-09T10:47:38.775+0000] {crawl_data.py:128} INFO - Skipped product 93514280 due to duplicate
+[2025-03-09T10:47:38.776+0000] {crawl_data.py:128} INFO - Skipped product 81517203 due to duplicate
+[2025-03-09T10:47:38.777+0000] {crawl_data.py:128} INFO - Skipped product 74402547 due to duplicate
+[2025-03-09T10:47:38.778+0000] {crawl_data.py:128} INFO - Skipped product 68494638 due to duplicate
+[2025-03-09T10:47:38.779+0000] {crawl_data.py:128} INFO - Skipped product 65401394 due to duplicate
+[2025-03-09T10:47:38.779+0000] {crawl_data.py:128} INFO - Skipped product 50699284 due to duplicate
+[2025-03-09T10:47:38.781+0000] {crawl_data.py:128} INFO - Skipped product 48579668 due to duplicate
+[2025-03-09T10:47:38.782+0000] {crawl_data.py:128} INFO - Skipped product 44810580 due to duplicate
+[2025-03-09T10:47:38.783+0000] {crawl_data.py:128} INFO - Skipped product 43754492 due to duplicate
+[2025-03-09T10:47:38.784+0000] {crawl_data.py:128} INFO - Skipped product 37153816 due to duplicate
+[2025-03-09T10:47:38.785+0000] {crawl_data.py:128} INFO - Skipped product 36158810 due to duplicate
+[2025-03-09T10:47:38.786+0000] {crawl_data.py:128} INFO - Skipped product 25444067 due to duplicate
+[2025-03-09T10:47:38.787+0000] {crawl_data.py:128} INFO - Skipped product 7690641 due to duplicate
+[2025-03-09T10:47:38.788+0000] {crawl_data.py:128} INFO - Skipped product 878393 due to duplicate
+[2025-03-09T10:47:38.789+0000] {crawl_data.py:128} INFO - Skipped product 654647 due to duplicate
+[2025-03-09T10:47:38.790+0000] {crawl_data.py:128} INFO - Skipped product 630778 due to duplicate
+[2025-03-09T10:47:38.790+0000] {crawl_data.py:128} INFO - Skipped product 580508 due to duplicate
+[2025-03-09T10:47:38.791+0000] {crawl_data.py:128} INFO - Skipped product 460943 due to duplicate
+[2025-03-09T10:47:38.792+0000] {crawl_data.py:131} INFO - Extracted page 5 - lam-dep-suc-khoe, 40 items, total extracted: 0
+[2025-03-09T10:47:42.162+0000] {crawl_data.py:106} INFO - Crawling category dien-thoai-may-tinh-bang with 5 pages
+[2025-03-09T10:47:42.548+0000] {crawl_data.py:128} INFO - Skipped product 276559198 due to duplicate
+[2025-03-09T10:47:42.549+0000] {crawl_data.py:128} INFO - Skipped product 276536922 due to duplicate
+[2025-03-09T10:47:42.551+0000] {crawl_data.py:128} INFO - Skipped product 276515327 due to duplicate
+[2025-03-09T10:47:42.552+0000] {crawl_data.py:128} INFO - Skipped product 276424626 due to duplicate
+[2025-03-09T10:47:42.554+0000] {crawl_data.py:128} INFO - Skipped product 276411458 due to duplicate
+[2025-03-09T10:47:42.555+0000] {crawl_data.py:128} INFO - Skipped product 276250878 due to duplicate
+[2025-03-09T10:47:42.556+0000] {crawl_data.py:128} INFO - Skipped product 276166741 due to duplicate
+[2025-03-09T10:47:42.557+0000] {crawl_data.py:128} INFO - Skipped product 276162093 due to duplicate
+[2025-03-09T10:47:42.557+0000] {crawl_data.py:128} INFO - Skipped product 276110349 due to duplicate
+[2025-03-09T10:47:42.558+0000] {crawl_data.py:128} INFO - Skipped product 276110276 due to duplicate
+[2025-03-09T10:47:42.559+0000] {crawl_data.py:128} INFO - Skipped product 276110023 due to duplicate
+[2025-03-09T10:47:42.560+0000] {crawl_data.py:128} INFO - Skipped product 276109904 due to duplicate
+[2025-03-09T10:47:42.562+0000] {crawl_data.py:128} INFO - Skipped product 276099688 due to duplicate
+[2025-03-09T10:47:42.563+0000] {crawl_data.py:128} INFO - Skipped product 275913708 due to duplicate
+[2025-03-09T10:47:42.564+0000] {crawl_data.py:128} INFO - Skipped product 275510578 due to duplicate
+[2025-03-09T10:47:42.565+0000] {crawl_data.py:128} INFO - Skipped product 275492145 due to duplicate
+[2025-03-09T10:47:42.566+0000] {crawl_data.py:128} INFO - Skipped product 275307093 due to duplicate
+[2025-03-09T10:47:42.567+0000] {crawl_data.py:128} INFO - Skipped product 275295008 due to duplicate
+[2025-03-09T10:47:42.568+0000] {crawl_data.py:128} INFO - Skipped product 274171148 due to duplicate
+[2025-03-09T10:47:42.569+0000] {crawl_data.py:128} INFO - Skipped product 274101262 due to duplicate
+[2025-03-09T10:47:42.570+0000] {crawl_data.py:128} INFO - Skipped product 274101255 due to duplicate
+[2025-03-09T10:47:42.572+0000] {crawl_data.py:128} INFO - Skipped product 274069052 due to duplicate
+[2025-03-09T10:47:42.573+0000] {crawl_data.py:128} INFO - Skipped product 273668660 due to duplicate
+[2025-03-09T10:47:42.574+0000] {crawl_data.py:128} INFO - Skipped product 273258825 due to duplicate
+[2025-03-09T10:47:42.575+0000] {crawl_data.py:128} INFO - Skipped product 271128271 due to duplicate
+[2025-03-09T10:47:42.576+0000] {crawl_data.py:128} INFO - Skipped product 270975124 due to duplicate
+[2025-03-09T10:47:42.577+0000] {crawl_data.py:128} INFO - Skipped product 252586291 due to duplicate
+[2025-03-09T10:47:42.578+0000] {crawl_data.py:128} INFO - Skipped product 217706932 due to duplicate
+[2025-03-09T10:47:42.579+0000] {crawl_data.py:128} INFO - Skipped product 205815576 due to duplicate
+[2025-03-09T10:47:42.580+0000] {crawl_data.py:128} INFO - Skipped product 201067649 due to duplicate
+[2025-03-09T10:47:42.581+0000] {crawl_data.py:128} INFO - Skipped product 191350420 due to duplicate
+[2025-03-09T10:47:42.582+0000] {crawl_data.py:128} INFO - Skipped product 184059211 due to duplicate
+[2025-03-09T10:47:42.583+0000] {crawl_data.py:128} INFO - Skipped product 183330021 due to duplicate
+[2025-03-09T10:47:42.584+0000] {crawl_data.py:128} INFO - Skipped product 181977398 due to duplicate
+[2025-03-09T10:47:42.586+0000] {crawl_data.py:128} INFO - Skipped product 181928619 due to duplicate
+[2025-03-09T10:47:42.586+0000] {crawl_data.py:128} INFO - Skipped product 170727266 due to duplicate
+[2025-03-09T10:47:42.588+0000] {crawl_data.py:128} INFO - Skipped product 170165701 due to duplicate
+[2025-03-09T10:47:42.589+0000] {crawl_data.py:128} INFO - Skipped product 163914808 due to duplicate
+[2025-03-09T10:47:42.590+0000] {crawl_data.py:128} INFO - Skipped product 125182567 due to duplicate
+[2025-03-09T10:47:42.591+0000] {crawl_data.py:128} INFO - Skipped product 118139108 due to duplicate
+[2025-03-09T10:47:42.591+0000] {crawl_data.py:131} INFO - Extracted page 1 - dien-thoai-may-tinh-bang, 40 items, total extracted: 0
+[2025-03-09T10:47:46.181+0000] {crawl_data.py:128} INFO - Skipped product 276639232 due to duplicate
+[2025-03-09T10:47:46.182+0000] {crawl_data.py:128} INFO - Skipped product 276448920 due to duplicate
+[2025-03-09T10:47:46.183+0000] {crawl_data.py:128} INFO - Skipped product 276448771 due to duplicate
+[2025-03-09T10:47:46.184+0000] {crawl_data.py:128} INFO - Skipped product 276440892 due to duplicate
+[2025-03-09T10:47:46.186+0000] {crawl_data.py:128} INFO - Skipped product 276410628 due to duplicate
+[2025-03-09T10:47:46.187+0000] {crawl_data.py:128} INFO - Skipped product 276323370 due to duplicate
+[2025-03-09T10:47:46.188+0000] {crawl_data.py:128} INFO - Skipped product 276167489 due to duplicate
+[2025-03-09T10:47:46.188+0000] {crawl_data.py:128} INFO - Skipped product 276132850 due to duplicate
+[2025-03-09T10:47:46.190+0000] {crawl_data.py:128} INFO - Skipped product 276074109 due to duplicate
+[2025-03-09T10:47:46.191+0000] {crawl_data.py:128} INFO - Skipped product 275618841 due to duplicate
+[2025-03-09T10:47:46.192+0000] {crawl_data.py:128} INFO - Skipped product 275589968 due to duplicate
+[2025-03-09T10:47:46.193+0000] {crawl_data.py:128} INFO - Skipped product 275589387 due to duplicate
+[2025-03-09T10:47:46.194+0000] {crawl_data.py:128} INFO - Skipped product 275588494 due to duplicate
+[2025-03-09T10:47:46.195+0000] {crawl_data.py:128} INFO - Skipped product 275571990 due to duplicate
+[2025-03-09T10:47:46.196+0000] {crawl_data.py:128} INFO - Skipped product 275510579 due to duplicate
+[2025-03-09T10:47:46.197+0000] {crawl_data.py:128} INFO - Skipped product 275496965 due to duplicate
+[2025-03-09T10:47:46.198+0000] {crawl_data.py:128} INFO - Skipped product 275407523 due to duplicate
+[2025-03-09T10:47:46.199+0000] {crawl_data.py:128} INFO - Skipped product 275362333 due to duplicate
+[2025-03-09T10:47:46.199+0000] {crawl_data.py:128} INFO - Skipped product 275295006 due to duplicate
+[2025-03-09T10:47:46.200+0000] {crawl_data.py:128} INFO - Skipped product 274857095 due to duplicate
+[2025-03-09T10:47:46.201+0000] {crawl_data.py:128} INFO - Skipped product 274638430 due to duplicate
+[2025-03-09T10:47:46.202+0000] {crawl_data.py:128} INFO - Skipped product 274544634 due to duplicate
+[2025-03-09T10:47:46.203+0000] {crawl_data.py:128} INFO - Skipped product 274542883 due to duplicate
+[2025-03-09T10:47:46.204+0000] {crawl_data.py:128} INFO - Skipped product 274542808 due to duplicate
+[2025-03-09T10:47:46.205+0000] {crawl_data.py:128} INFO - Skipped product 274415640 due to duplicate
+[2025-03-09T10:47:46.206+0000] {crawl_data.py:128} INFO - Skipped product 274405521 due to duplicate
+[2025-03-09T10:47:46.207+0000] {crawl_data.py:128} INFO - Skipped product 274191773 due to duplicate
+[2025-03-09T10:47:46.208+0000] {crawl_data.py:128} INFO - Skipped product 273990229 due to duplicate
+[2025-03-09T10:47:46.209+0000] {crawl_data.py:128} INFO - Skipped product 273872197 due to duplicate
+[2025-03-09T10:47:46.209+0000] {crawl_data.py:128} INFO - Skipped product 273664463 due to duplicate
+[2025-03-09T10:47:46.210+0000] {crawl_data.py:128} INFO - Skipped product 272222033 due to duplicate
+[2025-03-09T10:47:46.211+0000] {crawl_data.py:128} INFO - Skipped product 271967379 due to duplicate
+[2025-03-09T10:47:46.212+0000] {crawl_data.py:128} INFO - Skipped product 270794184 due to duplicate
+[2025-03-09T10:47:46.213+0000] {crawl_data.py:128} INFO - Skipped product 247427990 due to duplicate
+[2025-03-09T10:47:46.214+0000] {crawl_data.py:128} INFO - Skipped product 217505430 due to duplicate
+[2025-03-09T10:47:46.215+0000] {crawl_data.py:128} INFO - Skipped product 204237269 due to duplicate
+[2025-03-09T10:47:46.216+0000] {crawl_data.py:128} INFO - Skipped product 181452535 due to duplicate
+[2025-03-09T10:47:46.217+0000] {crawl_data.py:128} INFO - Skipped product 164213695 due to duplicate
+[2025-03-09T10:47:46.218+0000] {crawl_data.py:128} INFO - Skipped product 118130919 due to duplicate
+[2025-03-09T10:47:46.219+0000] {crawl_data.py:128} INFO - Skipped product 11802138 due to duplicate
+[2025-03-09T10:47:46.220+0000] {crawl_data.py:131} INFO - Extracted page 2 - dien-thoai-may-tinh-bang, 40 items, total extracted: 0
+[2025-03-09T10:47:50.640+0000] {crawl_data.py:128} INFO - Skipped product 276641263 due to duplicate
+[2025-03-09T10:47:50.641+0000] {crawl_data.py:128} INFO - Skipped product 276539826 due to duplicate
+[2025-03-09T10:47:50.642+0000] {crawl_data.py:128} INFO - Skipped product 276523733 due to duplicate
+[2025-03-09T10:47:50.643+0000] {crawl_data.py:128} INFO - Skipped product 276509102 due to duplicate
+[2025-03-09T10:47:50.644+0000] {crawl_data.py:128} INFO - Skipped product 276369646 due to duplicate
+[2025-03-09T10:47:50.645+0000] {crawl_data.py:128} INFO - Skipped product 276281988 due to duplicate
+[2025-03-09T10:47:50.647+0000] {crawl_data.py:128} INFO - Skipped product 276274790 due to duplicate
+[2025-03-09T10:47:50.647+0000] {crawl_data.py:128} INFO - Skipped product 276246838 due to duplicate
+[2025-03-09T10:47:50.648+0000] {crawl_data.py:128} INFO - Skipped product 275919759 due to duplicate
+[2025-03-09T10:47:50.649+0000] {crawl_data.py:128} INFO - Skipped product 275627388 due to duplicate
+[2025-03-09T10:47:50.650+0000] {crawl_data.py:128} INFO - Skipped product 275621214 due to duplicate
+[2025-03-09T10:47:50.651+0000] {crawl_data.py:128} INFO - Skipped product 275335546 due to duplicate
+[2025-03-09T10:47:50.651+0000] {crawl_data.py:128} INFO - Skipped product 274904904 due to duplicate
+[2025-03-09T10:47:50.652+0000] {crawl_data.py:128} INFO - Skipped product 274456687 due to duplicate
+[2025-03-09T10:47:50.654+0000] {crawl_data.py:128} INFO - Skipped product 273559020 due to duplicate
+[2025-03-09T10:47:50.655+0000] {crawl_data.py:128} INFO - Skipped product 273454566 due to duplicate
+[2025-03-09T10:47:50.656+0000] {crawl_data.py:128} INFO - Skipped product 273440662 due to duplicate
+[2025-03-09T10:47:50.656+0000] {crawl_data.py:128} INFO - Skipped product 273366296 due to duplicate
+[2025-03-09T10:47:50.657+0000] {crawl_data.py:128} INFO - Skipped product 273258830 due to duplicate
+[2025-03-09T10:47:50.658+0000] {crawl_data.py:128} INFO - Skipped product 273252926 due to duplicate
+[2025-03-09T10:47:50.659+0000] {crawl_data.py:128} INFO - Skipped product 272394241 due to duplicate
+[2025-03-09T10:47:50.661+0000] {crawl_data.py:128} INFO - Skipped product 272348047 due to duplicate
+[2025-03-09T10:47:50.661+0000] {crawl_data.py:128} INFO - Skipped product 271954384 due to duplicate
+[2025-03-09T10:47:50.662+0000] {crawl_data.py:128} INFO - Skipped product 271798615 due to duplicate
+[2025-03-09T10:47:50.663+0000] {crawl_data.py:128} INFO - Skipped product 271730109 due to duplicate
+[2025-03-09T10:47:50.664+0000] {crawl_data.py:128} INFO - Skipped product 271362153 due to duplicate
+[2025-03-09T10:47:50.665+0000] {crawl_data.py:128} INFO - Skipped product 263675862 due to duplicate
+[2025-03-09T10:47:50.666+0000] {crawl_data.py:128} INFO - Skipped product 262908601 due to duplicate
+[2025-03-09T10:47:50.667+0000] {crawl_data.py:128} INFO - Skipped product 262516014 due to duplicate
+[2025-03-09T10:47:50.668+0000] {crawl_data.py:128} INFO - Skipped product 261965186 due to duplicate
+[2025-03-09T10:47:50.669+0000] {crawl_data.py:128} INFO - Skipped product 230203067 due to duplicate
+[2025-03-09T10:47:50.670+0000] {crawl_data.py:128} INFO - Skipped product 217645692 due to duplicate
+[2025-03-09T10:47:50.671+0000] {crawl_data.py:128} INFO - Skipped product 217548686 due to duplicate
+[2025-03-09T10:47:50.672+0000] {crawl_data.py:128} INFO - Skipped product 193366048 due to duplicate
+[2025-03-09T10:47:50.673+0000] {crawl_data.py:128} INFO - Skipped product 188030974 due to duplicate
+[2025-03-09T10:47:50.674+0000] {crawl_data.py:128} INFO - Skipped product 160450655 due to duplicate
+[2025-03-09T10:47:50.675+0000] {crawl_data.py:128} INFO - Skipped product 147969070 due to duplicate
+[2025-03-09T10:47:50.676+0000] {crawl_data.py:128} INFO - Skipped product 140940220 due to duplicate
+[2025-03-09T10:47:50.677+0000] {crawl_data.py:128} INFO - Skipped product 139632023 due to duplicate
+[2025-03-09T10:47:50.678+0000] {crawl_data.py:128} INFO - Skipped product 25949745 due to duplicate
+[2025-03-09T10:47:50.679+0000] {crawl_data.py:131} INFO - Extracted page 3 - dien-thoai-may-tinh-bang, 40 items, total extracted: 0
+[2025-03-09T10:47:56.059+0000] {crawl_data.py:128} INFO - Skipped product 276508788 due to duplicate
+[2025-03-09T10:47:56.061+0000] {crawl_data.py:128} INFO - Skipped product 276421931 due to duplicate
+[2025-03-09T10:47:56.062+0000] {crawl_data.py:128} INFO - Skipped product 276323340 due to duplicate
+[2025-03-09T10:47:56.063+0000] {crawl_data.py:128} INFO - Skipped product 276314708 due to duplicate
+[2025-03-09T10:47:56.064+0000] {crawl_data.py:128} INFO - Skipped product 276146274 due to duplicate
+[2025-03-09T10:47:56.065+0000] {crawl_data.py:128} INFO - Skipped product 276062770 due to duplicate
+[2025-03-09T10:47:56.066+0000] {crawl_data.py:128} INFO - Skipped product 275746497 due to duplicate
+[2025-03-09T10:47:56.068+0000] {crawl_data.py:128} INFO - Skipped product 275695395 due to duplicate
+[2025-03-09T10:47:56.069+0000] {crawl_data.py:128} INFO - Skipped product 275386649 due to duplicate
+[2025-03-09T10:47:56.069+0000] {crawl_data.py:128} INFO - Skipped product 274638556 due to duplicate
+[2025-03-09T10:47:56.070+0000] {crawl_data.py:128} INFO - Skipped product 274524050 due to duplicate
+[2025-03-09T10:47:56.072+0000] {crawl_data.py:128} INFO - Skipped product 274392442 due to duplicate
+[2025-03-09T10:47:56.073+0000] {crawl_data.py:128} INFO - Skipped product 274378214 due to duplicate
+[2025-03-09T10:47:56.074+0000] {crawl_data.py:128} INFO - Skipped product 274019962 due to duplicate
+[2025-03-09T10:47:56.075+0000] {crawl_data.py:128} INFO - Skipped product 273958512 due to duplicate
+[2025-03-09T10:47:56.076+0000] {crawl_data.py:128} INFO - Skipped product 273685412 due to duplicate
+[2025-03-09T10:47:56.077+0000] {crawl_data.py:128} INFO - Skipped product 273653444 due to duplicate
+[2025-03-09T10:47:56.078+0000] {crawl_data.py:128} INFO - Skipped product 273610105 due to duplicate
+[2025-03-09T10:47:56.079+0000] {crawl_data.py:128} INFO - Skipped product 273430216 due to duplicate
+[2025-03-09T10:47:56.080+0000] {crawl_data.py:128} INFO - Skipped product 273412211 due to duplicate
+[2025-03-09T10:47:56.081+0000] {crawl_data.py:128} INFO - Skipped product 273373420 due to duplicate
+[2025-03-09T10:47:56.082+0000] {crawl_data.py:128} INFO - Skipped product 273360836 due to duplicate
+[2025-03-09T10:47:56.083+0000] {crawl_data.py:128} INFO - Skipped product 273227290 due to duplicate
+[2025-03-09T10:47:56.084+0000] {crawl_data.py:128} INFO - Skipped product 273029857 due to duplicate
+[2025-03-09T10:47:56.085+0000] {crawl_data.py:128} INFO - Skipped product 272850971 due to duplicate
+[2025-03-09T10:47:56.086+0000] {crawl_data.py:128} INFO - Skipped product 272328188 due to duplicate
+[2025-03-09T10:47:56.087+0000] {crawl_data.py:128} INFO - Skipped product 272273680 due to duplicate
+[2025-03-09T10:47:56.088+0000] {crawl_data.py:128} INFO - Skipped product 271530789 due to duplicate
+[2025-03-09T10:47:56.089+0000] {crawl_data.py:128} INFO - Skipped product 251448280 due to duplicate
+[2025-03-09T10:47:56.090+0000] {crawl_data.py:128} INFO - Skipped product 251407092 due to duplicate
+[2025-03-09T10:47:56.091+0000] {crawl_data.py:128} INFO - Skipped product 250113073 due to duplicate
+[2025-03-09T10:47:56.092+0000] {crawl_data.py:128} INFO - Skipped product 249890023 due to duplicate
+[2025-03-09T10:47:56.092+0000] {crawl_data.py:128} INFO - Skipped product 249178196 due to duplicate
+[2025-03-09T10:47:56.094+0000] {crawl_data.py:128} INFO - Skipped product 249143473 due to duplicate
+[2025-03-09T10:47:56.095+0000] {crawl_data.py:128} INFO - Skipped product 248005118 due to duplicate
+[2025-03-09T10:47:56.096+0000] {crawl_data.py:128} INFO - Skipped product 196197701 due to duplicate
+[2025-03-09T10:47:56.097+0000] {crawl_data.py:128} INFO - Skipped product 118486668 due to duplicate
+[2025-03-09T10:47:56.098+0000] {crawl_data.py:128} INFO - Skipped product 118100164 due to duplicate
+[2025-03-09T10:47:56.099+0000] {crawl_data.py:128} INFO - Skipped product 91281318 due to duplicate
+[2025-03-09T10:47:56.100+0000] {crawl_data.py:128} INFO - Skipped product 4048043 due to duplicate
+[2025-03-09T10:47:56.100+0000] {crawl_data.py:131} INFO - Extracted page 4 - dien-thoai-may-tinh-bang, 40 items, total extracted: 0
+[2025-03-09T10:48:00.796+0000] {crawl_data.py:131} INFO - Extracted page 5 - dien-thoai-may-tinh-bang, 40 items, total extracted: 40
+[2025-03-09T10:48:05.411+0000] {crawl_data.py:106} INFO - Crawling category laptop-may-vi-tinh-linh-kien with 5 pages
+[2025-03-09T10:48:05.908+0000] {crawl_data.py:131} INFO - Extracted page 1 - laptop-may-vi-tinh-linh-kien, 40 items, total extracted: 80
+[2025-03-09T10:48:10.351+0000] {crawl_data.py:131} INFO - Extracted page 2 - laptop-may-vi-tinh-linh-kien, 40 items, total extracted: 120
+[2025-03-09T10:48:13.758+0000] {crawl_data.py:131} INFO - Extracted page 3 - laptop-may-vi-tinh-linh-kien, 40 items, total extracted: 160
+[2025-03-09T10:48:18.373+0000] {crawl_data.py:131} INFO - Extracted page 4 - laptop-may-vi-tinh-linh-kien, 40 items, total extracted: 200
+[2025-03-09T10:48:21.362+0000] {crawl_data.py:131} INFO - Extracted page 5 - laptop-may-vi-tinh-linh-kien, 40 items, total extracted: 240
+[2025-03-09T10:48:26.221+0000] {crawl_data.py:106} INFO - Crawling category dien-gia-dung with 5 pages
+[2025-03-09T10:48:26.789+0000] {crawl_data.py:131} INFO - Extracted page 1 - dien-gia-dung, 40 items, total extracted: 280
+[2025-03-09T10:48:30.948+0000] {crawl_data.py:131} INFO - Extracted page 2 - dien-gia-dung, 40 items, total extracted: 320
+[2025-03-09T10:48:35.909+0000] {crawl_data.py:131} INFO - Extracted page 3 - dien-gia-dung, 40 items, total extracted: 360
+[2025-03-09T10:48:40.154+0000] {crawl_data.py:131} INFO - Extracted page 4 - dien-gia-dung, 40 items, total extracted: 400
+[2025-03-09T10:48:42.906+0000] {crawl_data.py:131} INFO - Extracted page 5 - dien-gia-dung, 40 items, total extracted: 440
+[2025-03-09T10:48:46.758+0000] {crawl_data.py:106} INFO - Crawling category sach with 5 pages
+[2025-03-09T10:48:47.233+0000] {crawl_data.py:131} INFO - Extracted page 1 - sach, 40 items, total extracted: 480
+[2025-03-09T10:48:49.891+0000] {crawl_data.py:131} INFO - Extracted page 2 - sach, 40 items, total extracted: 520
+[2025-03-09T10:48:54.410+0000] {crawl_data.py:131} INFO - Extracted page 3 - sach, 40 items, total extracted: 560
+[2025-03-09T10:48:58.688+0000] {crawl_data.py:131} INFO - Extracted page 4 - sach, 40 items, total extracted: 600
+[2025-03-09T10:49:04.007+0000] {crawl_data.py:131} INFO - Extracted page 5 - sach, 40 items, total extracted: 640
+[2025-03-09T10:49:06.579+0000] {crawl_data.py:106} INFO - Crawling category thiet-bi-kts-phu-kien-so with 5 pages
+[2025-03-09T10:49:07.139+0000] {crawl_data.py:128} INFO - Skipped product 276135518 due to duplicate
+[2025-03-09T10:49:07.141+0000] {crawl_data.py:128} INFO - Skipped product 276117054 due to duplicate
+[2025-03-09T10:49:07.142+0000] {crawl_data.py:128} INFO - Skipped product 274388406 due to duplicate
+[2025-03-09T10:49:07.143+0000] {crawl_data.py:128} INFO - Skipped product 263433314 due to duplicate
+[2025-03-09T10:49:07.144+0000] {crawl_data.py:128} INFO - Skipped product 227746564 due to duplicate
+[2025-03-09T10:49:07.145+0000] {crawl_data.py:128} INFO - Skipped product 192977208 due to duplicate
+[2025-03-09T10:49:07.146+0000] {crawl_data.py:128} INFO - Skipped product 191502436 due to duplicate
+[2025-03-09T10:49:07.147+0000] {crawl_data.py:128} INFO - Skipped product 179541784 due to duplicate
+[2025-03-09T10:49:07.148+0000] {crawl_data.py:128} INFO - Skipped product 176752662 due to duplicate
+[2025-03-09T10:49:07.149+0000] {crawl_data.py:128} INFO - Skipped product 174599595 due to duplicate
+[2025-03-09T10:49:07.150+0000] {crawl_data.py:128} INFO - Skipped product 174593860 due to duplicate
+[2025-03-09T10:49:07.151+0000] {crawl_data.py:128} INFO - Skipped product 174593826 due to duplicate
+[2025-03-09T10:49:07.153+0000] {crawl_data.py:128} INFO - Skipped product 172146754 due to duplicate
+[2025-03-09T10:49:07.154+0000] {crawl_data.py:128} INFO - Skipped product 170273830 due to duplicate
+[2025-03-09T10:49:07.155+0000] {crawl_data.py:128} INFO - Skipped product 162772687 due to duplicate
+[2025-03-09T10:49:07.156+0000] {crawl_data.py:128} INFO - Skipped product 161007768 due to duplicate
+[2025-03-09T10:49:07.157+0000] {crawl_data.py:128} INFO - Skipped product 142439870 due to duplicate
+[2025-03-09T10:49:07.158+0000] {crawl_data.py:128} INFO - Skipped product 137864606 due to duplicate
+[2025-03-09T10:49:07.159+0000] {crawl_data.py:128} INFO - Skipped product 134364129 due to duplicate
+[2025-03-09T10:49:07.160+0000] {crawl_data.py:128} INFO - Skipped product 116725239 due to duplicate
+[2025-03-09T10:49:07.161+0000] {crawl_data.py:128} INFO - Skipped product 116566083 due to duplicate
+[2025-03-09T10:49:07.162+0000] {crawl_data.py:128} INFO - Skipped product 110850007 due to duplicate
+[2025-03-09T10:49:07.163+0000] {crawl_data.py:128} INFO - Skipped product 107067035 due to duplicate
+[2025-03-09T10:49:07.164+0000] {crawl_data.py:128} INFO - Skipped product 89208874 due to duplicate
+[2025-03-09T10:49:07.165+0000] {crawl_data.py:128} INFO - Skipped product 88796437 due to duplicate
+[2025-03-09T10:49:07.166+0000] {crawl_data.py:128} INFO - Skipped product 80857582 due to duplicate
+[2025-03-09T10:49:07.168+0000] {crawl_data.py:128} INFO - Skipped product 73315307 due to duplicate
+[2025-03-09T10:49:07.168+0000] {crawl_data.py:128} INFO - Skipped product 68985833 due to duplicate
+[2025-03-09T10:49:07.170+0000] {crawl_data.py:128} INFO - Skipped product 52945747 due to duplicate
+[2025-03-09T10:49:07.171+0000] {crawl_data.py:128} INFO - Skipped product 49658272 due to duplicate
+[2025-03-09T10:49:07.172+0000] {crawl_data.py:128} INFO - Skipped product 49648343 due to duplicate
+[2025-03-09T10:49:07.173+0000] {crawl_data.py:128} INFO - Skipped product 36007224 due to duplicate
+[2025-03-09T10:49:07.174+0000] {crawl_data.py:128} INFO - Skipped product 35420153 due to duplicate
+[2025-03-09T10:49:07.175+0000] {crawl_data.py:128} INFO - Skipped product 4312979 due to duplicate
+[2025-03-09T10:49:07.176+0000] {crawl_data.py:128} INFO - Skipped product 3671793 due to duplicate
+[2025-03-09T10:49:07.177+0000] {crawl_data.py:128} INFO - Skipped product 554401 due to duplicate
+[2025-03-09T10:49:07.178+0000] {crawl_data.py:128} INFO - Skipped product 389145 due to duplicate
+[2025-03-09T10:49:07.179+0000] {crawl_data.py:128} INFO - Skipped product 359484 due to duplicate
+[2025-03-09T10:49:07.181+0000] {crawl_data.py:128} INFO - Skipped product 299461 due to duplicate
+[2025-03-09T10:49:07.182+0000] {crawl_data.py:128} INFO - Skipped product 126697 due to duplicate
+[2025-03-09T10:49:07.183+0000] {crawl_data.py:131} INFO - Extracted page 1 - thiet-bi-kts-phu-kien-so, 40 items, total extracted: 640
+[2025-03-09T10:49:10.629+0000] {crawl_data.py:131} INFO - Extracted page 2 - thiet-bi-kts-phu-kien-so, 40 items, total extracted: 680
+[2025-03-09T10:49:13.537+0000] {crawl_data.py:131} INFO - Extracted page 3 - thiet-bi-kts-phu-kien-so, 40 items, total extracted: 720
+[2025-03-09T10:49:17.685+0000] {crawl_data.py:131} INFO - Extracted page 4 - thiet-bi-kts-phu-kien-so, 40 items, total extracted: 760
+[2025-03-09T10:49:21.037+0000] {crawl_data.py:131} INFO - Extracted page 5 - thiet-bi-kts-phu-kien-so, 40 items, total extracted: 800
+[2025-03-09T10:49:25.900+0000] {crawl_data.py:106} INFO - Crawling category thoi-trang-nu with 5 pages
+[2025-03-09T10:49:26.635+0000] {crawl_data.py:131} INFO - Extracted page 1 - thoi-trang-nu, 40 items, total extracted: 840
+[2025-03-09T10:49:30.829+0000] {crawl_data.py:131} INFO - Extracted page 2 - thoi-trang-nu, 40 items, total extracted: 880
+[2025-03-09T10:49:34.132+0000] {crawl_data.py:131} INFO - Extracted page 3 - thoi-trang-nu, 40 items, total extracted: 920
+[2025-03-09T10:49:38.574+0000] {crawl_data.py:131} INFO - Extracted page 4 - thoi-trang-nu, 40 items, total extracted: 960
+[2025-03-09T10:49:42.322+0000] {crawl_data.py:131} INFO - Extracted page 5 - thoi-trang-nu, 40 items, total extracted: 1000
+[2025-03-09T10:49:47.136+0000] {crawl_data.py:106} INFO - Crawling category thoi-trang-nam with 5 pages
+[2025-03-09T10:49:48.612+0000] {crawl_data.py:131} INFO - Extracted page 1 - thoi-trang-nam, 40 items, total extracted: 1040
+[2025-03-09T10:49:51.647+0000] {crawl_data.py:131} INFO - Extracted page 2 - thoi-trang-nam, 40 items, total extracted: 1080
+[2025-03-09T10:49:57.057+0000] {crawl_data.py:131} INFO - Extracted page 3 - thoi-trang-nam, 40 items, total extracted: 1120
+[2025-03-09T10:50:01.473+0000] {crawl_data.py:131} INFO - Extracted page 4 - thoi-trang-nam, 40 items, total extracted: 1160
+[2025-03-09T10:50:04.629+0000] {crawl_data.py:131} INFO - Extracted page 5 - thoi-trang-nam, 40 items, total extracted: 1200
+[2025-03-09T10:50:08.403+0000] {crawl_data.py:106} INFO - Crawling category dong-ho-va-trang-suc with 5 pages
+[2025-03-09T10:50:08.911+0000] {crawl_data.py:131} INFO - Extracted page 1 - dong-ho-va-trang-suc, 40 items, total extracted: 1240
+[2025-03-09T10:50:13.735+0000] {crawl_data.py:131} INFO - Extracted page 2 - dong-ho-va-trang-suc, 40 items, total extracted: 1280
+[2025-03-09T10:50:17.420+0000] {crawl_data.py:131} INFO - Extracted page 3 - dong-ho-va-trang-suc, 40 items, total extracted: 1320
+[2025-03-09T10:50:22.328+0000] {crawl_data.py:131} INFO - Extracted page 4 - dong-ho-va-trang-suc, 40 items, total extracted: 1360
+[2025-03-09T10:50:25.942+0000] {crawl_data.py:131} INFO - Extracted page 5 - dong-ho-va-trang-suc, 40 items, total extracted: 1400
+[2025-03-09T10:50:29.915+0000] {crawl_data.py:106} INFO - Crawling category dien-tu-dien-lanh with 5 pages
+[2025-03-09T10:50:30.429+0000] {crawl_data.py:131} INFO - Extracted page 1 - dien-tu-dien-lanh, 40 items, total extracted: 1440
+[2025-03-09T10:50:34.429+0000] {crawl_data.py:131} INFO - Extracted page 2 - dien-tu-dien-lanh, 40 items, total extracted: 1480
+[2025-03-09T10:50:39.300+0000] {crawl_data.py:131} INFO - Extracted page 3 - dien-tu-dien-lanh, 40 items, total extracted: 1520
+[2025-03-09T10:50:44.425+0000] {crawl_data.py:131} INFO - Extracted page 4 - dien-tu-dien-lanh, 40 items, total extracted: 1560
+[2025-03-09T10:50:47.798+0000] {crawl_data.py:131} INFO - Extracted page 5 - dien-tu-dien-lanh, 40 items, total extracted: 1600
+[2025-03-09T10:50:53.311+0000] {crawl_data.py:49} INFO - Updated crawled products at tiki-data/tiki_crawled/crawled_products.json
+[2025-03-09T10:50:53.313+0000] {crawl_data.py:147} INFO - Uploaded raw data to tiki-data/tiki_raw_data/raw_20250309_105051.json, total items: 1600
+[2025-03-09T10:50:53.371+0000] {tiki_extract_dag.py:35} INFO - Extracted data and saved to tiki_raw_data/raw_20250309_105051.json
+[2025-03-09T10:50:53.374+0000] {python.py:240} INFO - Done. Returned value was: tiki_raw_data/raw_20250309_105051.json
+[2025-03-09T10:50:53.419+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-03-09T10:50:53.420+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=tiki_extract_dag, task_id=extract_data, run_id=manual__2025-03-09T10:47:16.261763+00:00, execution_date=20250309T104716, start_date=20250309T104720, end_date=20250309T105053
+[2025-03-09T10:50:53.483+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-03-09T10:50:53.484+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-03-09T10:50:53.485+0000] {logging_mixin.py:190} INFO - Dag name:tiki_extract_dag queued_at:2025-03-09 10:47:16.327576+00:00
+[2025-03-09T10:50:53.486+0000] {logging_mixin.py:190} INFO - Task hostname:4dc18dee7126 operator:PythonOperator
+[2025-03-09T10:50:53.539+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-03-09T10:50:53.584+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-03-09T10:50:53.588+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,217 @@
+[2025-03-10T10:17:43.133+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-10T10:17:43.203+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: tiki_extract_dag.crawl_dien-thoai-may-tinh-bang manual__2025-03-10T10:16:46.076323+00:00 [queued]>
+[2025-03-10T10:17:43.228+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: tiki_extract_dag.crawl_dien-thoai-may-tinh-bang manual__2025-03-10T10:16:46.076323+00:00 [queued]>
+[2025-03-10T10:17:43.229+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 4
+[2025-03-10T10:17:43.347+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): crawl_dien-thoai-may-tinh-bang> on 2025-03-10 10:16:46.076323+00:00
+[2025-03-10T10:17:43.427+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=2551) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-10T10:17:43.459+0000] {standard_task_runner.py:72} INFO - Started process 2581 to run task
+[2025-03-10T10:17:43.467+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'tiki_extract_dag', 'crawl_dien-thoai-may-tinh-bang', 'manual__2025-03-10T10:16:46.076323+00:00', '--job-id', '412', '--raw', '--subdir', 'DAGS_FOLDER/tiki_extract_dag.py', '--cfg-path', '/tmp/tmp2sslagq5']
+[2025-03-10T10:17:43.475+0000] {standard_task_runner.py:105} INFO - Job 412: Subtask crawl_dien-thoai-may-tinh-bang
+[2025-03-10T10:17:44.112+0000] {task_command.py:467} INFO - Running <TaskInstance: tiki_extract_dag.crawl_dien-thoai-may-tinh-bang manual__2025-03-10T10:16:46.076323+00:00 [running]> on host c77555d100c4
+[2025-03-10T10:17:45.230+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='tiki_extract_dag' AIRFLOW_CTX_TASK_ID='crawl_dien-thoai-may-tinh-bang' AIRFLOW_CTX_EXECUTION_DATE='2025-03-10T10:16:46.076323+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-10T10:16:46.076323+00:00'
+[2025-03-10T10:17:45.281+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-03-10T10:17:45.282+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-03-10T10:17:45.284+0000] {logging_mixin.py:190} INFO - Current task name:crawl_dien-thoai-may-tinh-bang state:running start_date:2025-03-10 10:17:43.204871+00:00
+[2025-03-10T10:17:45.286+0000] {logging_mixin.py:190} INFO - Dag name:tiki_extract_dag and current dag run status:running
+[2025-03-10T10:17:45.288+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-03-10T10:19:03.407+0000] {job.py:229} INFO - Heartbeat recovered after 80.63 seconds
+[2025-03-10T10:19:57.404+0000] {job.py:239} ERROR - Job heartbeat failed with error
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+    return fn()
+           ^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 690, in __connect
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: could not translate host name "postgres" to address: Temporary failure in name resolution
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/jobs/job.py", line 233, in heartbeat
+    heartbeat_callback(session)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/jobs/local_task_job_runner.py", line 284, in heartbeat_callback
+    self.task_instance.refresh_from_db()
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 2360, in refresh_from_db
+    _refresh_from_db(task_instance=self, session=session, lock_for_update=lock_for_update)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 873, in _refresh_from_db
+    ti = TaskInstance.get_task_instance(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/api_internal/internal_api_call.py", line 166, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 2346, in get_task_instance
+    return query.one_or_none()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2850, in one_or_none
+    return self._iter().one_or_none()
+           ^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2916, in _iter
+    result = self.session.execute(
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+    conn = self._connection_for_bind(bind)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1555, in _connection_for_bind
+    return self._transaction._connection_for_bind(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 750, in _connection_for_bind
+    conn = bind.connect()
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/future/engine.py", line 412, in connect
+    return super(Engine, self).connect()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 3325, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 3404, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 3374, in _wrap_pool_connect
+    Connection._handle_dbapi_exception_noconnection(
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2208, in _handle_dbapi_exception_noconnection
+    util.raise_(
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+    return fn()
+           ^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 690, in __connect
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) could not translate host name "postgres" to address: Temporary failure in name resolution
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2025-03-10T10:19:57.551+0000] {job.py:254} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2025-03-10T10:20:07.204+0000] {job.py:229} INFO - Heartbeat recovered after 63.81 seconds
+[2025-03-10T10:20:08.217+0000] {tiki_extract_dag.py:132} INFO - Starting crawl for category dien-thoai-may-tinh-bang (ID: 1789)
+[2025-03-10T10:20:08.255+0000] {tiki_extract_dag.py:134} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 1, 'limit': 40, 'category': '1789'}
+[2025-03-10T10:20:09.315+0000] {tiki_extract_dag.py:143} INFO - Total pages for dien-thoai-may-tinh-bang: 9 (limited to 50)
+[2025-03-10T10:20:23.896+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 276110349: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:20:24.040+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 276110276: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:20:24.190+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 276110023: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:20:24.346+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 276109904: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:20:24.486+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 276099688: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:20:24.647+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 275913708: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:20:24.810+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 275510578: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:20:24.949+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 275492145: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:20:25.093+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 275307093: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:20:25.248+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 275295008: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:20:25.392+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 274171148: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:20:25.535+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 274101262: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:20:25.677+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 274101255: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:20:25.827+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 274069052: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:20:25.972+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 273668660: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:20:26.122+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 273258825: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:20:26.292+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 271128271: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:20:26.433+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 270975124: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:20:26.573+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 252586291: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:20:26.715+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 217706932: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:20:26.860+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 205815576: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:20:27.001+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 201067649: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:20:27.140+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 191350420: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:20:27.284+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 184059211: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:20:27.427+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 183330021: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:20:27.569+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 181977398: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:20:27.712+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 181928619: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:20:27.881+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 170727266: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:20:28.049+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 170165701: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:20:28.201+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 163914808: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:20:28.350+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 125182567: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:20:28.494+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 118139108: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:20:28.495+0000] {tiki_extract_dag.py:156} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 2, 'limit': 40, 'category': '1789'}
+[2025-03-10T10:20:28.638+0000] {tiki_extract_dag.py:178} ERROR - API error at page 2 in category dien-thoai-may-tinh-bang: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:20:31.317+0000] {tiki_extract_dag.py:50} INFO - Updated crawled products at tiki-pipeline/tiki_crawled/crawled_products.json
+[2025-03-10T10:20:31.318+0000] {tiki_extract_dag.py:192} INFO - Uploaded raw data to tiki-pipeline/raw_data/dien-thoai-may-tinh-bang_20250310_102028.json, total items: 40
+[2025-03-10T10:20:31.652+0000] {tiki_extract_dag.py:204} INFO - Saved metadata to tiki-pipeline/metadata/dien-thoai-may-tinh-bang_extract_run_metadata_20250310_102028.json
+[2025-03-10T10:20:31.654+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-03-10T10:20:31.760+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-03-10T10:20:31.761+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=tiki_extract_dag, task_id=crawl_dien-thoai-may-tinh-bang, run_id=manual__2025-03-10T10:16:46.076323+00:00, execution_date=20250310T101646, start_date=20250310T101743, end_date=20250310T102031
+[2025-03-10T10:20:31.841+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-03-10T10:20:31.843+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-03-10T10:20:31.844+0000] {logging_mixin.py:190} INFO - Dag name:tiki_extract_dag queued_at:2025-03-10 10:16:46.133924+00:00
+[2025-03-10T10:20:31.844+0000] {logging_mixin.py:190} INFO - Task hostname:c77555d100c4 operator:PythonOperator
+[2025-03-10T10:20:31.909+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-03-10T10:20:31.956+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-03-10T10:20:31.963+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

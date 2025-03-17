@@ -1,0 +1,83 @@
+[2025-03-12T04:21:52.211+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-12T04:21:52.296+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: tiki_extract_dag.extract_thiet-bi-kts-phu-kien-so manual__2025-03-12T04:21:28.506204+00:00 [queued]>
+[2025-03-12T04:21:52.339+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: tiki_extract_dag.extract_thiet-bi-kts-phu-kien-so manual__2025-03-12T04:21:28.506204+00:00 [queued]>
+[2025-03-12T04:21:52.342+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 4
+[2025-03-12T04:21:52.499+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): extract_thiet-bi-kts-phu-kien-so> on 2025-03-12 04:21:28.506204+00:00
+[2025-03-12T04:21:52.687+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'tiki_extract_dag', 'extract_thiet-bi-kts-phu-kien-so', 'manual__2025-03-12T04:21:28.506204+00:00', '--job-id', '651', '--raw', '--subdir', 'DAGS_FOLDER/tiki_extract_dag.py', '--cfg-path', '/tmp/tmpgc_60ytb']
+[2025-03-12T04:21:52.715+0000] {standard_task_runner.py:105} INFO - Job 651: Subtask extract_thiet-bi-kts-phu-kien-so
+[2025-03-12T04:21:52.688+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=3847) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-12T04:21:52.740+0000] {standard_task_runner.py:72} INFO - Started process 3885 to run task
+[2025-03-12T04:21:53.378+0000] {task_command.py:467} INFO - Running <TaskInstance: tiki_extract_dag.extract_thiet-bi-kts-phu-kien-so manual__2025-03-12T04:21:28.506204+00:00 [running]> on host 5c8190d7da62
+[2025-03-12T04:22:01.690+0000] {job.py:229} INFO - Heartbeat recovered after 11.00 seconds
+[2025-03-12T04:22:04.713+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='tiki_extract_dag' AIRFLOW_CTX_TASK_ID='extract_thiet-bi-kts-phu-kien-so' AIRFLOW_CTX_EXECUTION_DATE='2025-03-12T04:21:28.506204+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-12T04:21:28.506204+00:00'
+[2025-03-12T04:22:04.807+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-03-12T04:22:04.807+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-03-12T04:22:04.808+0000] {logging_mixin.py:190} INFO - Current task name:extract_thiet-bi-kts-phu-kien-so state:running start_date:2025-03-12 04:21:52.301507+00:00
+[2025-03-12T04:22:04.808+0000] {logging_mixin.py:190} INFO - Dag name:tiki_extract_dag and current dag run status:running
+[2025-03-12T04:22:04.809+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-03-12T04:22:06.591+0000] {tiki_extract_dag.py:120} INFO - Starting crawl for category thiet-bi-kts-phu-kien-so
+[2025-03-12T04:22:07.252+0000] {tiki_extract_dag.py:127} INFO - Total pages for thiet-bi-kts-phu-kien-so: 50
+[2025-03-12T04:22:07.849+0000] {tiki_extract_dag.py:155} INFO - Extracted page 2/50 - thiet-bi-kts-phu-kien-so, total items: 80
+[2025-03-12T04:22:13.988+0000] {tiki_extract_dag.py:155} INFO - Extracted page 3/50 - thiet-bi-kts-phu-kien-so, total items: 120
+[2025-03-12T04:22:22.240+0000] {tiki_extract_dag.py:155} INFO - Extracted page 4/50 - thiet-bi-kts-phu-kien-so, total items: 160
+[2025-03-12T04:22:30.488+0000] {tiki_extract_dag.py:155} INFO - Extracted page 5/50 - thiet-bi-kts-phu-kien-so, total items: 200
+[2025-03-12T04:22:37.285+0000] {tiki_extract_dag.py:155} INFO - Extracted page 6/50 - thiet-bi-kts-phu-kien-so, total items: 240
+[2025-03-12T04:22:46.086+0000] {tiki_extract_dag.py:155} INFO - Extracted page 7/50 - thiet-bi-kts-phu-kien-so, total items: 280
+[2025-03-12T04:22:54.964+0000] {tiki_extract_dag.py:155} INFO - Extracted page 8/50 - thiet-bi-kts-phu-kien-so, total items: 320
+[2025-03-12T04:23:01.497+0000] {tiki_extract_dag.py:155} INFO - Extracted page 9/50 - thiet-bi-kts-phu-kien-so, total items: 360
+[2025-03-12T04:23:08.505+0000] {tiki_extract_dag.py:155} INFO - Extracted page 10/50 - thiet-bi-kts-phu-kien-so, total items: 400
+[2025-03-12T04:23:18.473+0000] {tiki_extract_dag.py:155} INFO - Extracted page 11/50 - thiet-bi-kts-phu-kien-so, total items: 440
+[2025-03-12T04:23:25.612+0000] {tiki_extract_dag.py:155} INFO - Extracted page 12/50 - thiet-bi-kts-phu-kien-so, total items: 480
+[2025-03-12T04:23:34.563+0000] {tiki_extract_dag.py:155} INFO - Extracted page 13/50 - thiet-bi-kts-phu-kien-so, total items: 520
+[2025-03-12T04:23:43.024+0000] {tiki_extract_dag.py:155} INFO - Extracted page 14/50 - thiet-bi-kts-phu-kien-so, total items: 560
+[2025-03-12T04:23:50.780+0000] {tiki_extract_dag.py:155} INFO - Extracted page 15/50 - thiet-bi-kts-phu-kien-so, total items: 600
+[2025-03-12T04:23:59.013+0000] {tiki_extract_dag.py:155} INFO - Extracted page 16/50 - thiet-bi-kts-phu-kien-so, total items: 640
+[2025-03-12T04:24:05.299+0000] {tiki_extract_dag.py:155} INFO - Extracted page 17/50 - thiet-bi-kts-phu-kien-so, total items: 680
+[2025-03-12T04:24:11.311+0000] {tiki_extract_dag.py:155} INFO - Extracted page 18/50 - thiet-bi-kts-phu-kien-so, total items: 720
+[2025-03-12T04:24:19.979+0000] {tiki_extract_dag.py:155} INFO - Extracted page 19/50 - thiet-bi-kts-phu-kien-so, total items: 760
+[2025-03-12T04:24:26.223+0000] {tiki_extract_dag.py:155} INFO - Extracted page 20/50 - thiet-bi-kts-phu-kien-so, total items: 800
+[2025-03-12T04:24:34.788+0000] {tiki_extract_dag.py:155} INFO - Extracted page 21/50 - thiet-bi-kts-phu-kien-so, total items: 840
+[2025-03-12T04:24:42.804+0000] {tiki_extract_dag.py:155} INFO - Extracted page 22/50 - thiet-bi-kts-phu-kien-so, total items: 880
+[2025-03-12T04:24:48.989+0000] {tiki_extract_dag.py:155} INFO - Extracted page 23/50 - thiet-bi-kts-phu-kien-so, total items: 920
+[2025-03-12T04:24:55.912+0000] {tiki_extract_dag.py:155} INFO - Extracted page 24/50 - thiet-bi-kts-phu-kien-so, total items: 960
+[2025-03-12T04:25:06.101+0000] {tiki_extract_dag.py:155} INFO - Extracted page 25/50 - thiet-bi-kts-phu-kien-so, total items: 1000
+[2025-03-12T04:25:12.214+0000] {tiki_extract_dag.py:155} INFO - Extracted page 26/50 - thiet-bi-kts-phu-kien-so, total items: 1040
+[2025-03-12T04:25:18.239+0000] {tiki_extract_dag.py:155} INFO - Extracted page 27/50 - thiet-bi-kts-phu-kien-so, total items: 1080
+[2025-03-12T04:25:28.517+0000] {tiki_extract_dag.py:155} INFO - Extracted page 28/50 - thiet-bi-kts-phu-kien-so, total items: 1120
+[2025-03-12T04:25:37.779+0000] {tiki_extract_dag.py:155} INFO - Extracted page 29/50 - thiet-bi-kts-phu-kien-so, total items: 1160
+[2025-03-12T04:25:43.770+0000] {tiki_extract_dag.py:155} INFO - Extracted page 30/50 - thiet-bi-kts-phu-kien-so, total items: 1200
+[2025-03-12T04:25:53.391+0000] {tiki_extract_dag.py:155} INFO - Extracted page 31/50 - thiet-bi-kts-phu-kien-so, total items: 1240
+[2025-03-12T04:26:02.312+0000] {tiki_extract_dag.py:155} INFO - Extracted page 32/50 - thiet-bi-kts-phu-kien-so, total items: 1280
+[2025-03-12T04:26:09.529+0000] {tiki_extract_dag.py:155} INFO - Extracted page 33/50 - thiet-bi-kts-phu-kien-so, total items: 1320
+[2025-03-12T04:26:16.322+0000] {tiki_extract_dag.py:155} INFO - Extracted page 34/50 - thiet-bi-kts-phu-kien-so, total items: 1360
+[2025-03-12T04:26:26.573+0000] {tiki_extract_dag.py:155} INFO - Extracted page 35/50 - thiet-bi-kts-phu-kien-so, total items: 1400
+[2025-03-12T04:26:34.476+0000] {tiki_extract_dag.py:155} INFO - Extracted page 36/50 - thiet-bi-kts-phu-kien-so, total items: 1440
+[2025-03-12T04:26:40.366+0000] {tiki_extract_dag.py:155} INFO - Extracted page 37/50 - thiet-bi-kts-phu-kien-so, total items: 1480
+[2025-03-12T04:26:50.173+0000] {tiki_extract_dag.py:155} INFO - Extracted page 38/50 - thiet-bi-kts-phu-kien-so, total items: 1520
+[2025-03-12T04:26:56.088+0000] {tiki_extract_dag.py:155} INFO - Extracted page 39/50 - thiet-bi-kts-phu-kien-so, total items: 1560
+[2025-03-12T04:27:03.721+0000] {tiki_extract_dag.py:155} INFO - Extracted page 40/50 - thiet-bi-kts-phu-kien-so, total items: 1600
+[2025-03-12T04:27:09.667+0000] {tiki_extract_dag.py:155} INFO - Extracted page 41/50 - thiet-bi-kts-phu-kien-so, total items: 1640
+[2025-03-12T04:27:16.770+0000] {tiki_extract_dag.py:155} INFO - Extracted page 42/50 - thiet-bi-kts-phu-kien-so, total items: 1680
+[2025-03-12T04:27:24.947+0000] {tiki_extract_dag.py:155} INFO - Extracted page 43/50 - thiet-bi-kts-phu-kien-so, total items: 1720
+[2025-03-12T04:27:35.092+0000] {tiki_extract_dag.py:155} INFO - Extracted page 44/50 - thiet-bi-kts-phu-kien-so, total items: 1760
+[2025-03-12T04:27:41.662+0000] {tiki_extract_dag.py:155} INFO - Extracted page 45/50 - thiet-bi-kts-phu-kien-so, total items: 1800
+[2025-03-12T04:27:51.613+0000] {tiki_extract_dag.py:155} INFO - Extracted page 46/50 - thiet-bi-kts-phu-kien-so, total items: 1840
+[2025-03-12T04:27:57.654+0000] {tiki_extract_dag.py:155} INFO - Extracted page 47/50 - thiet-bi-kts-phu-kien-so, total items: 1880
+[2025-03-12T04:28:03.907+0000] {tiki_extract_dag.py:155} INFO - Extracted page 48/50 - thiet-bi-kts-phu-kien-so, total items: 1920
+[2025-03-12T04:28:13.527+0000] {tiki_extract_dag.py:155} INFO - Extracted page 49/50 - thiet-bi-kts-phu-kien-so, total items: 1960
+[2025-03-12T04:28:21.900+0000] {tiki_extract_dag.py:155} INFO - Extracted page 50/50 - thiet-bi-kts-phu-kien-so, total items: 2000
+[2025-03-12T04:28:38.082+0000] {tiki_extract_dag.py:56} INFO - Updated crawled products at tiki-pipeline/tiki_crawled/crawled_products.json
+[2025-03-12T04:28:38.084+0000] {tiki_extract_dag.py:172} INFO - Uploaded raw data to tiki-pipeline/tiki_raw_data/raw_thiet-bi-kts-phu-kien-so_20250312_042832.json, total items: 2000
+[2025-03-12T04:28:38.755+0000] {tiki_extract_dag.py:183} INFO - Saved metadata to tiki-pipeline/metadata/extract_run_metadata_thiet-bi-kts-phu-kien-so_20250312_042832.json
+[2025-03-12T04:28:38.802+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-03-12T04:28:39.020+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-03-12T04:28:39.026+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=tiki_extract_dag, task_id=extract_thiet-bi-kts-phu-kien-so, run_id=manual__2025-03-12T04:21:28.506204+00:00, execution_date=20250312T042128, start_date=20250312T042152, end_date=20250312T042839
+[2025-03-12T04:28:39.198+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-03-12T04:28:39.200+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-03-12T04:28:39.201+0000] {logging_mixin.py:190} INFO - Dag name:tiki_extract_dag queued_at:2025-03-12 04:21:28.548433+00:00
+[2025-03-12T04:28:39.202+0000] {logging_mixin.py:190} INFO - Task hostname:5c8190d7da62 operator:PythonOperator
+[2025-03-12T04:28:39.332+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-03-12T04:28:39.493+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-03-12T04:28:39.498+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

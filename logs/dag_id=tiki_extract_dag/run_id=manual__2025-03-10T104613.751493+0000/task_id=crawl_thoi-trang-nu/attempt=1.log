@@ -1,0 +1,97 @@
+[2025-03-10T10:46:53.700+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-10T10:46:53.833+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: tiki_extract_dag.crawl_thoi-trang-nu manual__2025-03-10T10:46:13.751493+00:00 [queued]>
+[2025-03-10T10:46:53.890+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: tiki_extract_dag.crawl_thoi-trang-nu manual__2025-03-10T10:46:13.751493+00:00 [queued]>
+[2025-03-10T10:46:53.894+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 4
+[2025-03-10T10:46:54.351+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): crawl_thoi-trang-nu> on 2025-03-10 10:46:13.751493+00:00
+[2025-03-10T10:46:54.470+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=330) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-10T10:46:54.490+0000] {standard_task_runner.py:72} INFO - Started process 371 to run task
+[2025-03-10T10:46:54.542+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'tiki_extract_dag', 'crawl_thoi-trang-nu', 'manual__2025-03-10T10:46:13.751493+00:00', '--job-id', '477', '--raw', '--subdir', 'DAGS_FOLDER/tiki_extract_dag.py', '--cfg-path', '/tmp/tmpk5ophspa']
+[2025-03-10T10:46:54.558+0000] {standard_task_runner.py:105} INFO - Job 477: Subtask crawl_thoi-trang-nu
+[2025-03-10T10:46:55.590+0000] {task_command.py:467} INFO - Running <TaskInstance: tiki_extract_dag.crawl_thoi-trang-nu manual__2025-03-10T10:46:13.751493+00:00 [running]> on host 0c9fb3f19112
+[2025-03-10T10:47:13.151+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='tiki_extract_dag' AIRFLOW_CTX_TASK_ID='crawl_thoi-trang-nu' AIRFLOW_CTX_EXECUTION_DATE='2025-03-10T10:46:13.751493+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-10T10:46:13.751493+00:00'
+[2025-03-10T10:47:13.178+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-03-10T10:47:13.181+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-03-10T10:47:13.198+0000] {logging_mixin.py:190} INFO - Current task name:crawl_thoi-trang-nu state:running start_date:2025-03-10 10:46:53.834594+00:00
+[2025-03-10T10:47:13.203+0000] {logging_mixin.py:190} INFO - Dag name:tiki_extract_dag and current dag run status:running
+[2025-03-10T10:47:13.209+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-03-10T10:47:14.357+0000] {job.py:229} INFO - Heartbeat recovered after 21.03 seconds
+[2025-03-10T10:47:58.798+0000] {job.py:229} INFO - Heartbeat recovered after 44.47 seconds
+[2025-03-10T10:47:59.421+0000] {tiki_extract_dag.py:137} INFO - Starting crawl for category thoi-trang-nu (ID: 931)
+[2025-03-10T10:47:59.422+0000] {tiki_extract_dag.py:139} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 1, 'limit': 40, 'category': '931'}
+[2025-03-10T10:47:59.952+0000] {tiki_extract_dag.py:148} INFO - Total pages for thoi-trang-nu: 50 (limited to 50)
+[2025-03-10T10:47:59.953+0000] {tiki_extract_dag.py:161} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 2, 'limit': 40, 'category': '931'}
+[2025-03-10T10:48:01.557+0000] {tiki_extract_dag.py:181} INFO - Extracted page 2/50 for category thoi-trang-nu, total items: 0
+[2025-03-10T10:48:18.273+0000] {job.py:229} INFO - Heartbeat recovered after 14.10 seconds
+[2025-03-10T10:48:18.572+0000] {tiki_extract_dag.py:161} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 3, 'limit': 40, 'category': '931'}
+[2025-03-10T10:48:26.882+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 177272170 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:48:33.762+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 177272170 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:48:41.226+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 177272170 on attempt 3/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:48:41.364+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 176881225 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:48:51.486+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 176881225 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:48:57.788+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 176881225 on attempt 3/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:48:57.944+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 176021615 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:49:19.354+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 118026606 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:49:28.757+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 118026606 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:49:37.384+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 118026606 on attempt 3/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:49:37.526+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 118017395 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:49:44.810+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 118017395 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:49:50.702+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 118017395 on attempt 3/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:49:50.850+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 118015056 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:49:56.378+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 118015056 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:50:17.046+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 84544893 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:50:25.389+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 84544893 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:50:33.165+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 84544893 on attempt 3/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:50:33.309+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 84487723 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:50:40.368+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 84487723 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:50:46.684+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 84487723 on attempt 3/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:50:46.850+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 83757870 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:50:53.164+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 83757870 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:50:58.357+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 83757870 on attempt 3/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:50:58.518+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 78032841 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:51:21.697+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 979203 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:51:29.711+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 979203 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:51:38.347+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 979203 on attempt 3/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:51:38.348+0000] {tiki_extract_dag.py:181} INFO - Extracted page 3/50 for category thoi-trang-nu, total items: 40
+[2025-03-10T10:51:57.366+0000] {tiki_extract_dag.py:161} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 4, 'limit': 40, 'category': '931'}
+[2025-03-10T10:51:57.526+0000] {tiki_extract_dag.py:184} ERROR - API error at page 4 in category thoi-trang-nu on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:52:24.297+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 116244653 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:52:31.035+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 116244653 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:52:38.154+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 116244653 on attempt 3/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:52:38.297+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 113256243 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:52:43.821+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 113256243 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:52:52.025+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 113256243 on attempt 3/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:52:52.167+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 109698272 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:53:16.101+0000] {tiki_extract_dag.py:181} INFO - Extracted page 4/50 for category thoi-trang-nu, total items: 80
+[2025-03-10T10:53:32.846+0000] {tiki_extract_dag.py:161} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 5, 'limit': 40, 'category': '931'}
+[2025-03-10T10:53:35.792+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 188835606 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:53:43.093+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 188835606 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:53:49.209+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 188835606 on attempt 3/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:53:49.362+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 183558599 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:53:58.914+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 183558599 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:54:21.389+0000] {tiki_extract_dag.py:181} INFO - Extracted page 5/50 for category thoi-trang-nu, total items: 120
+[2025-03-10T10:54:39.487+0000] {tiki_extract_dag.py:161} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 6, 'limit': 40, 'category': '931'}
+[2025-03-10T10:54:47.039+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 119671674 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:54:53.829+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 119671674 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:55:08.575+0000] {tiki_extract_dag.py:181} INFO - Extracted page 6/50 for category thoi-trang-nu, total items: 160
+[2025-03-10T10:55:26.136+0000] {tiki_extract_dag.py:161} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 7, 'limit': 40, 'category': '931'}
+[2025-03-10T10:55:47.778+0000] {tiki_extract_dag.py:181} INFO - Extracted page 7/50 for category thoi-trang-nu, total items: 200
+[2025-03-10T10:56:06.785+0000] {tiki_extract_dag.py:161} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 8, 'limit': 40, 'category': '931'}
+[2025-03-10T10:56:24.114+0000] {tiki_extract_dag.py:181} INFO - Extracted page 8/50 for category thoi-trang-nu, total items: 240
+[2025-03-10T10:56:44.018+0000] {tiki_extract_dag.py:161} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 9, 'limit': 40, 'category': '931'}
+[2025-03-10T10:56:46.862+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 167462243 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:56:52.083+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 167462243 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:57:13.248+0000] {tiki_extract_dag.py:181} INFO - Extracted page 9/50 for category thoi-trang-nu, total items: 280
+[2025-03-10T10:57:29.056+0000] {tiki_extract_dag.py:161} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 10, 'limit': 40, 'category': '931'}
+[2025-03-10T10:57:42.657+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 55728548 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:57:49.079+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 55728548 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:57:55.217+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 55728548 on attempt 3/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:57:55.383+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 55023696 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:58:04.049+0000] {tiki_extract_dag.py:181} INFO - Extracted page 10/50 for category thoi-trang-nu, total items: 320
+[2025-03-10T10:58:23.954+0000] {tiki_extract_dag.py:161} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 11, 'limit': 40, 'category': '931'}
+[2025-03-10T10:58:39.503+0000] {tiki_extract_dag.py:181} INFO - Extracted page 11/50 for category thoi-trang-nu, total items: 360
+[2025-03-10T10:58:57.553+0000] {tiki_extract_dag.py:161} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 12, 'limit': 40, 'category': '931'}
+[2025-03-10T10:58:57.701+0000] {tiki_extract_dag.py:184} ERROR - API error at page 12 in category thoi-trang-nu on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:59:22.705+0000] {tiki_extract_dag.py:181} INFO - Extracted page 12/50 for category thoi-trang-nu, total items: 400
+[2025-03-10T10:59:38.120+0000] {tiki_extract_dag.py:161} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 13, 'limit': 40, 'category': '931'}

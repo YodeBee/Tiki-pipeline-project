@@ -1,0 +1,45 @@
+[2025-03-11T09:55:13.481+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-11T09:55:13.645+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: tiki_extract_dag.crawl_dien-tu-dien-lanh manual__2025-03-11T09:54:25.561686+00:00 [queued]>
+[2025-03-11T09:55:13.787+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: tiki_extract_dag.crawl_dien-tu-dien-lanh manual__2025-03-11T09:54:25.561686+00:00 [queued]>
+[2025-03-11T09:55:13.793+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 4
+[2025-03-11T09:55:13.956+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): crawl_dien-tu-dien-lanh> on 2025-03-11 09:54:25.561686+00:00
+[2025-03-11T09:55:14.078+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=754) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-11T09:55:14.154+0000] {standard_task_runner.py:72} INFO - Started process 782 to run task
+[2025-03-11T09:55:14.255+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'tiki_extract_dag', 'crawl_dien-tu-dien-lanh', 'manual__2025-03-11T09:54:25.561686+00:00', '--job-id', '581', '--raw', '--subdir', 'DAGS_FOLDER/tiki_extract_dag.py', '--cfg-path', '/tmp/tmp_6hd_6j8']
+[2025-03-11T09:55:14.265+0000] {standard_task_runner.py:105} INFO - Job 581: Subtask crawl_dien-tu-dien-lanh
+[2025-03-11T09:55:16.471+0000] {task_command.py:467} INFO - Running <TaskInstance: tiki_extract_dag.crawl_dien-tu-dien-lanh manual__2025-03-11T09:54:25.561686+00:00 [running]> on host 5c8190d7da62
+[2025-03-11T09:55:26.511+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='tiki_extract_dag' AIRFLOW_CTX_TASK_ID='crawl_dien-tu-dien-lanh' AIRFLOW_CTX_EXECUTION_DATE='2025-03-11T09:54:25.561686+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-11T09:54:25.561686+00:00'
+[2025-03-11T09:55:26.520+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-03-11T09:55:26.522+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-03-11T09:55:26.525+0000] {logging_mixin.py:190} INFO - Current task name:crawl_dien-tu-dien-lanh state:running start_date:2025-03-11 09:55:13.685920+00:00
+[2025-03-11T09:55:26.529+0000] {logging_mixin.py:190} INFO - Dag name:tiki_extract_dag and current dag run status:running
+[2025-03-11T09:55:26.531+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-03-11T09:55:40.981+0000] {tiki_extract_dag.py:139} INFO - Starting crawl for category dien-tu-dien-lanh (ID: 4221)
+[2025-03-11T09:55:40.982+0000] {tiki_extract_dag.py:141} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 1, 'limit': 40, 'category': '4221'}
+[2025-03-11T09:55:42.082+0000] {tiki_extract_dag.py:150} INFO - Total pages for dien-tu-dien-lanh: 50 (limited to 50)
+[2025-03-11T09:55:51.565+0000] {job.py:229} INFO - Heartbeat recovered after 13.90 seconds
+[2025-03-11T09:56:19.373+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 21180803 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T09:56:28.719+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 21180803 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T09:56:35.508+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 21180803 on attempt 3/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T09:56:35.654+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 19401965 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T09:56:44.643+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 19401965 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T09:56:50.237+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 19401965 on attempt 3/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T09:56:50.411+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 17908150 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T09:56:59.411+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 17908150 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T09:57:19.701+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 2, 'limit': 40, 'category': '4221'}
+[2025-03-11T09:57:19.907+0000] {tiki_extract_dag.py:186} ERROR - API error at page 2 in category dien-tu-dien-lanh on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T09:57:26.232+0000] {tiki_extract_dag.py:186} ERROR - API error at page 2 in category dien-tu-dien-lanh on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T09:57:33.905+0000] {tiki_extract_dag.py:186} ERROR - API error at page 2 in category dien-tu-dien-lanh on attempt 3/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T09:57:33.911+0000] {tiki_extract_dag.py:191} ERROR - Failed after 3 attempts for page 2 in category dien-tu-dien-lanh
+[2025-03-11T09:57:33.927+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-03-11T09:57:34.528+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-03-11T09:57:34.554+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=tiki_extract_dag, task_id=crawl_dien-tu-dien-lanh, run_id=manual__2025-03-11T09:54:25.561686+00:00, execution_date=20250311T095425, start_date=20250311T095513, end_date=20250311T095734
+[2025-03-11T09:57:34.926+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-03-11T09:57:34.928+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-03-11T09:57:34.930+0000] {logging_mixin.py:190} INFO - Dag name:tiki_extract_dag queued_at:2025-03-11 09:54:25.681807+00:00
+[2025-03-11T09:57:34.931+0000] {logging_mixin.py:190} INFO - Task hostname:5c8190d7da62 operator:PythonOperator
+[2025-03-11T09:57:35.166+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-03-11T09:57:35.465+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-03-11T09:57:35.475+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,44 @@
+[2025-03-09T19:41:06.230+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-09T19:41:06.264+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: tiki_load_dag.load_data manual__2025-03-09T19:40:59.740184+00:00 [queued]>
+[2025-03-09T19:41:06.282+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: tiki_load_dag.load_data manual__2025-03-09T19:40:59.740184+00:00 [queued]>
+[2025-03-09T19:41:06.283+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2025-03-09T19:41:06.314+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): load_data> on 2025-03-09 19:40:59.740184+00:00
+[2025-03-09T19:41:06.334+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=810) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-09T19:41:06.338+0000] {standard_task_runner.py:72} INFO - Started process 819 to run task
+[2025-03-09T19:41:06.339+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'tiki_load_dag', 'load_data', 'manual__2025-03-09T19:40:59.740184+00:00', '--job-id', '300', '--raw', '--subdir', 'DAGS_FOLDER/tiki_load_dag.py', '--cfg-path', '/tmp/tmp0azobcbl']
+[2025-03-09T19:41:06.342+0000] {standard_task_runner.py:105} INFO - Job 300: Subtask load_data
+[2025-03-09T19:41:06.481+0000] {task_command.py:467} INFO - Running <TaskInstance: tiki_load_dag.load_data manual__2025-03-09T19:40:59.740184+00:00 [running]> on host 72a6d77a3cc5
+[2025-03-09T19:41:06.710+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='tiki_load_dag' AIRFLOW_CTX_TASK_ID='load_data' AIRFLOW_CTX_EXECUTION_DATE='2025-03-09T19:40:59.740184+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-09T19:40:59.740184+00:00'
+[2025-03-09T19:41:06.712+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-03-09T19:41:06.713+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-03-09T19:41:06.714+0000] {logging_mixin.py:190} INFO - Current task name:load_data state:running start_date:2025-03-09 19:41:06.265392+00:00
+[2025-03-09T19:41:06.714+0000] {logging_mixin.py:190} INFO - Dag name:tiki_load_dag and current dag run status:running
+[2025-03-09T19:41:06.715+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-03-09T19:41:07.386+0000] {tiki_load_dag.py:37} INFO - Found latest fact_sales blob: tiki_transformed_data/fact_sales_20250309_193952.csv
+[2025-03-09T19:41:07.456+0000] {tiki_load_dag.py:37} INFO - Found latest dim_product blob: tiki_transformed_data/dim_product_20250309_193952.csv
+[2025-03-09T19:41:07.526+0000] {tiki_load_dag.py:37} INFO - Found latest dim_seller blob: tiki_transformed_data/dim_seller_20250309_193952.csv
+[2025-03-09T19:41:07.600+0000] {tiki_load_dag.py:37} INFO - Found latest dim_category blob: tiki_transformed_data/dim_category_20250309_193952.csv
+[2025-03-09T19:41:07.668+0000] {tiki_load_dag.py:37} INFO - Found latest dim_brand blob: tiki_transformed_data/dim_brand_20250309_193952.csv
+[2025-03-09T19:41:08.979+0000] {tiki_load_dag.py:68} INFO - Starting load job for Fact_Sales from gs://tiki-data/tiki_transformed_data/fact_sales_20250309_193952.csv
+[2025-03-09T19:41:14.738+0000] {tiki_load_dag.py:70} INFO - Loaded Fact_Sales with 18336 rows
+[2025-03-09T19:41:15.565+0000] {tiki_load_dag.py:68} INFO - Starting load job for Dim_Product from gs://tiki-data/tiki_transformed_data/dim_product_20250309_193952.csv
+[2025-03-09T19:41:31.228+0000] {tiki_load_dag.py:70} INFO - Loaded Dim_Product with 18336 rows
+[2025-03-09T19:41:32.076+0000] {tiki_load_dag.py:68} INFO - Starting load job for Dim_Seller from gs://tiki-data/tiki_transformed_data/dim_seller_20250309_193952.csv
+[2025-03-09T19:41:36.515+0000] {tiki_load_dag.py:70} INFO - Loaded Dim_Seller with 1664 rows
+[2025-03-09T19:41:37.408+0000] {tiki_load_dag.py:68} INFO - Starting load job for Dim_Category from gs://tiki-data/tiki_transformed_data/dim_category_20250309_193952.csv
+[2025-03-09T19:41:45.581+0000] {tiki_load_dag.py:70} INFO - Loaded Dim_Category with 9124 rows
+[2025-03-09T19:41:46.450+0000] {tiki_load_dag.py:68} INFO - Starting load job for Dim_Brand from gs://tiki-data/tiki_transformed_data/dim_brand_20250309_193952.csv
+[2025-03-09T19:41:51.211+0000] {tiki_load_dag.py:70} INFO - Loaded Dim_Brand with 1 rows
+[2025-03-09T19:41:51.212+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-03-09T19:41:51.231+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-03-09T19:41:51.233+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=tiki_load_dag, task_id=load_data, run_id=manual__2025-03-09T19:40:59.740184+00:00, execution_date=20250309T194059, start_date=20250309T194106, end_date=20250309T194151
+[2025-03-09T19:41:51.280+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-03-09T19:41:51.281+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-03-09T19:41:51.281+0000] {logging_mixin.py:190} INFO - Dag name:tiki_load_dag queued_at:2025-03-09 19:40:59.770594+00:00
+[2025-03-09T19:41:51.282+0000] {logging_mixin.py:190} INFO - Task hostname:72a6d77a3cc5 operator:PythonOperator
+[2025-03-09T19:41:51.323+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-03-09T19:41:51.349+0000] {standard_task_runner.py:217} INFO - Process not found (most likely exited), stop collecting metrics
+[2025-03-09T19:41:51.354+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-03-09T19:41:51.359+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

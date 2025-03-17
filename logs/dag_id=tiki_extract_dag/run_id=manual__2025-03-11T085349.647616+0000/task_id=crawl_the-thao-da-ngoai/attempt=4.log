@@ -1,0 +1,33 @@
+[2025-03-11T09:22:08.251+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-11T09:22:08.340+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: tiki_extract_dag.crawl_the-thao-da-ngoai manual__2025-03-11T08:53:49.647616+00:00 [queued]>
+[2025-03-11T09:22:08.369+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: tiki_extract_dag.crawl_the-thao-da-ngoai manual__2025-03-11T08:53:49.647616+00:00 [queued]>
+[2025-03-11T09:22:08.371+0000] {taskinstance.py:2867} INFO - Starting attempt 4 of 4
+[2025-03-11T09:22:08.414+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): crawl_the-thao-da-ngoai> on 2025-03-11 08:53:49.647616+00:00
+[2025-03-11T09:22:08.453+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=431) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-11T09:22:08.471+0000] {standard_task_runner.py:72} INFO - Started process 433 to run task
+[2025-03-11T09:22:08.452+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'tiki_extract_dag', 'crawl_the-thao-da-ngoai', 'manual__2025-03-11T08:53:49.647616+00:00', '--job-id', '561', '--raw', '--subdir', 'DAGS_FOLDER/tiki_extract_dag.py', '--cfg-path', '/tmp/tmpek1gs2y8']
+[2025-03-11T09:22:08.474+0000] {standard_task_runner.py:105} INFO - Job 561: Subtask crawl_the-thao-da-ngoai
+[2025-03-11T09:22:08.609+0000] {task_command.py:467} INFO - Running <TaskInstance: tiki_extract_dag.crawl_the-thao-da-ngoai manual__2025-03-11T08:53:49.647616+00:00 [running]> on host 5c8190d7da62
+[2025-03-11T09:22:09.430+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='tiki_extract_dag' AIRFLOW_CTX_TASK_ID='crawl_the-thao-da-ngoai' AIRFLOW_CTX_EXECUTION_DATE='2025-03-11T08:53:49.647616+00:00' AIRFLOW_CTX_TRY_NUMBER='4' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-11T08:53:49.647616+00:00'
+[2025-03-11T09:22:09.433+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-03-11T09:22:09.436+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-03-11T09:22:09.437+0000] {logging_mixin.py:190} INFO - Current task name:crawl_the-thao-da-ngoai state:running start_date:2025-03-11 09:22:08.343261+00:00
+[2025-03-11T09:22:09.438+0000] {logging_mixin.py:190} INFO - Dag name:tiki_extract_dag and current dag run status:running
+[2025-03-11T09:22:09.439+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-03-11T09:22:10.503+0000] {tiki_extract_dag.py:139} INFO - Starting crawl for category the-thao-da-ngoai (ID: 1975)
+[2025-03-11T09:22:10.504+0000] {tiki_extract_dag.py:141} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 1, 'limit': 40, 'category': '1975'}
+[2025-03-11T09:22:10.998+0000] {tiki_extract_dag.py:150} INFO - Total pages for the-thao-da-ngoai: 50 (limited to 50)
+[2025-03-11T09:22:10.999+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 2, 'limit': 40, 'category': '1975'}
+[2025-03-11T09:22:11.654+0000] {tiki_extract_dag.py:183} INFO - Extracted page 2/50 for category the-thao-da-ngoai, total items: 1
+[2025-03-11T09:22:32.483+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 3, 'limit': 40, 'category': '1975'}
+[2025-03-11T09:22:40.666+0000] {job.py:229} INFO - Heartbeat recovered after 17.05 seconds
+[2025-03-11T09:22:53.219+0000] {tiki_extract_dag.py:183} INFO - Extracted page 3/50 for category the-thao-da-ngoai, total items: 41
+[2025-03-11T09:23:08.400+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 4, 'limit': 40, 'category': '1975'}
+[2025-03-11T09:23:23.915+0000] {tiki_extract_dag.py:183} INFO - Extracted page 4/50 for category the-thao-da-ngoai, total items: 81
+[2025-03-11T09:23:39.763+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 5, 'limit': 40, 'category': '1975'}
+[2025-03-11T09:24:11.932+0000] {job.py:229} INFO - Heartbeat recovered after 50.74 seconds
+[2025-03-11T09:24:12.416+0000] {local_task_job_runner.py:266} INFO - Task exited with return code -9. For more information, see https://***.apache.org/docs/apache-***/stable/troubleshooting.html#LocalTaskJob-killed
+[2025-03-11T09:24:12.549+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-03-11T09:24:12.556+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,348 @@
+[2025-03-12T07:40:55.207+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-12T07:40:55.250+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: tiki_extract_dag.extract_thoi-trang-nam manual__2025-03-12T07:40:49.551946+00:00 [queued]>
+[2025-03-12T07:40:55.270+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: tiki_extract_dag.extract_thoi-trang-nam manual__2025-03-12T07:40:49.551946+00:00 [queued]>
+[2025-03-12T07:40:55.271+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 4
+[2025-03-12T07:40:55.302+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): extract_thoi-trang-nam> on 2025-03-12 07:40:49.551946+00:00
+[2025-03-12T07:40:55.321+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=452) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-12T07:40:55.326+0000] {standard_task_runner.py:72} INFO - Started process 476 to run task
+[2025-03-12T07:40:55.327+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'tiki_extract_dag', 'extract_thoi-trang-nam', 'manual__2025-03-12T07:40:49.551946+00:00', '--job-id', '684', '--raw', '--subdir', 'DAGS_FOLDER/tiki_extract_dag.py', '--cfg-path', '/tmp/tmpyjx7tbkc']
+[2025-03-12T07:40:55.329+0000] {standard_task_runner.py:105} INFO - Job 684: Subtask extract_thoi-trang-nam
+[2025-03-12T07:40:55.466+0000] {task_command.py:467} INFO - Running <TaskInstance: tiki_extract_dag.extract_thoi-trang-nam manual__2025-03-12T07:40:49.551946+00:00 [running]> on host 3905098656d4
+[2025-03-12T07:40:56.397+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='tiki_extract_dag' AIRFLOW_CTX_TASK_ID='extract_thoi-trang-nam' AIRFLOW_CTX_EXECUTION_DATE='2025-03-12T07:40:49.551946+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-12T07:40:49.551946+00:00'
+[2025-03-12T07:40:56.399+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-03-12T07:40:56.401+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-03-12T07:40:56.402+0000] {logging_mixin.py:190} INFO - Current task name:extract_thoi-trang-nam state:running start_date:2025-03-12 07:40:55.251363+00:00
+[2025-03-12T07:40:56.402+0000] {logging_mixin.py:190} INFO - Dag name:tiki_extract_dag and current dag run status:running
+[2025-03-12T07:40:56.403+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-03-12T07:40:57.334+0000] {tiki_extract_dag.py:122} INFO - Starting crawl for category thoi-trang-nam
+[2025-03-12T07:40:58.602+0000] {tiki_extract_dag.py:129} INFO - Total pages for thoi-trang-nam: 50
+[2025-03-12T07:40:59.090+0000] {tiki_extract_dag.py:155} INFO - Extracted page 2/50 - thoi-trang-nam, total items: 80
+[2025-03-12T07:41:09.714+0000] {tiki_extract_dag.py:155} INFO - Extracted page 3/50 - thoi-trang-nam, total items: 120
+[2025-03-12T07:41:46.241+0000] {job.py:229} INFO - Heartbeat recovered after 35.68 seconds
+[2025-03-12T07:41:48.529+0000] {tiki_extract_dag.py:155} INFO - Extracted page 4/50 - thoi-trang-nam, total items: 160
+[2025-03-12T07:41:57.968+0000] {tiki_extract_dag.py:155} INFO - Extracted page 5/50 - thoi-trang-nam, total items: 200
+[2025-03-12T07:42:05.581+0000] {tiki_extract_dag.py:155} INFO - Extracted page 6/50 - thoi-trang-nam, total items: 240
+[2025-03-12T07:42:12.291+0000] {tiki_extract_dag.py:155} INFO - Extracted page 7/50 - thoi-trang-nam, total items: 280
+[2025-03-12T07:42:21.663+0000] {tiki_extract_dag.py:155} INFO - Extracted page 8/50 - thoi-trang-nam, total items: 320
+[2025-03-12T07:42:30.646+0000] {tiki_extract_dag.py:155} INFO - Extracted page 9/50 - thoi-trang-nam, total items: 360
+[2025-03-12T07:42:40.166+0000] {tiki_extract_dag.py:155} INFO - Extracted page 10/50 - thoi-trang-nam, total items: 400
+[2025-03-12T07:42:49.816+0000] {tiki_extract_dag.py:155} INFO - Extracted page 11/50 - thoi-trang-nam, total items: 440
+[2025-03-12T07:42:56.137+0000] {tiki_extract_dag.py:155} INFO - Extracted page 12/50 - thoi-trang-nam, total items: 480
+[2025-03-12T07:43:03.266+0000] {tiki_extract_dag.py:155} INFO - Extracted page 13/50 - thoi-trang-nam, total items: 520
+[2025-03-12T07:43:08.922+0000] {tiki_extract_dag.py:155} INFO - Extracted page 14/50 - thoi-trang-nam, total items: 560
+[2025-03-12T07:43:19.137+0000] {tiki_extract_dag.py:155} INFO - Extracted page 15/50 - thoi-trang-nam, total items: 600
+[2025-03-12T07:43:27.711+0000] {tiki_extract_dag.py:155} INFO - Extracted page 16/50 - thoi-trang-nam, total items: 640
+[2025-03-12T07:43:37.340+0000] {tiki_extract_dag.py:155} INFO - Extracted page 17/50 - thoi-trang-nam, total items: 680
+[2025-03-12T07:43:46.608+0000] {tiki_extract_dag.py:155} INFO - Extracted page 18/50 - thoi-trang-nam, total items: 720
+[2025-03-12T07:43:55.259+0000] {tiki_extract_dag.py:155} INFO - Extracted page 19/50 - thoi-trang-nam, total items: 760
+[2025-03-12T07:44:03.468+0000] {tiki_extract_dag.py:155} INFO - Extracted page 20/50 - thoi-trang-nam, total items: 800
+[2025-03-12T07:44:13.755+0000] {tiki_extract_dag.py:155} INFO - Extracted page 21/50 - thoi-trang-nam, total items: 840
+[2025-03-12T07:44:22.629+0000] {tiki_extract_dag.py:155} INFO - Extracted page 22/50 - thoi-trang-nam, total items: 880
+[2025-03-12T07:44:29.005+0000] {tiki_extract_dag.py:155} INFO - Extracted page 23/50 - thoi-trang-nam, total items: 920
+[2025-03-12T07:44:36.655+0000] {tiki_extract_dag.py:155} INFO - Extracted page 24/50 - thoi-trang-nam, total items: 960
+[2025-03-12T07:44:44.698+0000] {tiki_extract_dag.py:155} INFO - Extracted page 25/50 - thoi-trang-nam, total items: 1000
+[2025-03-12T07:44:50.492+0000] {tiki_extract_dag.py:155} INFO - Extracted page 26/50 - thoi-trang-nam, total items: 1040
+[2025-03-12T07:44:56.777+0000] {tiki_extract_dag.py:155} INFO - Extracted page 27/50 - thoi-trang-nam, total items: 1080
+[2025-03-12T07:45:05.069+0000] {tiki_extract_dag.py:155} INFO - Extracted page 28/50 - thoi-trang-nam, total items: 1120
+[2025-03-12T07:45:14.563+0000] {tiki_extract_dag.py:155} INFO - Extracted page 29/50 - thoi-trang-nam, total items: 1160
+[2025-03-12T07:45:21.508+0000] {tiki_extract_dag.py:155} INFO - Extracted page 30/50 - thoi-trang-nam, total items: 1200
+[2025-03-12T07:45:27.368+0000] {tiki_extract_dag.py:155} INFO - Extracted page 31/50 - thoi-trang-nam, total items: 1240
+[2025-03-12T07:45:33.552+0000] {tiki_extract_dag.py:155} INFO - Extracted page 32/50 - thoi-trang-nam, total items: 1280
+[2025-03-12T07:45:39.443+0000] {tiki_extract_dag.py:155} INFO - Extracted page 33/50 - thoi-trang-nam, total items: 1320
+[2025-03-12T07:45:47.328+0000] {tiki_extract_dag.py:155} INFO - Extracted page 34/50 - thoi-trang-nam, total items: 1360
+[2025-03-12T07:45:57.578+0000] {tiki_extract_dag.py:155} INFO - Extracted page 35/50 - thoi-trang-nam, total items: 1400
+[2025-03-12T07:46:06.468+0000] {tiki_extract_dag.py:155} INFO - Extracted page 36/50 - thoi-trang-nam, total items: 1440
+[2025-03-12T07:46:16.098+0000] {tiki_extract_dag.py:155} INFO - Extracted page 37/50 - thoi-trang-nam, total items: 1480
+[2025-03-12T07:46:26.213+0000] {tiki_extract_dag.py:155} INFO - Extracted page 38/50 - thoi-trang-nam, total items: 1520
+[2025-03-12T07:46:35.980+0000] {tiki_extract_dag.py:155} INFO - Extracted page 39/50 - thoi-trang-nam, total items: 1560
+[2025-03-12T07:46:43.495+0000] {tiki_extract_dag.py:155} INFO - Extracted page 40/50 - thoi-trang-nam, total items: 1600
+[2025-03-12T07:46:52.939+0000] {tiki_extract_dag.py:155} INFO - Extracted page 41/50 - thoi-trang-nam, total items: 1640
+[2025-03-12T07:46:58.940+0000] {tiki_extract_dag.py:155} INFO - Extracted page 42/50 - thoi-trang-nam, total items: 1680
+[2025-03-12T07:47:08.336+0000] {tiki_extract_dag.py:155} INFO - Extracted page 43/50 - thoi-trang-nam, total items: 1720
+[2025-03-12T07:47:29.239+0000] {job.py:229} INFO - Heartbeat recovered after 19.16 seconds
+[2025-03-12T07:47:29.696+0000] {tiki_extract_dag.py:155} INFO - Extracted page 44/50 - thoi-trang-nam, total items: 1760
+[2025-03-12T07:47:37.501+0000] {tiki_extract_dag.py:155} INFO - Extracted page 45/50 - thoi-trang-nam, total items: 1800
+[2025-03-12T07:47:47.462+0000] {tiki_extract_dag.py:155} INFO - Extracted page 46/50 - thoi-trang-nam, total items: 1840
+[2025-03-12T07:47:57.568+0000] {tiki_extract_dag.py:155} INFO - Extracted page 47/50 - thoi-trang-nam, total items: 1880
+[2025-03-12T07:48:07.327+0000] {tiki_extract_dag.py:155} INFO - Extracted page 48/50 - thoi-trang-nam, total items: 1920
+[2025-03-12T07:48:13.215+0000] {tiki_extract_dag.py:155} INFO - Extracted page 49/50 - thoi-trang-nam, total items: 1960
+[2025-03-12T07:48:19.320+0000] {tiki_extract_dag.py:155} INFO - Extracted page 50/50 - thoi-trang-nam, total items: 2000
+[2025-03-12T07:50:12.701+0000] {taskinstance.py:3313} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 516, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/http/client.py", line 1430, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.12/http/client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/http/client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/socket.py", line 720, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/ssl.py", line 1251, in recv_into
+    return self.read(nbytes, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/ssl.py", line 1103, in read
+    return self._sslobj.read(len, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TimeoutError: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/retry.py", line 474, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 536, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 367, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Read timed out. (read timeout=60)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/tiki_extract_dag.py", line 170, in extract_category_data
+    blob.upload_from_string(json.dumps(all_raw_data), content_type='application/json')
+  File "/usr/local/lib/python3.12/contextlib.py", line 81, in inner
+    return func(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/cloud/storage/blob.py", line 3128, in upload_from_string
+    self.upload_from_file(
+  File "/usr/local/lib/python3.12/contextlib.py", line 81, in inner
+    return func(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/cloud/storage/blob.py", line 2851, in upload_from_file
+    self._prep_and_do_upload(
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/cloud/storage/blob.py", line 2700, in _prep_and_do_upload
+    created_json = self._do_upload(
+                   ^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/cloud/storage/blob.py", line 2506, in _do_upload
+    response = self._do_multipart_upload(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/cloud/storage/blob.py", line 2007, in _do_multipart_upload
+    response = upload.transmit(
+               ^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/resumable_media/requests/upload.py", line 153, in transmit
+    return _request_helpers.wait_and_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/resumable_media/requests/_request_helpers.py", line 178, in wait_and_retry
+    raise error
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/resumable_media/requests/_request_helpers.py", line 155, in wait_and_retry
+    response = func()
+               ^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/resumable_media/requests/upload.py", line 145, in retriable_request
+    result = transport.request(
+             ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/auth/transport/requests.py", line 537, in request
+    response = super(AuthorizedSession, self).request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/adapters.py", line 713, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Read timed out. (read timeout=60)
+[2025-03-12T07:50:12.882+0000] {logging_mixin.py:190} INFO - Task instance in failure state
+[2025-03-12T07:50:12.883+0000] {logging_mixin.py:190} INFO - Task start:2025-03-12 07:40:55.251363+00:00 end:2025-03-12 07:50:12.874588+00:00 duration:557.623225
+[2025-03-12T07:50:12.887+0000] {logging_mixin.py:190} INFO - Task:<Task(PythonOperator): extract_thoi-trang-nam> dag:<DAG: tiki_extract_dag> dagrun:<DagRun tiki_extract_dag @ 2025-03-12 07:40:49.551946+00:00: manual__2025-03-12T07:40:49.551946+00:00, state:running, queued_at: 2025-03-12 07:40:49.590021+00:00. externally triggered: True>
+[2025-03-12T07:50:12.888+0000] {logging_mixin.py:190} INFO - Failure caused by HTTPSConnectionPool(host='storage.googleapis.com', port=443): Read timed out. (read timeout=60)
+[2025-03-12T07:50:12.891+0000] {taskinstance.py:1226} INFO - Marking task as UP_FOR_RETRY. dag_id=tiki_extract_dag, task_id=extract_thoi-trang-nam, run_id=manual__2025-03-12T07:40:49.551946+00:00, execution_date=20250312T074049, start_date=20250312T074055, end_date=20250312T075012
+[2025-03-12T07:50:12.999+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-03-12T07:50:13.004+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 684 for task extract_thoi-trang-nam (HTTPSConnectionPool(host='storage.googleapis.com', port=443): Read timed out. (read timeout=60); 476)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 516, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/http/client.py", line 1430, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.12/http/client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/http/client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/socket.py", line 720, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/ssl.py", line 1251, in recv_into
+    return self.read(nbytes, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/ssl.py", line 1103, in read
+    return self._sslobj.read(len, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TimeoutError: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/retry.py", line 474, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 536, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 367, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Read timed out. (read timeout=60)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3006, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 274, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3161, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3185, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/tiki_extract_dag.py", line 170, in extract_category_data
+    blob.upload_from_string(json.dumps(all_raw_data), content_type='application/json')
+  File "/usr/local/lib/python3.12/contextlib.py", line 81, in inner
+    return func(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/cloud/storage/blob.py", line 3128, in upload_from_string
+    self.upload_from_file(
+  File "/usr/local/lib/python3.12/contextlib.py", line 81, in inner
+    return func(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/cloud/storage/blob.py", line 2851, in upload_from_file
+    self._prep_and_do_upload(
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/cloud/storage/blob.py", line 2700, in _prep_and_do_upload
+    created_json = self._do_upload(
+                   ^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/cloud/storage/blob.py", line 2506, in _do_upload
+    response = self._do_multipart_upload(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/cloud/storage/blob.py", line 2007, in _do_multipart_upload
+    response = upload.transmit(
+               ^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/resumable_media/requests/upload.py", line 153, in transmit
+    return _request_helpers.wait_and_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/resumable_media/requests/_request_helpers.py", line 178, in wait_and_retry
+    raise error
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/resumable_media/requests/_request_helpers.py", line 155, in wait_and_retry
+    response = func()
+               ^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/resumable_media/requests/upload.py", line 145, in retriable_request
+    result = transport.request(
+             ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/auth/transport/requests.py", line 537, in request
+    response = super(AuthorizedSession, self).request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/adapters.py", line 713, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Read timed out. (read timeout=60)
+[2025-03-12T07:50:13.069+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-03-12T07:50:13.143+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-03-12T07:50:13.147+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

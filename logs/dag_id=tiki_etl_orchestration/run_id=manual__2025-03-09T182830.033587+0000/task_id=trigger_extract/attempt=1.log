@@ -1,0 +1,32 @@
+[2025-03-09T18:28:35.068+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-09T18:28:35.102+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: tiki_etl_orchestration.trigger_extract manual__2025-03-09T18:28:30.033587+00:00 [queued]>
+[2025-03-09T18:28:35.117+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: tiki_etl_orchestration.trigger_extract manual__2025-03-09T18:28:30.033587+00:00 [queued]>
+[2025-03-09T18:28:35.119+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2025-03-09T18:28:35.355+0000] {taskinstance.py:2890} INFO - Executing <Task(TriggerDagRunOperator): trigger_extract> on 2025-03-09 18:28:30.033587+00:00
+[2025-03-09T18:28:35.369+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=88) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-09T18:28:35.372+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'tiki_etl_orchestration', 'trigger_extract', 'manual__2025-03-09T18:28:30.033587+00:00', '--job-id', '268', '--raw', '--subdir', 'DAGS_FOLDER/tiki_etl_orchestration.py', '--cfg-path', '/tmp/tmpixmf7cv3']
+[2025-03-09T18:28:35.374+0000] {standard_task_runner.py:72} INFO - Started process 90 to run task
+[2025-03-09T18:28:35.374+0000] {standard_task_runner.py:105} INFO - Job 268: Subtask trigger_extract
+[2025-03-09T18:28:35.468+0000] {task_command.py:467} INFO - Running <TaskInstance: tiki_etl_orchestration.trigger_extract manual__2025-03-09T18:28:30.033587+00:00 [running]> on host 72a6d77a3cc5
+[2025-03-09T18:28:35.619+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='tiki_etl_orchestration' AIRFLOW_CTX_TASK_ID='trigger_extract' AIRFLOW_CTX_EXECUTION_DATE='2025-03-09T18:28:30.033587+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-09T18:28:30.033587+00:00'
+[2025-03-09T18:28:35.622+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-03-09T18:28:35.623+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-03-09T18:28:35.624+0000] {logging_mixin.py:190} INFO - Current task name:trigger_extract state:running start_date:2025-03-09 18:28:35.104155+00:00
+[2025-03-09T18:28:35.625+0000] {logging_mixin.py:190} INFO - Dag name:tiki_etl_orchestration and current dag run status:running
+[2025-03-09T18:28:35.625+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-03-09T18:28:35.762+0000] {trigger_dagrun.py:257} INFO - Waiting for tiki_extract_dag on 2025-03-09 18:28:35.626858+00:00 to become allowed state ['success'] ...
+[2025-03-09T18:28:45.777+0000] {trigger_dagrun.py:257} INFO - Waiting for tiki_extract_dag on 2025-03-09 18:28:35.626858+00:00 to become allowed state ['success'] ...
+[2025-03-09T18:28:55.789+0000] {trigger_dagrun.py:257} INFO - Waiting for tiki_extract_dag on 2025-03-09 18:28:35.626858+00:00 to become allowed state ['success'] ...
+[2025-03-09T18:29:05.802+0000] {trigger_dagrun.py:257} INFO - Waiting for tiki_extract_dag on 2025-03-09 18:28:35.626858+00:00 to become allowed state ['success'] ...
+[2025-03-09T18:29:15.814+0000] {trigger_dagrun.py:257} INFO - Waiting for tiki_extract_dag on 2025-03-09 18:28:35.626858+00:00 to become allowed state ['success'] ...
+[2025-03-09T18:29:25.828+0000] {trigger_dagrun.py:271} INFO - tiki_extract_dag finished with allowed state success
+[2025-03-09T18:29:25.851+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-03-09T18:29:25.852+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=tiki_etl_orchestration, task_id=trigger_extract, run_id=manual__2025-03-09T18:28:30.033587+00:00, execution_date=20250309T182830, start_date=20250309T182835, end_date=20250309T182925
+[2025-03-09T18:29:25.899+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-03-09T18:29:25.900+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-03-09T18:29:25.901+0000] {logging_mixin.py:190} INFO - Dag name:tiki_etl_orchestration queued_at:2025-03-09 18:28:30.703177+00:00
+[2025-03-09T18:29:25.902+0000] {logging_mixin.py:190} INFO - Task hostname:72a6d77a3cc5 operator:TriggerDagRunOperator
+[2025-03-09T18:29:25.935+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-03-09T18:29:25.953+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

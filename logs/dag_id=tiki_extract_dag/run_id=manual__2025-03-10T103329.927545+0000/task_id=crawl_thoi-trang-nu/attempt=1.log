@@ -1,0 +1,102 @@
+[2025-03-10T10:38:53.471+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-10T10:38:53.605+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: tiki_extract_dag.crawl_thoi-trang-nu manual__2025-03-10T10:33:29.927545+00:00 [queued]>
+[2025-03-10T10:38:53.680+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: tiki_extract_dag.crawl_thoi-trang-nu manual__2025-03-10T10:33:29.927545+00:00 [queued]>
+[2025-03-10T10:38:53.687+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 4
+[2025-03-10T10:38:53.893+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): crawl_thoi-trang-nu> on 2025-03-10 10:33:29.927545+00:00
+[2025-03-10T10:38:54.104+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'tiki_extract_dag', 'crawl_thoi-trang-nu', 'manual__2025-03-10T10:33:29.927545+00:00', '--job-id', '462', '--raw', '--subdir', 'DAGS_FOLDER/tiki_extract_dag.py', '--cfg-path', '/tmp/tmp9q295xl4']
+[2025-03-10T10:38:54.113+0000] {standard_task_runner.py:105} INFO - Job 462: Subtask crawl_thoi-trang-nu
+[2025-03-10T10:38:54.102+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=193) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-10T10:38:54.125+0000] {standard_task_runner.py:72} INFO - Started process 214 to run task
+[2025-03-10T10:38:54.580+0000] {task_command.py:467} INFO - Running <TaskInstance: tiki_extract_dag.crawl_thoi-trang-nu manual__2025-03-10T10:33:29.927545+00:00 [running]> on host 0c9fb3f19112
+[2025-03-10T10:39:03.435+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='tiki_extract_dag' AIRFLOW_CTX_TASK_ID='crawl_thoi-trang-nu' AIRFLOW_CTX_EXECUTION_DATE='2025-03-10T10:33:29.927545+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-10T10:33:29.927545+00:00'
+[2025-03-10T10:39:03.449+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-03-10T10:39:03.450+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-03-10T10:39:03.452+0000] {logging_mixin.py:190} INFO - Current task name:crawl_thoi-trang-nu state:running start_date:2025-03-10 10:38:53.612963+00:00
+[2025-03-10T10:39:03.453+0000] {logging_mixin.py:190} INFO - Dag name:tiki_extract_dag and current dag run status:running
+[2025-03-10T10:39:03.469+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-03-10T10:39:10.732+0000] {tiki_extract_dag.py:132} INFO - Starting crawl for category thoi-trang-nu (ID: 931)
+[2025-03-10T10:39:10.734+0000] {tiki_extract_dag.py:134} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 1, 'limit': 40, 'category': '931'}
+[2025-03-10T10:39:11.777+0000] {tiki_extract_dag.py:143} INFO - Total pages for thoi-trang-nu: 50 (limited to 50)
+[2025-03-10T10:39:36.598+0000] {job.py:229} INFO - Heartbeat recovered after 21.52 seconds
+[2025-03-10T10:39:43.953+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 132126497: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:39:44.119+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 131907412: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:39:44.267+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 124238677: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:39:44.545+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 118014158: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:01.800+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 107056472: HTTPSConnectionPool(host='maintenance.tiki.vn', port=443): Read timed out.
+[2025-03-10T10:40:04.194+0000] {job.py:229} INFO - Heartbeat recovered after 21.89 seconds
+[2025-03-10T10:40:04.742+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 106782807: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:04.918+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 106765137: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:05.075+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 106750367: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:05.229+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 106002718: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:05.378+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 101949563: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:05.532+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 101439243: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:05.679+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 97790859: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:05.824+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 84446029: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:05.968+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 83907537: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:06.114+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 83812939: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:06.261+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 83757503: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:06.448+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 82874281: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:06.619+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 82704606: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:06.798+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 82700848: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:06.961+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 82700777: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:07.107+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 82695200: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:07.258+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 76661889: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:07.409+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 68196229: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:07.595+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 66089930: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:07.760+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 57982432: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:07.927+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 55042458: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:08.127+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 44248342: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:08.390+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 42712220: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:17.329+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 36904256: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:17.335+0000] {tiki_extract_dag.py:156} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 2, 'limit': 40, 'category': '931'}
+[2025-03-10T10:40:29.067+0000] {job.py:229} INFO - Heartbeat recovered after 24.88 seconds
+[2025-03-10T10:40:34.605+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 183692692: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:34.762+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 180590012: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:34.906+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 172666766: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:35.051+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 170831596: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:35.203+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 166531902: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:35.358+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 165206693: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:35.511+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 164545695: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:35.672+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 160819392: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:35.827+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 154135275: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:35.983+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 146222727: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:36.140+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 121258407: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:36.285+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 107540897: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:36.433+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 106756612: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:36.581+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 103357144: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:36.733+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 102121667: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:36.882+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 97685241: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:37.029+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 97676376: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:37.199+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 84574514: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:37.355+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 83832124: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:37.530+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 83034305: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:37.682+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 82875023: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:37.825+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 82865098: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:37.973+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 82700771: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:38.118+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 74820156: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:38.261+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 70662805: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:38.410+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 58255254: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:38.555+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 28390948: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:38.709+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 21164740: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:38.864+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 13894753: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:39.010+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 10280258: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:39.155+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 7965235: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:39.300+0000] {tiki_extract_dag.py:119} ERROR - Error fetching details for product 1818717: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:39.302+0000] {tiki_extract_dag.py:175} INFO - Extracted page 2/50 for category thoi-trang-nu, total items: 80
+[2025-03-10T10:40:50.745+0000] {tiki_extract_dag.py:156} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 3, 'limit': 40, 'category': '931'}
+[2025-03-10T10:40:50.886+0000] {tiki_extract_dag.py:178} ERROR - API error at page 3 in category thoi-trang-nu: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:40:54.684+0000] {tiki_extract_dag.py:50} INFO - Updated crawled products at tiki-pipeline/tiki_crawled/crawled_products.json
+[2025-03-10T10:40:54.685+0000] {tiki_extract_dag.py:192} INFO - Uploaded raw data to tiki-pipeline/raw_data/thoi-trang-nu_20250310_104050.json, total items: 80
+[2025-03-10T10:40:55.067+0000] {tiki_extract_dag.py:204} INFO - Saved metadata to tiki-pipeline/metadata/thoi-trang-nu_extract_run_metadata_20250310_104050.json
+[2025-03-10T10:40:55.069+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-03-10T10:40:55.117+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-03-10T10:40:55.119+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=tiki_extract_dag, task_id=crawl_thoi-trang-nu, run_id=manual__2025-03-10T10:33:29.927545+00:00, execution_date=20250310T103329, start_date=20250310T103853, end_date=20250310T104055
+[2025-03-10T10:40:55.167+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-03-10T10:40:55.167+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-03-10T10:40:55.168+0000] {logging_mixin.py:190} INFO - Dag name:tiki_extract_dag queued_at:2025-03-10 10:33:30.016202+00:00
+[2025-03-10T10:40:55.168+0000] {logging_mixin.py:190} INFO - Task hostname:0c9fb3f19112 operator:PythonOperator
+[2025-03-10T10:40:55.220+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-03-10T10:40:55.340+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-03-10T10:40:55.345+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

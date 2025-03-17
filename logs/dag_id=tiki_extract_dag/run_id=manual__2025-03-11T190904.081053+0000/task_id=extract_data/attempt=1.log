@@ -1,0 +1,484 @@
+[2025-03-11T19:09:12.090+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-11T19:09:12.124+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: tiki_extract_dag.extract_data manual__2025-03-11T19:09:04.081053+00:00 [queued]>
+[2025-03-11T19:09:12.140+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: tiki_extract_dag.extract_data manual__2025-03-11T19:09:04.081053+00:00 [queued]>
+[2025-03-11T19:09:12.141+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 4
+[2025-03-11T19:09:12.169+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): extract_data> on 2025-03-11 19:09:04.081053+00:00
+[2025-03-11T19:09:12.188+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=2109) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-11T19:09:12.191+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'tiki_extract_dag', 'extract_data', 'manual__2025-03-11T19:09:04.081053+00:00', '--job-id', '637', '--raw', '--subdir', 'DAGS_FOLDER/tiki_extract_dag.py', '--cfg-path', '/tmp/tmpxvvmpiiv']
+[2025-03-11T19:09:12.194+0000] {standard_task_runner.py:105} INFO - Job 637: Subtask extract_data
+[2025-03-11T19:09:12.194+0000] {standard_task_runner.py:72} INFO - Started process 2111 to run task
+[2025-03-11T19:09:12.297+0000] {task_command.py:467} INFO - Running <TaskInstance: tiki_extract_dag.extract_data manual__2025-03-11T19:09:04.081053+00:00 [running]> on host 5c8190d7da62
+[2025-03-11T19:09:13.558+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='tiki_extract_dag' AIRFLOW_CTX_TASK_ID='extract_data' AIRFLOW_CTX_EXECUTION_DATE='2025-03-11T19:09:04.081053+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-11T19:09:04.081053+00:00'
+[2025-03-11T19:09:13.560+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-03-11T19:09:13.561+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-03-11T19:09:13.562+0000] {logging_mixin.py:190} INFO - Current task name:extract_data state:running start_date:2025-03-11 19:09:12.125556+00:00
+[2025-03-11T19:09:13.563+0000] {logging_mixin.py:190} INFO - Dag name:tiki_extract_dag and current dag run status:running
+[2025-03-11T19:09:13.563+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-03-11T19:09:16.717+0000] {tiki_extract_dag.py:152} INFO - Starting crawl for category lam-dep-suc-khoe
+[2025-03-11T19:09:17.247+0000] {tiki_extract_dag.py:159} INFO - Total pages for lam-dep-suc-khoe: 50
+[2025-03-11T19:09:17.672+0000] {tiki_extract_dag.py:185} INFO - Extracted page 2/50 - lam-dep-suc-khoe, total items: 0
+[2025-03-11T19:09:25.441+0000] {tiki_extract_dag.py:185} INFO - Extracted page 3/50 - lam-dep-suc-khoe, total items: 0
+[2025-03-11T19:09:32.274+0000] {tiki_extract_dag.py:185} INFO - Extracted page 4/50 - lam-dep-suc-khoe, total items: 0
+[2025-03-11T19:09:39.541+0000] {tiki_extract_dag.py:185} INFO - Extracted page 5/50 - lam-dep-suc-khoe, total items: 0
+[2025-03-11T19:09:46.651+0000] {tiki_extract_dag.py:185} INFO - Extracted page 6/50 - lam-dep-suc-khoe, total items: 0
+[2025-03-11T19:09:56.004+0000] {tiki_extract_dag.py:185} INFO - Extracted page 7/50 - lam-dep-suc-khoe, total items: 0
+[2025-03-11T19:10:02.233+0000] {tiki_extract_dag.py:185} INFO - Extracted page 8/50 - lam-dep-suc-khoe, total items: 0
+[2025-03-11T19:10:12.469+0000] {tiki_extract_dag.py:185} INFO - Extracted page 9/50 - lam-dep-suc-khoe, total items: 0
+[2025-03-11T19:10:20.919+0000] {tiki_extract_dag.py:185} INFO - Extracted page 10/50 - lam-dep-suc-khoe, total items: 0
+[2025-03-11T19:10:29.457+0000] {tiki_extract_dag.py:185} INFO - Extracted page 11/50 - lam-dep-suc-khoe, total items: 0
+[2025-03-11T19:10:36.501+0000] {tiki_extract_dag.py:185} INFO - Extracted page 12/50 - lam-dep-suc-khoe, total items: 0
+[2025-03-11T19:10:43.411+0000] {tiki_extract_dag.py:185} INFO - Extracted page 13/50 - lam-dep-suc-khoe, total items: 0
+[2025-03-11T19:10:52.909+0000] {tiki_extract_dag.py:185} INFO - Extracted page 14/50 - lam-dep-suc-khoe, total items: 0
+[2025-03-11T19:10:59.418+0000] {tiki_extract_dag.py:185} INFO - Extracted page 15/50 - lam-dep-suc-khoe, total items: 0
+[2025-03-11T19:11:07.788+0000] {tiki_extract_dag.py:185} INFO - Extracted page 16/50 - lam-dep-suc-khoe, total items: 0
+[2025-03-11T19:11:15.033+0000] {tiki_extract_dag.py:185} INFO - Extracted page 17/50 - lam-dep-suc-khoe, total items: 0
+[2025-03-11T19:11:24.670+0000] {tiki_extract_dag.py:185} INFO - Extracted page 18/50 - lam-dep-suc-khoe, total items: 0
+[2025-03-11T19:11:33.554+0000] {tiki_extract_dag.py:185} INFO - Extracted page 19/50 - lam-dep-suc-khoe, total items: 0
+[2025-03-11T19:11:43.664+0000] {tiki_extract_dag.py:185} INFO - Extracted page 20/50 - lam-dep-suc-khoe, total items: 0
+[2025-03-11T19:11:51.333+0000] {tiki_extract_dag.py:185} INFO - Extracted page 21/50 - lam-dep-suc-khoe, total items: 0
+[2025-03-11T19:11:57.677+0000] {tiki_extract_dag.py:185} INFO - Extracted page 22/50 - lam-dep-suc-khoe, total items: 0
+[2025-03-11T19:12:07.257+0000] {tiki_extract_dag.py:185} INFO - Extracted page 23/50 - lam-dep-suc-khoe, total items: 0
+[2025-03-11T19:12:14.248+0000] {tiki_extract_dag.py:185} INFO - Extracted page 24/50 - lam-dep-suc-khoe, total items: 0
+[2025-03-11T19:12:23.677+0000] {tiki_extract_dag.py:185} INFO - Extracted page 25/50 - lam-dep-suc-khoe, total items: 0
+[2025-03-11T19:12:29.768+0000] {tiki_extract_dag.py:185} INFO - Extracted page 26/50 - lam-dep-suc-khoe, total items: 0
+[2025-03-11T19:12:37.292+0000] {tiki_extract_dag.py:185} INFO - Extracted page 27/50 - lam-dep-suc-khoe, total items: 0
+[2025-03-11T19:12:47.507+0000] {tiki_extract_dag.py:185} INFO - Extracted page 28/50 - lam-dep-suc-khoe, total items: 0
+[2025-03-11T19:12:56.055+0000] {tiki_extract_dag.py:185} INFO - Extracted page 29/50 - lam-dep-suc-khoe, total items: 0
+[2025-03-11T19:13:05.145+0000] {tiki_extract_dag.py:185} INFO - Extracted page 30/50 - lam-dep-suc-khoe, total items: 0
+[2025-03-11T19:13:13.944+0000] {tiki_extract_dag.py:185} INFO - Extracted page 31/50 - lam-dep-suc-khoe, total items: 0
+[2025-03-11T19:13:20.562+0000] {tiki_extract_dag.py:185} INFO - Extracted page 32/50 - lam-dep-suc-khoe, total items: 0
+[2025-03-11T19:13:30.947+0000] {tiki_extract_dag.py:185} INFO - Extracted page 33/50 - lam-dep-suc-khoe, total items: 0
+[2025-03-11T19:13:38.987+0000] {tiki_extract_dag.py:185} INFO - Extracted page 34/50 - lam-dep-suc-khoe, total items: 0
+[2025-03-11T19:13:45.335+0000] {tiki_extract_dag.py:185} INFO - Extracted page 35/50 - lam-dep-suc-khoe, total items: 0
+[2025-03-11T19:13:53.060+0000] {tiki_extract_dag.py:185} INFO - Extracted page 36/50 - lam-dep-suc-khoe, total items: 0
+[2025-03-11T19:14:02.787+0000] {tiki_extract_dag.py:185} INFO - Extracted page 37/50 - lam-dep-suc-khoe, total items: 0
+[2025-03-11T19:14:11.902+0000] {tiki_extract_dag.py:185} INFO - Extracted page 38/50 - lam-dep-suc-khoe, total items: 0
+[2025-03-11T19:14:22.290+0000] {tiki_extract_dag.py:185} INFO - Extracted page 39/50 - lam-dep-suc-khoe, total items: 0
+[2025-03-11T19:14:28.304+0000] {tiki_extract_dag.py:185} INFO - Extracted page 40/50 - lam-dep-suc-khoe, total items: 0
+[2025-03-11T19:14:37.527+0000] {tiki_extract_dag.py:185} INFO - Extracted page 41/50 - lam-dep-suc-khoe, total items: 0
+[2025-03-11T19:14:43.955+0000] {tiki_extract_dag.py:185} INFO - Extracted page 42/50 - lam-dep-suc-khoe, total items: 0
+[2025-03-11T19:14:53.204+0000] {tiki_extract_dag.py:185} INFO - Extracted page 43/50 - lam-dep-suc-khoe, total items: 0
+[2025-03-11T19:15:02.709+0000] {tiki_extract_dag.py:185} INFO - Extracted page 44/50 - lam-dep-suc-khoe, total items: 0
+[2025-03-11T19:15:09.886+0000] {tiki_extract_dag.py:185} INFO - Extracted page 45/50 - lam-dep-suc-khoe, total items: 0
+[2025-03-11T19:15:18.160+0000] {tiki_extract_dag.py:185} INFO - Extracted page 46/50 - lam-dep-suc-khoe, total items: 0
+[2025-03-11T19:15:28.505+0000] {tiki_extract_dag.py:185} INFO - Extracted page 47/50 - lam-dep-suc-khoe, total items: 0
+[2025-03-11T19:15:38.593+0000] {tiki_extract_dag.py:185} INFO - Extracted page 48/50 - lam-dep-suc-khoe, total items: 0
+[2025-03-11T19:15:47.326+0000] {tiki_extract_dag.py:185} INFO - Extracted page 49/50 - lam-dep-suc-khoe, total items: 0
+[2025-03-11T19:15:55.313+0000] {tiki_extract_dag.py:185} INFO - Extracted page 50/50 - lam-dep-suc-khoe, total items: 18
+[2025-03-11T19:16:01.521+0000] {tiki_extract_dag.py:152} INFO - Starting crawl for category dien-thoai-may-tinh-bang
+[2025-03-11T19:16:01.901+0000] {tiki_extract_dag.py:159} INFO - Total pages for dien-thoai-may-tinh-bang: 9
+[2025-03-11T19:16:02.318+0000] {tiki_extract_dag.py:185} INFO - Extracted page 2/9 - dien-thoai-may-tinh-bang, total items: 18
+[2025-03-11T19:16:12.398+0000] {tiki_extract_dag.py:185} INFO - Extracted page 3/9 - dien-thoai-may-tinh-bang, total items: 18
+[2025-03-11T19:16:18.318+0000] {tiki_extract_dag.py:185} INFO - Extracted page 4/9 - dien-thoai-may-tinh-bang, total items: 18
+[2025-03-11T19:16:25.183+0000] {tiki_extract_dag.py:185} INFO - Extracted page 5/9 - dien-thoai-may-tinh-bang, total items: 18
+[2025-03-11T19:16:32.598+0000] {tiki_extract_dag.py:185} INFO - Extracted page 6/9 - dien-thoai-may-tinh-bang, total items: 18
+[2025-03-11T19:16:40.180+0000] {tiki_extract_dag.py:185} INFO - Extracted page 7/9 - dien-thoai-may-tinh-bang, total items: 18
+[2025-03-11T19:16:47.284+0000] {tiki_extract_dag.py:185} INFO - Extracted page 8/9 - dien-thoai-may-tinh-bang, total items: 18
+[2025-03-11T19:16:53.988+0000] {tiki_extract_dag.py:185} INFO - Extracted page 9/9 - dien-thoai-may-tinh-bang, total items: 18
+[2025-03-11T19:17:01.363+0000] {tiki_extract_dag.py:152} INFO - Starting crawl for category laptop-may-vi-tinh-linh-kien
+[2025-03-11T19:17:01.955+0000] {tiki_extract_dag.py:159} INFO - Total pages for laptop-may-vi-tinh-linh-kien: 50
+[2025-03-11T19:17:02.430+0000] {tiki_extract_dag.py:185} INFO - Extracted page 2/50 - laptop-may-vi-tinh-linh-kien, total items: 18
+[2025-03-11T19:17:11.772+0000] {tiki_extract_dag.py:185} INFO - Extracted page 3/50 - laptop-may-vi-tinh-linh-kien, total items: 18
+[2025-03-11T19:17:20.742+0000] {tiki_extract_dag.py:185} INFO - Extracted page 4/50 - laptop-may-vi-tinh-linh-kien, total items: 18
+[2025-03-11T19:17:29.056+0000] {tiki_extract_dag.py:185} INFO - Extracted page 5/50 - laptop-may-vi-tinh-linh-kien, total items: 18
+[2025-03-11T19:17:36.105+0000] {tiki_extract_dag.py:185} INFO - Extracted page 6/50 - laptop-may-vi-tinh-linh-kien, total items: 18
+[2025-03-11T19:17:44.220+0000] {tiki_extract_dag.py:185} INFO - Extracted page 7/50 - laptop-may-vi-tinh-linh-kien, total items: 18
+[2025-03-11T19:17:51.348+0000] {tiki_extract_dag.py:185} INFO - Extracted page 8/50 - laptop-may-vi-tinh-linh-kien, total items: 18
+[2025-03-11T19:18:01.887+0000] {tiki_extract_dag.py:185} INFO - Extracted page 9/50 - laptop-may-vi-tinh-linh-kien, total items: 18
+[2025-03-11T19:18:07.951+0000] {tiki_extract_dag.py:185} INFO - Extracted page 10/50 - laptop-may-vi-tinh-linh-kien, total items: 18
+[2025-03-11T19:18:14.087+0000] {tiki_extract_dag.py:185} INFO - Extracted page 11/50 - laptop-may-vi-tinh-linh-kien, total items: 18
+[2025-03-11T19:18:20.330+0000] {tiki_extract_dag.py:185} INFO - Extracted page 12/50 - laptop-may-vi-tinh-linh-kien, total items: 18
+[2025-03-11T19:18:25.936+0000] {tiki_extract_dag.py:185} INFO - Extracted page 13/50 - laptop-may-vi-tinh-linh-kien, total items: 18
+[2025-03-11T19:18:35.710+0000] {tiki_extract_dag.py:185} INFO - Extracted page 14/50 - laptop-may-vi-tinh-linh-kien, total items: 18
+[2025-03-11T19:18:45.364+0000] {tiki_extract_dag.py:185} INFO - Extracted page 15/50 - laptop-may-vi-tinh-linh-kien, total items: 18
+[2025-03-11T19:18:53.947+0000] {tiki_extract_dag.py:185} INFO - Extracted page 16/50 - laptop-may-vi-tinh-linh-kien, total items: 18
+[2025-03-11T19:19:02.118+0000] {tiki_extract_dag.py:185} INFO - Extracted page 17/50 - laptop-may-vi-tinh-linh-kien, total items: 18
+[2025-03-11T19:19:07.993+0000] {tiki_extract_dag.py:185} INFO - Extracted page 18/50 - laptop-may-vi-tinh-linh-kien, total items: 18
+[2025-03-11T19:19:18.223+0000] {tiki_extract_dag.py:185} INFO - Extracted page 19/50 - laptop-may-vi-tinh-linh-kien, total items: 18
+[2025-03-11T19:19:25.995+0000] {tiki_extract_dag.py:185} INFO - Extracted page 20/50 - laptop-may-vi-tinh-linh-kien, total items: 18
+[2025-03-11T19:19:33.344+0000] {tiki_extract_dag.py:185} INFO - Extracted page 21/50 - laptop-may-vi-tinh-linh-kien, total items: 18
+[2025-03-11T19:19:42.884+0000] {tiki_extract_dag.py:185} INFO - Extracted page 22/50 - laptop-may-vi-tinh-linh-kien, total items: 18
+[2025-03-11T19:19:50.851+0000] {tiki_extract_dag.py:185} INFO - Extracted page 23/50 - laptop-may-vi-tinh-linh-kien, total items: 19
+[2025-03-11T19:19:56.675+0000] {tiki_extract_dag.py:185} INFO - Extracted page 24/50 - laptop-may-vi-tinh-linh-kien, total items: 19
+[2025-03-11T19:20:03.602+0000] {tiki_extract_dag.py:185} INFO - Extracted page 25/50 - laptop-may-vi-tinh-linh-kien, total items: 19
+[2025-03-11T19:20:10.367+0000] {tiki_extract_dag.py:185} INFO - Extracted page 26/50 - laptop-may-vi-tinh-linh-kien, total items: 19
+[2025-03-11T19:20:19.039+0000] {tiki_extract_dag.py:185} INFO - Extracted page 27/50 - laptop-may-vi-tinh-linh-kien, total items: 19
+[2025-03-11T19:20:25.258+0000] {tiki_extract_dag.py:185} INFO - Extracted page 28/50 - laptop-may-vi-tinh-linh-kien, total items: 19
+[2025-03-11T19:20:35.704+0000] {tiki_extract_dag.py:185} INFO - Extracted page 29/50 - laptop-may-vi-tinh-linh-kien, total items: 19
+[2025-03-11T19:20:46.148+0000] {tiki_extract_dag.py:185} INFO - Extracted page 30/50 - laptop-may-vi-tinh-linh-kien, total items: 19
+[2025-03-11T19:20:51.892+0000] {tiki_extract_dag.py:185} INFO - Extracted page 31/50 - laptop-may-vi-tinh-linh-kien, total items: 19
+[2025-03-11T19:20:58.430+0000] {tiki_extract_dag.py:185} INFO - Extracted page 32/50 - laptop-may-vi-tinh-linh-kien, total items: 19
+[2025-03-11T19:21:04.490+0000] {tiki_extract_dag.py:185} INFO - Extracted page 33/50 - laptop-may-vi-tinh-linh-kien, total items: 19
+[2025-03-11T19:21:11.821+0000] {tiki_extract_dag.py:185} INFO - Extracted page 34/50 - laptop-may-vi-tinh-linh-kien, total items: 19
+[2025-03-11T19:21:18.315+0000] {tiki_extract_dag.py:185} INFO - Extracted page 35/50 - laptop-may-vi-tinh-linh-kien, total items: 19
+[2025-03-11T19:21:28.606+0000] {tiki_extract_dag.py:185} INFO - Extracted page 36/50 - laptop-may-vi-tinh-linh-kien, total items: 19
+[2025-03-11T19:21:36.734+0000] {tiki_extract_dag.py:185} INFO - Extracted page 37/50 - laptop-may-vi-tinh-linh-kien, total items: 19
+[2025-03-11T19:21:45.406+0000] {tiki_extract_dag.py:185} INFO - Extracted page 38/50 - laptop-may-vi-tinh-linh-kien, total items: 19
+[2025-03-11T19:21:54.158+0000] {tiki_extract_dag.py:185} INFO - Extracted page 39/50 - laptop-may-vi-tinh-linh-kien, total items: 19
+[2025-03-11T19:22:04.602+0000] {tiki_extract_dag.py:185} INFO - Extracted page 40/50 - laptop-may-vi-tinh-linh-kien, total items: 19
+[2025-03-11T19:22:11.885+0000] {tiki_extract_dag.py:185} INFO - Extracted page 41/50 - laptop-may-vi-tinh-linh-kien, total items: 19
+[2025-03-11T19:22:22.511+0000] {tiki_extract_dag.py:185} INFO - Extracted page 42/50 - laptop-may-vi-tinh-linh-kien, total items: 19
+[2025-03-11T19:22:32.850+0000] {tiki_extract_dag.py:185} INFO - Extracted page 43/50 - laptop-may-vi-tinh-linh-kien, total items: 19
+[2025-03-11T19:22:41.974+0000] {tiki_extract_dag.py:185} INFO - Extracted page 44/50 - laptop-may-vi-tinh-linh-kien, total items: 19
+[2025-03-11T19:22:48.824+0000] {tiki_extract_dag.py:185} INFO - Extracted page 45/50 - laptop-may-vi-tinh-linh-kien, total items: 19
+[2025-03-11T19:22:55.494+0000] {tiki_extract_dag.py:185} INFO - Extracted page 46/50 - laptop-may-vi-tinh-linh-kien, total items: 19
+[2025-03-11T19:23:05.436+0000] {tiki_extract_dag.py:185} INFO - Extracted page 47/50 - laptop-may-vi-tinh-linh-kien, total items: 19
+[2025-03-11T19:23:12.796+0000] {tiki_extract_dag.py:185} INFO - Extracted page 48/50 - laptop-may-vi-tinh-linh-kien, total items: 19
+[2025-03-11T19:23:22.280+0000] {tiki_extract_dag.py:185} INFO - Extracted page 49/50 - laptop-may-vi-tinh-linh-kien, total items: 19
+[2025-03-11T19:23:30.365+0000] {tiki_extract_dag.py:185} INFO - Extracted page 50/50 - laptop-may-vi-tinh-linh-kien, total items: 38
+[2025-03-11T19:23:38.169+0000] {tiki_extract_dag.py:152} INFO - Starting crawl for category dien-gia-dung
+[2025-03-11T19:23:38.820+0000] {tiki_extract_dag.py:159} INFO - Total pages for dien-gia-dung: 50
+[2025-03-11T19:23:39.282+0000] {tiki_extract_dag.py:185} INFO - Extracted page 2/50 - dien-gia-dung, total items: 38
+[2025-03-11T19:23:44.935+0000] {tiki_extract_dag.py:185} INFO - Extracted page 3/50 - dien-gia-dung, total items: 38
+[2025-03-11T19:23:54.867+0000] {tiki_extract_dag.py:185} INFO - Extracted page 4/50 - dien-gia-dung, total items: 38
+[2025-03-11T19:24:02.507+0000] {tiki_extract_dag.py:185} INFO - Extracted page 5/50 - dien-gia-dung, total items: 38
+[2025-03-11T19:24:12.081+0000] {tiki_extract_dag.py:185} INFO - Extracted page 6/50 - dien-gia-dung, total items: 38
+[2025-03-11T19:24:20.403+0000] {tiki_extract_dag.py:185} INFO - Extracted page 7/50 - dien-gia-dung, total items: 38
+[2025-03-11T19:24:26.007+0000] {tiki_extract_dag.py:185} INFO - Extracted page 8/50 - dien-gia-dung, total items: 38
+[2025-03-11T19:24:34.231+0000] {tiki_extract_dag.py:185} INFO - Extracted page 9/50 - dien-gia-dung, total items: 38
+[2025-03-11T19:24:40.068+0000] {tiki_extract_dag.py:185} INFO - Extracted page 10/50 - dien-gia-dung, total items: 38
+[2025-03-11T19:24:50.106+0000] {tiki_extract_dag.py:185} INFO - Extracted page 11/50 - dien-gia-dung, total items: 38
+[2025-03-11T19:24:57.134+0000] {tiki_extract_dag.py:185} INFO - Extracted page 12/50 - dien-gia-dung, total items: 38
+[2025-03-11T19:25:02.829+0000] {tiki_extract_dag.py:185} INFO - Extracted page 13/50 - dien-gia-dung, total items: 38
+[2025-03-11T19:25:11.272+0000] {tiki_extract_dag.py:185} INFO - Extracted page 14/50 - dien-gia-dung, total items: 38
+[2025-03-11T19:25:20.406+0000] {tiki_extract_dag.py:185} INFO - Extracted page 15/50 - dien-gia-dung, total items: 38
+[2025-03-11T19:25:28.712+0000] {tiki_extract_dag.py:185} INFO - Extracted page 16/50 - dien-gia-dung, total items: 38
+[2025-03-11T19:25:38.121+0000] {tiki_extract_dag.py:185} INFO - Extracted page 17/50 - dien-gia-dung, total items: 38
+[2025-03-11T19:25:44.145+0000] {tiki_extract_dag.py:185} INFO - Extracted page 18/50 - dien-gia-dung, total items: 38
+[2025-03-11T19:25:51.208+0000] {tiki_extract_dag.py:185} INFO - Extracted page 19/50 - dien-gia-dung, total items: 38
+[2025-03-11T19:25:59.340+0000] {tiki_extract_dag.py:185} INFO - Extracted page 20/50 - dien-gia-dung, total items: 38
+[2025-03-11T19:26:06.313+0000] {tiki_extract_dag.py:185} INFO - Extracted page 21/50 - dien-gia-dung, total items: 38
+[2025-03-11T19:26:15.438+0000] {tiki_extract_dag.py:185} INFO - Extracted page 22/50 - dien-gia-dung, total items: 38
+[2025-03-11T19:26:21.026+0000] {tiki_extract_dag.py:185} INFO - Extracted page 23/50 - dien-gia-dung, total items: 38
+[2025-03-11T19:26:28.735+0000] {tiki_extract_dag.py:185} INFO - Extracted page 24/50 - dien-gia-dung, total items: 38
+[2025-03-11T19:26:34.557+0000] {tiki_extract_dag.py:185} INFO - Extracted page 25/50 - dien-gia-dung, total items: 38
+[2025-03-11T19:26:44.872+0000] {tiki_extract_dag.py:185} INFO - Extracted page 26/50 - dien-gia-dung, total items: 38
+[2025-03-11T19:26:52.935+0000] {tiki_extract_dag.py:185} INFO - Extracted page 27/50 - dien-gia-dung, total items: 38
+[2025-03-11T19:27:00.646+0000] {tiki_extract_dag.py:185} INFO - Extracted page 28/50 - dien-gia-dung, total items: 38
+[2025-03-11T19:27:08.710+0000] {tiki_extract_dag.py:185} INFO - Extracted page 29/50 - dien-gia-dung, total items: 38
+[2025-03-11T19:27:18.684+0000] {tiki_extract_dag.py:185} INFO - Extracted page 30/50 - dien-gia-dung, total items: 38
+[2025-03-11T19:27:29.027+0000] {tiki_extract_dag.py:185} INFO - Extracted page 31/50 - dien-gia-dung, total items: 38
+[2025-03-11T19:27:34.975+0000] {tiki_extract_dag.py:185} INFO - Extracted page 32/50 - dien-gia-dung, total items: 38
+[2025-03-11T19:27:44.383+0000] {tiki_extract_dag.py:185} INFO - Extracted page 33/50 - dien-gia-dung, total items: 38
+[2025-03-11T19:27:50.607+0000] {tiki_extract_dag.py:185} INFO - Extracted page 34/50 - dien-gia-dung, total items: 38
+[2025-03-11T19:27:57.568+0000] {tiki_extract_dag.py:185} INFO - Extracted page 35/50 - dien-gia-dung, total items: 38
+[2025-03-11T19:28:05.583+0000] {tiki_extract_dag.py:185} INFO - Extracted page 36/50 - dien-gia-dung, total items: 38
+[2025-03-11T19:28:13.158+0000] {tiki_extract_dag.py:185} INFO - Extracted page 37/50 - dien-gia-dung, total items: 38
+[2025-03-11T19:28:19.524+0000] {tiki_extract_dag.py:185} INFO - Extracted page 38/50 - dien-gia-dung, total items: 38
+[2025-03-11T19:28:26.138+0000] {tiki_extract_dag.py:185} INFO - Extracted page 39/50 - dien-gia-dung, total items: 38
+[2025-03-11T19:28:33.585+0000] {tiki_extract_dag.py:185} INFO - Extracted page 40/50 - dien-gia-dung, total items: 38
+[2025-03-11T19:28:41.991+0000] {tiki_extract_dag.py:185} INFO - Extracted page 41/50 - dien-gia-dung, total items: 38
+[2025-03-11T19:28:52.253+0000] {tiki_extract_dag.py:185} INFO - Extracted page 42/50 - dien-gia-dung, total items: 38
+[2025-03-11T19:28:58.709+0000] {tiki_extract_dag.py:185} INFO - Extracted page 43/50 - dien-gia-dung, total items: 38
+[2025-03-11T19:29:07.869+0000] {tiki_extract_dag.py:185} INFO - Extracted page 44/50 - dien-gia-dung, total items: 38
+[2025-03-11T19:29:17.541+0000] {tiki_extract_dag.py:185} INFO - Extracted page 45/50 - dien-gia-dung, total items: 38
+[2025-03-11T19:29:23.305+0000] {tiki_extract_dag.py:185} INFO - Extracted page 46/50 - dien-gia-dung, total items: 38
+[2025-03-11T19:29:30.217+0000] {tiki_extract_dag.py:185} INFO - Extracted page 47/50 - dien-gia-dung, total items: 38
+[2025-03-11T19:29:40.343+0000] {tiki_extract_dag.py:185} INFO - Extracted page 48/50 - dien-gia-dung, total items: 38
+[2025-03-11T19:29:48.797+0000] {tiki_extract_dag.py:185} INFO - Extracted page 49/50 - dien-gia-dung, total items: 38
+[2025-03-11T19:29:57.790+0000] {tiki_extract_dag.py:185} INFO - Extracted page 50/50 - dien-gia-dung, total items: 47
+[2025-03-11T19:30:03.915+0000] {tiki_extract_dag.py:152} INFO - Starting crawl for category sach
+[2025-03-11T19:30:04.465+0000] {tiki_extract_dag.py:159} INFO - Total pages for sach: 50
+[2025-03-11T19:30:04.986+0000] {tiki_extract_dag.py:185} INFO - Extracted page 2/50 - sach, total items: 47
+[2025-03-11T19:30:11.998+0000] {tiki_extract_dag.py:185} INFO - Extracted page 3/50 - sach, total items: 47
+[2025-03-11T19:30:22.397+0000] {tiki_extract_dag.py:185} INFO - Extracted page 4/50 - sach, total items: 47
+[2025-03-11T19:30:28.848+0000] {tiki_extract_dag.py:185} INFO - Extracted page 5/50 - sach, total items: 47
+[2025-03-11T19:30:38.374+0000] {tiki_extract_dag.py:185} INFO - Extracted page 6/50 - sach, total items: 47
+[2025-03-11T19:30:45.077+0000] {tiki_extract_dag.py:185} INFO - Extracted page 7/50 - sach, total items: 47
+[2025-03-11T19:30:53.619+0000] {tiki_extract_dag.py:185} INFO - Extracted page 8/50 - sach, total items: 47
+[2025-03-11T19:31:03.608+0000] {tiki_extract_dag.py:185} INFO - Extracted page 9/50 - sach, total items: 47
+[2025-03-11T19:31:09.780+0000] {tiki_extract_dag.py:185} INFO - Extracted page 10/50 - sach, total items: 47
+[2025-03-11T19:31:17.729+0000] {tiki_extract_dag.py:185} INFO - Extracted page 11/50 - sach, total items: 47
+[2025-03-11T19:31:25.954+0000] {tiki_extract_dag.py:185} INFO - Extracted page 12/50 - sach, total items: 47
+[2025-03-11T19:31:34.337+0000] {tiki_extract_dag.py:185} INFO - Extracted page 13/50 - sach, total items: 47
+[2025-03-11T19:31:44.594+0000] {tiki_extract_dag.py:185} INFO - Extracted page 14/50 - sach, total items: 47
+[2025-03-11T19:31:54.374+0000] {tiki_extract_dag.py:185} INFO - Extracted page 15/50 - sach, total items: 47
+[2025-03-11T19:32:03.570+0000] {tiki_extract_dag.py:185} INFO - Extracted page 16/50 - sach, total items: 47
+[2025-03-11T19:32:11.492+0000] {tiki_extract_dag.py:185} INFO - Extracted page 17/50 - sach, total items: 47
+[2025-03-11T19:32:19.791+0000] {tiki_extract_dag.py:185} INFO - Extracted page 18/50 - sach, total items: 47
+[2025-03-11T19:32:29.873+0000] {tiki_extract_dag.py:185} INFO - Extracted page 19/50 - sach, total items: 47
+[2025-03-11T19:32:37.432+0000] {tiki_extract_dag.py:185} INFO - Extracted page 20/50 - sach, total items: 47
+[2025-03-11T19:32:45.322+0000] {tiki_extract_dag.py:185} INFO - Extracted page 21/50 - sach, total items: 47
+[2025-03-11T19:32:53.009+0000] {tiki_extract_dag.py:185} INFO - Extracted page 22/50 - sach, total items: 47
+[2025-03-11T19:33:01.356+0000] {tiki_extract_dag.py:185} INFO - Extracted page 23/50 - sach, total items: 47
+[2025-03-11T19:33:11.482+0000] {tiki_extract_dag.py:185} INFO - Extracted page 24/50 - sach, total items: 47
+[2025-03-11T19:33:18.625+0000] {tiki_extract_dag.py:185} INFO - Extracted page 25/50 - sach, total items: 47
+[2025-03-11T19:33:26.485+0000] {tiki_extract_dag.py:185} INFO - Extracted page 26/50 - sach, total items: 47
+[2025-03-11T19:33:34.782+0000] {tiki_extract_dag.py:185} INFO - Extracted page 27/50 - sach, total items: 47
+[2025-03-11T19:33:41.172+0000] {tiki_extract_dag.py:185} INFO - Extracted page 28/50 - sach, total items: 47
+[2025-03-11T19:33:51.342+0000] {tiki_extract_dag.py:185} INFO - Extracted page 29/50 - sach, total items: 47
+[2025-03-11T19:33:58.422+0000] {tiki_extract_dag.py:185} INFO - Extracted page 30/50 - sach, total items: 47
+[2025-03-11T19:34:04.781+0000] {tiki_extract_dag.py:185} INFO - Extracted page 31/50 - sach, total items: 47
+[2025-03-11T19:34:12.568+0000] {tiki_extract_dag.py:185} INFO - Extracted page 32/50 - sach, total items: 47
+[2025-03-11T19:34:20.521+0000] {tiki_extract_dag.py:185} INFO - Extracted page 33/50 - sach, total items: 47
+[2025-03-11T19:34:28.981+0000] {tiki_extract_dag.py:185} INFO - Extracted page 34/50 - sach, total items: 47
+[2025-03-11T19:34:36.497+0000] {tiki_extract_dag.py:185} INFO - Extracted page 35/50 - sach, total items: 47
+[2025-03-11T19:34:44.547+0000] {tiki_extract_dag.py:185} INFO - Extracted page 36/50 - sach, total items: 47
+[2025-03-11T19:34:51.832+0000] {tiki_extract_dag.py:185} INFO - Extracted page 37/50 - sach, total items: 47
+[2025-03-11T19:34:57.921+0000] {tiki_extract_dag.py:185} INFO - Extracted page 38/50 - sach, total items: 47
+[2025-03-11T19:35:07.155+0000] {tiki_extract_dag.py:185} INFO - Extracted page 39/50 - sach, total items: 47
+[2025-03-11T19:35:16.065+0000] {tiki_extract_dag.py:185} INFO - Extracted page 40/50 - sach, total items: 47
+[2025-03-11T19:35:23.567+0000] {tiki_extract_dag.py:185} INFO - Extracted page 41/50 - sach, total items: 47
+[2025-03-11T19:35:32.870+0000] {tiki_extract_dag.py:185} INFO - Extracted page 42/50 - sach, total items: 47
+[2025-03-11T19:35:39.709+0000] {tiki_extract_dag.py:185} INFO - Extracted page 43/50 - sach, total items: 47
+[2025-03-11T19:35:45.752+0000] {tiki_extract_dag.py:185} INFO - Extracted page 44/50 - sach, total items: 47
+[2025-03-11T19:35:53.053+0000] {tiki_extract_dag.py:185} INFO - Extracted page 45/50 - sach, total items: 47
+[2025-03-11T19:35:59.071+0000] {tiki_extract_dag.py:185} INFO - Extracted page 46/50 - sach, total items: 47
+[2025-03-11T19:36:07.975+0000] {tiki_extract_dag.py:185} INFO - Extracted page 47/50 - sach, total items: 47
+[2025-03-11T19:36:15.860+0000] {tiki_extract_dag.py:185} INFO - Extracted page 48/50 - sach, total items: 47
+[2025-03-11T19:36:24.618+0000] {tiki_extract_dag.py:185} INFO - Extracted page 49/50 - sach, total items: 47
+[2025-03-11T19:36:35.020+0000] {tiki_extract_dag.py:185} INFO - Extracted page 50/50 - sach, total items: 50
+[2025-03-11T19:36:44.463+0000] {tiki_extract_dag.py:152} INFO - Starting crawl for category thiet-bi-kts-phu-kien-so
+[2025-03-11T19:36:44.943+0000] {tiki_extract_dag.py:159} INFO - Total pages for thiet-bi-kts-phu-kien-so: 50
+[2025-03-11T19:36:45.311+0000] {tiki_extract_dag.py:185} INFO - Extracted page 2/50 - thiet-bi-kts-phu-kien-so, total items: 50
+[2025-03-11T19:36:51.610+0000] {tiki_extract_dag.py:185} INFO - Extracted page 3/50 - thiet-bi-kts-phu-kien-so, total items: 50
+[2025-03-11T19:37:01.135+0000] {tiki_extract_dag.py:185} INFO - Extracted page 4/50 - thiet-bi-kts-phu-kien-so, total items: 50
+[2025-03-11T19:37:06.857+0000] {tiki_extract_dag.py:185} INFO - Extracted page 5/50 - thiet-bi-kts-phu-kien-so, total items: 50
+[2025-03-11T19:37:14.266+0000] {tiki_extract_dag.py:185} INFO - Extracted page 6/50 - thiet-bi-kts-phu-kien-so, total items: 50
+[2025-03-11T19:37:23.328+0000] {tiki_extract_dag.py:185} INFO - Extracted page 7/50 - thiet-bi-kts-phu-kien-so, total items: 50
+[2025-03-11T19:37:30.710+0000] {tiki_extract_dag.py:185} INFO - Extracted page 8/50 - thiet-bi-kts-phu-kien-so, total items: 50
+[2025-03-11T19:37:39.466+0000] {tiki_extract_dag.py:185} INFO - Extracted page 9/50 - thiet-bi-kts-phu-kien-so, total items: 50
+[2025-03-11T19:37:49.548+0000] {tiki_extract_dag.py:185} INFO - Extracted page 10/50 - thiet-bi-kts-phu-kien-so, total items: 50
+[2025-03-11T19:37:56.519+0000] {tiki_extract_dag.py:185} INFO - Extracted page 11/50 - thiet-bi-kts-phu-kien-so, total items: 50
+[2025-03-11T19:38:02.184+0000] {tiki_extract_dag.py:185} INFO - Extracted page 12/50 - thiet-bi-kts-phu-kien-so, total items: 50
+[2025-03-11T19:38:10.337+0000] {tiki_extract_dag.py:185} INFO - Extracted page 13/50 - thiet-bi-kts-phu-kien-so, total items: 50
+[2025-03-12T01:47:43.773+0000] {local_task_job_runner.py:228} ERROR - Heartbeat time limit exceeded!
+[2025-03-12T01:47:44.336+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-03-12T01:47:44.434+0000] {process_utils.py:132} INFO - Sending 15 to group 2111. PIDs of all processes in the group: [2111]
+[2025-03-12T01:47:44.477+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 2111
+[2025-03-12T01:47:47.849+0000] {taskinstance.py:3094} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-03-12T01:47:48.460+0000] {taskinstance.py:3095} ERROR - Stacktrace: 
+  File "/home/***/.local/bin/***", line 8, in <module>
+    sys.exit(main())
+  File "/home/***/.local/lib/python3.12/site-packages/***/__main__.py", line 62, in main
+    args.func(args)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/providers/celery/cli/celery_command.py", line 64, in wrapper
+    providers_configuration_loaded(func)(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/providers_configuration_loader.py", line 55, in wrapped_function
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/providers/celery/cli/celery_command.py", line 237, in worker
+    _run_command_with_daemon_option(
+  File "/home/***/.local/lib/python3.12/site-packages/***/providers/celery/cli/celery_command.py", line 50, in _run_command_with_daemon_option
+    run_command_with_daemon_option(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/daemon_utils.py", line 86, in run_command_with_daemon_option
+    callback()
+  File "/home/***/.local/lib/python3.12/site-packages/***/providers/celery/cli/celery_command.py", line 230, in run_celery_worker
+    celery_app.worker_main(options)
+  File "/home/***/.local/lib/python3.12/site-packages/celery/app/base.py", line 391, in worker_main
+    self.start(argv=argv)
+  File "/home/***/.local/lib/python3.12/site-packages/celery/app/base.py", line 371, in start
+    celery.main(args=argv, standalone_mode=False)
+  File "/home/***/.local/lib/python3.12/site-packages/click/core.py", line 1082, in main
+    rv = self.invoke(ctx)
+  File "/home/***/.local/lib/python3.12/site-packages/click/core.py", line 1697, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/***/.local/lib/python3.12/site-packages/click/core.py", line 1443, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/***/.local/lib/python3.12/site-packages/click/core.py", line 788, in invoke
+    return __callback(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/click/decorators.py", line 33, in new_func
+    return f(get_current_context(), *args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/celery/bin/base.py", line 135, in caller
+    return f(ctx, *args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/celery/bin/worker.py", line 356, in worker
+    worker.start()
+  File "/home/***/.local/lib/python3.12/site-packages/celery/worker/worker.py", line 202, in start
+    self.blueprint.start(self)
+  File "/home/***/.local/lib/python3.12/site-packages/celery/bootsteps.py", line 116, in start
+    step.start(parent)
+  File "/home/***/.local/lib/python3.12/site-packages/celery/bootsteps.py", line 365, in start
+    return self.obj.start()
+  File "/home/***/.local/lib/python3.12/site-packages/celery/concurrency/base.py", line 130, in start
+    self.on_start()
+  File "/home/***/.local/lib/python3.12/site-packages/celery/concurrency/prefork.py", line 109, in on_start
+    P = self._pool = Pool(processes=self.limit,
+  File "/home/***/.local/lib/python3.12/site-packages/celery/concurrency/asynpool.py", line 464, in __init__
+    super().__init__(processes, *args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/billiard/pool.py", line 1046, in __init__
+    self._create_worker_process(i)
+  File "/home/***/.local/lib/python3.12/site-packages/celery/concurrency/asynpool.py", line 482, in _create_worker_process
+    return super()._create_worker_process(i)
+  File "/home/***/.local/lib/python3.12/site-packages/billiard/pool.py", line 1158, in _create_worker_process
+    w.start()
+  File "/home/***/.local/lib/python3.12/site-packages/billiard/process.py", line 120, in start
+    self._popen = self._Popen(self)
+  File "/home/***/.local/lib/python3.12/site-packages/billiard/context.py", line 331, in _Popen
+    return Popen(process_obj)
+  File "/home/***/.local/lib/python3.12/site-packages/billiard/popen_fork.py", line 22, in __init__
+    self._launch(process_obj)
+  File "/home/***/.local/lib/python3.12/site-packages/billiard/popen_fork.py", line 77, in _launch
+    code = process_obj._bootstrap()
+  File "/home/***/.local/lib/python3.12/site-packages/billiard/process.py", line 323, in _bootstrap
+    self.run()
+  File "/home/***/.local/lib/python3.12/site-packages/billiard/process.py", line 110, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/billiard/pool.py", line 292, in __call__
+    sys.exit(self.workloop(pid=pid))
+  File "/home/***/.local/lib/python3.12/site-packages/billiard/pool.py", line 362, in workloop
+    result = (True, prepare_result(fun(*args, **kwargs)))
+  File "/home/***/.local/lib/python3.12/site-packages/celery/app/trace.py", line 651, in fast_trace_task
+    R, I, T, Rstr = tasks[task].__trace__(
+  File "/home/***/.local/lib/python3.12/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/providers/celery/executors/celery_executor_utils.py", line 139, in execute_command
+    _execute_in_fork(command_to_exec, celery_task_id)
+  File "/home/***/.local/lib/python3.12/site-packages/***/providers/celery/executors/celery_executor_utils.py", line 171, in _execute_in_fork
+    args.func(args)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 254, in _run_task_by_selected_method
+    return _run_task_by_local_task_job(args, ti)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 322, in _run_task_by_local_task_job
+    ret = run_job(job=job_runner.job, execute_callable=job_runner._execute)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/jobs/job.py", line 421, in run_job
+    return execute_job(job, execute_callable=execute_callable)
+  File "/home/***/.local/lib/python3.12/site-packages/***/jobs/job.py", line 450, in execute_job
+    ret = execute_callable()
+  File "/home/***/.local/lib/python3.12/site-packages/***/jobs/local_task_job_runner.py", line 171, in _execute
+    self.task_runner.start()
+  File "/home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py", line 55, in start
+    self.process = self._start_by_fork()
+  File "/home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 3006, in _run_raw_task
+    return _run_raw_task(
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 274, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 3161, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 3185, in _execute_task
+    return _execute_task(self, context, task_orig)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+  File "/home/***/.local/lib/python3.12/site-packages/***/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/opt/***/dags/tiki_extract_dag.py", line 172, in extract_data
+    response = session.get(api_url, headers=headers, params=params, timeout=15)
+  File "/home/***/.local/lib/python3.12/site-packages/requests/sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "/home/***/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/home/***/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "/home/***/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "/home/***/.local/lib/python3.12/site-packages/urllib3/connection.py", line 704, in connect
+    self.sock = sock = self._new_conn()
+  File "/home/***/.local/lib/python3.12/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "/home/***/.local/lib/python3.12/site-packages/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/local/lib/python3.12/socket.py", line 978, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 3095, in signal_handler
+    self.log.error("Stacktrace: \n%s", "".join(traceback.format_stack()))
+
+[2025-03-12T01:47:50.159+0000] {taskinstance.py:3313} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/tiki_extract_dag.py", line 172, in extract_data
+    response = session.get(api_url, headers=headers, params=params, timeout=15)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 704, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/socket.py", line 978, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3097, in signal_handler
+    raise AirflowTaskTerminated("Task received SIGTERM signal")
+airflow.exceptions.AirflowTaskTerminated: Task received SIGTERM signal
+[2025-03-12T01:47:50.608+0000] {logging_mixin.py:190} INFO - Task instance in failure state
+[2025-03-12T01:47:50.610+0000] {logging_mixin.py:190} INFO - Task start:2025-03-11 19:09:12.125556+00:00 end:2025-03-12 01:47:50.544795+00:00 duration:23918.419239
+[2025-03-12T01:47:50.624+0000] {logging_mixin.py:190} INFO - Task:<Task(PythonOperator): extract_data> dag:<DAG: tiki_extract_dag> dagrun:<DagRun tiki_extract_dag @ 2025-03-11 19:09:04.081053+00:00: manual__2025-03-11T19:09:04.081053+00:00, state:running, queued_at: 2025-03-11 19:09:04.277094+00:00. externally triggered: True>
+[2025-03-12T01:47:50.625+0000] {logging_mixin.py:190} INFO - Failure caused by Task received SIGTERM signal
+[2025-03-12T01:47:50.629+0000] {taskinstance.py:1226} INFO - Marking task as UP_FOR_RETRY. dag_id=tiki_extract_dag, task_id=extract_data, run_id=manual__2025-03-11T19:09:04.081053+00:00, execution_date=20250311T190904, start_date=20250311T190912, end_date=20250312T014750
+[2025-03-12T01:47:51.239+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-03-12T01:47:51.619+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=2111, status='terminated', exitcode=2, started='19:09:11') (2111) terminated with exit code 2

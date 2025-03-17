@@ -1,0 +1,38 @@
+[2025-03-12T07:44:30.126+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-12T07:44:30.152+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: tiki_transform_dag.transform_data manual__2025-03-12T07:36:00.910440+00:00 [queued]>
+[2025-03-12T07:44:30.163+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: tiki_transform_dag.transform_data manual__2025-03-12T07:36:00.910440+00:00 [queued]>
+[2025-03-12T07:44:30.165+0000] {taskinstance.py:2867} INFO - Starting attempt 2 of 4
+[2025-03-12T07:44:30.188+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): transform_data> on 2025-03-12 07:36:00.910440+00:00
+[2025-03-12T07:44:30.202+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=535) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-12T07:44:30.204+0000] {standard_task_runner.py:72} INFO - Started process 537 to run task
+[2025-03-12T07:44:30.204+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'tiki_transform_dag', 'transform_data', 'manual__2025-03-12T07:36:00.910440+00:00', '--job-id', '695', '--raw', '--subdir', 'DAGS_FOLDER/tiki_transform_dag.py', '--cfg-path', '/tmp/tmpfmw6h0sn']
+[2025-03-12T07:44:30.206+0000] {standard_task_runner.py:105} INFO - Job 695: Subtask transform_data
+[2025-03-12T07:44:30.278+0000] {task_command.py:467} INFO - Running <TaskInstance: tiki_transform_dag.transform_data manual__2025-03-12T07:36:00.910440+00:00 [running]> on host 3905098656d4
+[2025-03-12T07:44:30.678+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='tiki_transform_dag' AIRFLOW_CTX_TASK_ID='transform_data' AIRFLOW_CTX_EXECUTION_DATE='2025-03-12T07:36:00.910440+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-12T07:36:00.910440+00:00'
+[2025-03-12T07:44:30.679+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-03-12T07:44:30.680+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-03-12T07:44:30.681+0000] {logging_mixin.py:190} INFO - Current task name:transform_data state:running start_date:2025-03-12 07:44:30.153024+00:00
+[2025-03-12T07:44:30.681+0000] {logging_mixin.py:190} INFO - Dag name:tiki_transform_dag and current dag run status:running
+[2025-03-12T07:44:30.682+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-03-12T07:44:33.493+0000] {tiki_transform_dag.py:96} INFO - Loaded raw data from tiki-pipeline/tiki_raw_data/raw_dien-thoai-may-tinh-bang_20250312_074251.json, 361 rows
+[2025-03-12T07:44:33.498+0000] {tiki_transform_dag.py:106} INFO - After deduplication across all categories: 361 rows
+[2025-03-12T07:44:33.518+0000] {tiki_transform_dag.py:62} INFO - Data cleaning completed
+[2025-03-12T07:44:33.561+0000] {tiki_transform_dag.py:45} INFO - Data validation passed
+[2025-03-12T07:44:34.041+0000] {tiki_transform_dag.py:195} INFO - Saved fact_sales to tiki-pipeline/tiki_transformed_data/fact_sales_20250312_074433.csv
+[2025-03-12T07:44:36.310+0000] {tiki_transform_dag.py:195} INFO - Saved dim_product to tiki-pipeline/tiki_transformed_data/dim_product_20250312_074433.csv
+[2025-03-12T07:44:36.667+0000] {tiki_transform_dag.py:195} INFO - Saved dim_seller to tiki-pipeline/tiki_transformed_data/dim_seller_20250312_074433.csv
+[2025-03-12T07:44:37.012+0000] {tiki_transform_dag.py:195} INFO - Saved dim_category to tiki-pipeline/tiki_transformed_data/dim_category_20250312_074433.csv
+[2025-03-12T07:44:37.709+0000] {tiki_transform_dag.py:195} INFO - Saved dim_brand to tiki-pipeline/tiki_transformed_data/dim_brand_20250312_074433.csv
+[2025-03-12T07:44:37.746+0000] {tiki_transform_dag.py:198} INFO - Pushed transformed_blob_names to XCom: {'fact_sales': 'tiki_transformed_data/fact_sales_20250312_074433.csv', 'dim_product': 'tiki_transformed_data/dim_product_20250312_074433.csv', 'dim_seller': 'tiki_transformed_data/dim_seller_20250312_074433.csv', 'dim_category': 'tiki_transformed_data/dim_category_20250312_074433.csv', 'dim_brand': 'tiki_transformed_data/dim_brand_20250312_074433.csv'}
+[2025-03-12T07:44:37.750+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-03-12T07:44:37.773+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-03-12T07:44:37.774+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=tiki_transform_dag, task_id=transform_data, run_id=manual__2025-03-12T07:36:00.910440+00:00, execution_date=20250312T073600, start_date=20250312T074430, end_date=20250312T074437
+[2025-03-12T07:44:37.837+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-03-12T07:44:37.838+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-03-12T07:44:37.838+0000] {logging_mixin.py:190} INFO - Dag name:tiki_transform_dag queued_at:2025-03-12 07:36:00.944645+00:00
+[2025-03-12T07:44:37.839+0000] {logging_mixin.py:190} INFO - Task hostname:3905098656d4 operator:PythonOperator
+[2025-03-12T07:44:37.909+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-03-12T07:44:37.937+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-03-12T07:44:37.940+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

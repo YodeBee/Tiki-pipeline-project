@@ -1,0 +1,82 @@
+[2025-03-12T07:26:15.456+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-12T07:26:15.539+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: tiki_extract_dag.extract_dien-gia-dung manual__2025-03-12T07:25:54.854919+00:00 [queued]>
+[2025-03-12T07:26:15.580+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: tiki_extract_dag.extract_dien-gia-dung manual__2025-03-12T07:25:54.854919+00:00 [queued]>
+[2025-03-12T07:26:15.581+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 4
+[2025-03-12T07:26:15.631+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): extract_dien-gia-dung> on 2025-03-12 07:25:54.854919+00:00
+[2025-03-12T07:26:15.741+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=222) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-12T07:26:15.756+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'tiki_extract_dag', 'extract_dien-gia-dung', 'manual__2025-03-12T07:25:54.854919+00:00', '--job-id', '679', '--raw', '--subdir', 'DAGS_FOLDER/tiki_extract_dag.py', '--cfg-path', '/tmp/tmp2h80e7bt']
+[2025-03-12T07:26:15.833+0000] {standard_task_runner.py:105} INFO - Job 679: Subtask extract_dien-gia-dung
+[2025-03-12T07:26:15.832+0000] {standard_task_runner.py:72} INFO - Started process 264 to run task
+[2025-03-12T07:26:16.231+0000] {task_command.py:467} INFO - Running <TaskInstance: tiki_extract_dag.extract_dien-gia-dung manual__2025-03-12T07:25:54.854919+00:00 [running]> on host 3905098656d4
+[2025-03-12T07:26:16.667+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='tiki_extract_dag' AIRFLOW_CTX_TASK_ID='extract_dien-gia-dung' AIRFLOW_CTX_EXECUTION_DATE='2025-03-12T07:25:54.854919+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-12T07:25:54.854919+00:00'
+[2025-03-12T07:26:16.675+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-03-12T07:26:16.676+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-03-12T07:26:16.677+0000] {logging_mixin.py:190} INFO - Current task name:extract_dien-gia-dung state:running start_date:2025-03-12 07:26:15.542704+00:00
+[2025-03-12T07:26:16.678+0000] {logging_mixin.py:190} INFO - Dag name:tiki_extract_dag and current dag run status:running
+[2025-03-12T07:26:16.679+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-03-12T07:26:18.562+0000] {tiki_extract_dag.py:122} INFO - Starting crawl for category dien-gia-dung
+[2025-03-12T07:26:20.618+0000] {tiki_extract_dag.py:129} INFO - Total pages for dien-gia-dung: 50
+[2025-03-12T07:26:23.525+0000] {tiki_extract_dag.py:155} INFO - Extracted page 2/50 - dien-gia-dung, total items: 80
+[2025-03-12T07:26:31.295+0000] {tiki_extract_dag.py:155} INFO - Extracted page 3/50 - dien-gia-dung, total items: 120
+[2025-03-12T07:26:37.251+0000] {tiki_extract_dag.py:155} INFO - Extracted page 4/50 - dien-gia-dung, total items: 160
+[2025-03-12T07:26:44.203+0000] {tiki_extract_dag.py:155} INFO - Extracted page 5/50 - dien-gia-dung, total items: 200
+[2025-03-12T07:26:51.385+0000] {tiki_extract_dag.py:155} INFO - Extracted page 6/50 - dien-gia-dung, total items: 240
+[2025-03-12T07:26:59.267+0000] {tiki_extract_dag.py:155} INFO - Extracted page 7/50 - dien-gia-dung, total items: 280
+[2025-03-12T07:27:06.299+0000] {tiki_extract_dag.py:155} INFO - Extracted page 8/50 - dien-gia-dung, total items: 320
+[2025-03-12T07:27:16.975+0000] {tiki_extract_dag.py:155} INFO - Extracted page 9/50 - dien-gia-dung, total items: 360
+[2025-03-12T07:27:27.291+0000] {tiki_extract_dag.py:155} INFO - Extracted page 10/50 - dien-gia-dung, total items: 400
+[2025-03-12T07:27:34.558+0000] {tiki_extract_dag.py:155} INFO - Extracted page 11/50 - dien-gia-dung, total items: 440
+[2025-03-12T07:27:42.629+0000] {tiki_extract_dag.py:155} INFO - Extracted page 12/50 - dien-gia-dung, total items: 480
+[2025-03-12T07:27:51.812+0000] {tiki_extract_dag.py:155} INFO - Extracted page 13/50 - dien-gia-dung, total items: 520
+[2025-03-12T07:28:03.451+0000] {tiki_extract_dag.py:155} INFO - Extracted page 14/50 - dien-gia-dung, total items: 560
+[2025-03-12T07:28:11.893+0000] {tiki_extract_dag.py:155} INFO - Extracted page 15/50 - dien-gia-dung, total items: 600
+[2025-03-12T07:28:20.927+0000] {tiki_extract_dag.py:155} INFO - Extracted page 16/50 - dien-gia-dung, total items: 640
+[2025-03-12T07:28:29.433+0000] {tiki_extract_dag.py:155} INFO - Extracted page 17/50 - dien-gia-dung, total items: 680
+[2025-03-12T07:28:37.734+0000] {tiki_extract_dag.py:155} INFO - Extracted page 18/50 - dien-gia-dung, total items: 720
+[2025-03-12T07:28:46.425+0000] {tiki_extract_dag.py:155} INFO - Extracted page 19/50 - dien-gia-dung, total items: 760
+[2025-03-12T07:28:56.986+0000] {tiki_extract_dag.py:155} INFO - Extracted page 20/50 - dien-gia-dung, total items: 800
+[2025-03-12T07:29:04.682+0000] {tiki_extract_dag.py:155} INFO - Extracted page 21/50 - dien-gia-dung, total items: 840
+[2025-03-12T07:29:10.130+0000] {tiki_extract_dag.py:155} INFO - Extracted page 22/50 - dien-gia-dung, total items: 880
+[2025-03-12T07:29:18.472+0000] {tiki_extract_dag.py:155} INFO - Extracted page 23/50 - dien-gia-dung, total items: 920
+[2025-03-12T07:29:24.929+0000] {tiki_extract_dag.py:155} INFO - Extracted page 24/50 - dien-gia-dung, total items: 960
+[2025-03-12T07:29:34.277+0000] {tiki_extract_dag.py:155} INFO - Extracted page 25/50 - dien-gia-dung, total items: 1000
+[2025-03-12T07:29:41.537+0000] {tiki_extract_dag.py:155} INFO - Extracted page 26/50 - dien-gia-dung, total items: 1040
+[2025-03-12T07:29:47.465+0000] {tiki_extract_dag.py:155} INFO - Extracted page 27/50 - dien-gia-dung, total items: 1080
+[2025-03-12T07:29:55.664+0000] {tiki_extract_dag.py:155} INFO - Extracted page 28/50 - dien-gia-dung, total items: 1120
+[2025-03-12T07:30:01.580+0000] {tiki_extract_dag.py:155} INFO - Extracted page 29/50 - dien-gia-dung, total items: 1160
+[2025-03-12T07:30:07.756+0000] {tiki_extract_dag.py:155} INFO - Extracted page 30/50 - dien-gia-dung, total items: 1200
+[2025-03-12T07:30:16.043+0000] {tiki_extract_dag.py:155} INFO - Extracted page 31/50 - dien-gia-dung, total items: 1240
+[2025-03-12T07:30:26.264+0000] {tiki_extract_dag.py:155} INFO - Extracted page 32/50 - dien-gia-dung, total items: 1280
+[2025-03-12T07:30:34.914+0000] {tiki_extract_dag.py:155} INFO - Extracted page 33/50 - dien-gia-dung, total items: 1320
+[2025-03-12T07:30:43.721+0000] {tiki_extract_dag.py:155} INFO - Extracted page 34/50 - dien-gia-dung, total items: 1360
+[2025-03-12T07:30:49.438+0000] {tiki_extract_dag.py:155} INFO - Extracted page 35/50 - dien-gia-dung, total items: 1400
+[2025-03-12T07:30:54.924+0000] {tiki_extract_dag.py:155} INFO - Extracted page 36/50 - dien-gia-dung, total items: 1440
+[2025-03-12T07:31:04.520+0000] {tiki_extract_dag.py:155} INFO - Extracted page 37/50 - dien-gia-dung, total items: 1480
+[2025-03-12T07:31:14.508+0000] {tiki_extract_dag.py:155} INFO - Extracted page 38/50 - dien-gia-dung, total items: 1520
+[2025-03-12T07:31:24.894+0000] {tiki_extract_dag.py:155} INFO - Extracted page 39/50 - dien-gia-dung, total items: 1560
+[2025-03-12T07:31:32.260+0000] {tiki_extract_dag.py:155} INFO - Extracted page 40/50 - dien-gia-dung, total items: 1600
+[2025-03-12T07:31:41.325+0000] {tiki_extract_dag.py:155} INFO - Extracted page 41/50 - dien-gia-dung, total items: 1640
+[2025-03-12T07:31:48.806+0000] {tiki_extract_dag.py:155} INFO - Extracted page 42/50 - dien-gia-dung, total items: 1680
+[2025-03-12T07:31:58.775+0000] {tiki_extract_dag.py:155} INFO - Extracted page 43/50 - dien-gia-dung, total items: 1720
+[2025-03-12T07:32:06.340+0000] {tiki_extract_dag.py:155} INFO - Extracted page 44/50 - dien-gia-dung, total items: 1760
+[2025-03-12T07:32:12.203+0000] {tiki_extract_dag.py:155} INFO - Extracted page 45/50 - dien-gia-dung, total items: 1800
+[2025-03-12T07:32:21.550+0000] {tiki_extract_dag.py:155} INFO - Extracted page 46/50 - dien-gia-dung, total items: 1840
+[2025-03-12T07:32:30.932+0000] {tiki_extract_dag.py:155} INFO - Extracted page 47/50 - dien-gia-dung, total items: 1880
+[2025-03-12T07:32:41.358+0000] {tiki_extract_dag.py:155} INFO - Extracted page 48/50 - dien-gia-dung, total items: 1920
+[2025-03-12T07:32:50.899+0000] {tiki_extract_dag.py:155} INFO - Extracted page 49/50 - dien-gia-dung, total items: 1960
+[2025-03-12T07:32:57.724+0000] {tiki_extract_dag.py:155} INFO - Extracted page 50/50 - dien-gia-dung, total items: 2000
+[2025-03-12T07:33:32.930+0000] {tiki_extract_dag.py:56} INFO - Updated crawled products at tiki-pipeline/tiki_crawled/crawled_products.json
+[2025-03-12T07:33:32.932+0000] {tiki_extract_dag.py:172} INFO - Uploaded raw data to tiki-pipeline/tiki_raw_data/raw_dien-gia-dung_20250312_073305.json, total items: 2000
+[2025-03-12T07:33:33.257+0000] {tiki_extract_dag.py:183} INFO - Saved metadata to tiki-pipeline/metadata/extract_run_metadata_dien-gia-dung_20250312_073305.json
+[2025-03-12T07:33:33.281+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-03-12T07:33:33.349+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-03-12T07:33:33.352+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=tiki_extract_dag, task_id=extract_dien-gia-dung, run_id=manual__2025-03-12T07:25:54.854919+00:00, execution_date=20250312T072554, start_date=20250312T072615, end_date=20250312T073333
+[2025-03-12T07:33:33.434+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-03-12T07:33:33.435+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-03-12T07:33:33.435+0000] {logging_mixin.py:190} INFO - Dag name:tiki_extract_dag queued_at:2025-03-12 07:25:54.899816+00:00
+[2025-03-12T07:33:33.436+0000] {logging_mixin.py:190} INFO - Task hostname:3905098656d4 operator:PythonOperator
+[2025-03-12T07:33:33.498+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-03-12T07:33:33.580+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-03-12T07:33:33.584+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

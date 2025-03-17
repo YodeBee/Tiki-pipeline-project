@@ -1,0 +1,46 @@
+gcs:
+  bucket_name: "tiki-pipeline"
+  raw_data_path: "tiki_raw_data/"
+  transformed_data_path: "tiki_transformed_data/"
+  crawled_products_path: "tiki_crawled/crawled_products.json"
+
+bigquery:
+  project_id: "vietadc"
+  dataset_id: "tiki_dataset"
+  table_names:
+    fact_sales: "Fact_Sales"
+    dim_product: "Dim_Product"
+    dim_seller: "Dim_Seller"
+    dim_category: "Dim_Category"
+    dim_brand: "Dim_Brand"
+
+tiki:
+  api_url: "https://tiki.vn/api/v2/products"
+  max_pages: 50
+  categories:
+    - urlKey: "lam-dep-suc-khoe"
+      category: "1520"
+    - urlKey: "dien-thoai-may-tinh-bang"
+      category: "1789"
+    - urlKey: "laptop-may-vi-tinh-linh-kien"
+      category: "1846"
+    - urlKey: "dien-gia-dung"
+      category: "1882"
+    - urlKey: "sach"
+      category: "8322"
+    - urlKey: "thiet-bi-kts-phu-kien-so"
+      category: "1815"
+    - urlKey: "thoi-trang-nu"
+      category: "931"
+    - urlKey: "thoi-trang-nam"
+      category: "915"
+    - urlKey: "dong-ho-va-trang-suc"
+      category: "8371"
+    - urlKey: "dien-tu-dien-lanh"
+      category: "4221"
+    - urlKey: "the-thao-da-ngoai"
+      category: "1975"
+
+
+credentials:
+  google_cloud_keyfile: "/opt/airflow/configs/gcp_credentials.json"

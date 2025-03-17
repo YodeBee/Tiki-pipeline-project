@@ -1,0 +1,81 @@
+[2025-03-12T07:26:10.507+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-12T07:26:10.545+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: tiki_extract_dag.extract_dien-tu-dien-lanh manual__2025-03-12T07:25:54.854919+00:00 [queued]>
+[2025-03-12T07:26:10.569+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: tiki_extract_dag.extract_dien-tu-dien-lanh manual__2025-03-12T07:25:54.854919+00:00 [queued]>
+[2025-03-12T07:26:10.572+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 4
+[2025-03-12T07:26:10.611+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): extract_dien-tu-dien-lanh> on 2025-03-12 07:25:54.854919+00:00
+[2025-03-12T07:26:10.660+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=223) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-12T07:26:10.672+0000] {standard_task_runner.py:72} INFO - Started process 246 to run task
+[2025-03-12T07:26:10.668+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'tiki_extract_dag', 'extract_dien-tu-dien-lanh', 'manual__2025-03-12T07:25:54.854919+00:00', '--job-id', '672', '--raw', '--subdir', 'DAGS_FOLDER/tiki_extract_dag.py', '--cfg-path', '/tmp/tmpsin0itap']
+[2025-03-12T07:26:10.675+0000] {standard_task_runner.py:105} INFO - Job 672: Subtask extract_dien-tu-dien-lanh
+[2025-03-12T07:26:10.985+0000] {task_command.py:467} INFO - Running <TaskInstance: tiki_extract_dag.extract_dien-tu-dien-lanh manual__2025-03-12T07:25:54.854919+00:00 [running]> on host 3905098656d4
+[2025-03-12T07:26:15.670+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='tiki_extract_dag' AIRFLOW_CTX_TASK_ID='extract_dien-tu-dien-lanh' AIRFLOW_CTX_EXECUTION_DATE='2025-03-12T07:25:54.854919+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-12T07:25:54.854919+00:00'
+[2025-03-12T07:26:15.673+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-03-12T07:26:15.676+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-03-12T07:26:15.679+0000] {logging_mixin.py:190} INFO - Current task name:extract_dien-tu-dien-lanh state:running start_date:2025-03-12 07:26:10.547451+00:00
+[2025-03-12T07:26:15.681+0000] {logging_mixin.py:190} INFO - Dag name:tiki_extract_dag and current dag run status:running
+[2025-03-12T07:26:15.687+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-03-12T07:26:18.442+0000] {tiki_extract_dag.py:122} INFO - Starting crawl for category dien-tu-dien-lanh
+[2025-03-12T07:26:19.702+0000] {tiki_extract_dag.py:129} INFO - Total pages for dien-tu-dien-lanh: 50
+[2025-03-12T07:26:22.486+0000] {tiki_extract_dag.py:155} INFO - Extracted page 2/50 - dien-tu-dien-lanh, total items: 80
+[2025-03-12T07:26:28.833+0000] {tiki_extract_dag.py:155} INFO - Extracted page 3/50 - dien-tu-dien-lanh, total items: 120
+[2025-03-12T07:26:39.033+0000] {tiki_extract_dag.py:155} INFO - Extracted page 4/50 - dien-tu-dien-lanh, total items: 160
+[2025-03-12T07:26:47.222+0000] {tiki_extract_dag.py:155} INFO - Extracted page 5/50 - dien-tu-dien-lanh, total items: 200
+[2025-03-12T07:26:55.364+0000] {tiki_extract_dag.py:155} INFO - Extracted page 6/50 - dien-tu-dien-lanh, total items: 240
+[2025-03-12T07:27:04.537+0000] {tiki_extract_dag.py:155} INFO - Extracted page 7/50 - dien-tu-dien-lanh, total items: 280
+[2025-03-12T07:27:13.996+0000] {tiki_extract_dag.py:155} INFO - Extracted page 8/50 - dien-tu-dien-lanh, total items: 320
+[2025-03-12T07:27:21.484+0000] {tiki_extract_dag.py:155} INFO - Extracted page 9/50 - dien-tu-dien-lanh, total items: 360
+[2025-03-12T07:27:28.189+0000] {tiki_extract_dag.py:155} INFO - Extracted page 10/50 - dien-tu-dien-lanh, total items: 400
+[2025-03-12T07:27:37.978+0000] {tiki_extract_dag.py:155} INFO - Extracted page 11/50 - dien-tu-dien-lanh, total items: 440
+[2025-03-12T07:27:47.480+0000] {tiki_extract_dag.py:155} INFO - Extracted page 12/50 - dien-tu-dien-lanh, total items: 480
+[2025-03-12T07:27:55.938+0000] {tiki_extract_dag.py:155} INFO - Extracted page 13/50 - dien-tu-dien-lanh, total items: 520
+[2025-03-12T07:28:06.041+0000] {tiki_extract_dag.py:155} INFO - Extracted page 14/50 - dien-tu-dien-lanh, total items: 560
+[2025-03-12T07:28:15.297+0000] {tiki_extract_dag.py:155} INFO - Extracted page 15/50 - dien-tu-dien-lanh, total items: 600
+[2025-03-12T07:28:22.988+0000] {tiki_extract_dag.py:155} INFO - Extracted page 16/50 - dien-tu-dien-lanh, total items: 640
+[2025-03-12T07:28:33.619+0000] {tiki_extract_dag.py:155} INFO - Extracted page 17/50 - dien-tu-dien-lanh, total items: 680
+[2025-03-12T07:28:39.884+0000] {tiki_extract_dag.py:155} INFO - Extracted page 18/50 - dien-tu-dien-lanh, total items: 720
+[2025-03-12T07:28:45.485+0000] {tiki_extract_dag.py:155} INFO - Extracted page 19/50 - dien-tu-dien-lanh, total items: 760
+[2025-03-12T07:28:53.739+0000] {tiki_extract_dag.py:155} INFO - Extracted page 20/50 - dien-tu-dien-lanh, total items: 800
+[2025-03-12T07:29:03.748+0000] {tiki_extract_dag.py:155} INFO - Extracted page 21/50 - dien-tu-dien-lanh, total items: 840
+[2025-03-12T07:29:10.850+0000] {tiki_extract_dag.py:155} INFO - Extracted page 22/50 - dien-tu-dien-lanh, total items: 880
+[2025-03-12T07:29:19.101+0000] {tiki_extract_dag.py:155} INFO - Extracted page 23/50 - dien-tu-dien-lanh, total items: 920
+[2025-03-12T07:29:27.946+0000] {tiki_extract_dag.py:155} INFO - Extracted page 24/50 - dien-tu-dien-lanh, total items: 960
+[2025-03-12T07:29:33.703+0000] {tiki_extract_dag.py:155} INFO - Extracted page 25/50 - dien-tu-dien-lanh, total items: 1000
+[2025-03-12T07:29:39.862+0000] {tiki_extract_dag.py:155} INFO - Extracted page 26/50 - dien-tu-dien-lanh, total items: 1040
+[2025-03-12T07:29:46.583+0000] {tiki_extract_dag.py:155} INFO - Extracted page 27/50 - dien-tu-dien-lanh, total items: 1080
+[2025-03-12T07:29:53.671+0000] {tiki_extract_dag.py:155} INFO - Extracted page 28/50 - dien-tu-dien-lanh, total items: 1120
+[2025-03-12T07:30:02.270+0000] {tiki_extract_dag.py:155} INFO - Extracted page 29/50 - dien-tu-dien-lanh, total items: 1160
+[2025-03-12T07:30:10.536+0000] {tiki_extract_dag.py:155} INFO - Extracted page 30/50 - dien-tu-dien-lanh, total items: 1200
+[2025-03-12T07:30:19.563+0000] {tiki_extract_dag.py:155} INFO - Extracted page 31/50 - dien-tu-dien-lanh, total items: 1240
+[2025-03-12T07:30:25.891+0000] {tiki_extract_dag.py:155} INFO - Extracted page 32/50 - dien-tu-dien-lanh, total items: 1280
+[2025-03-12T07:30:32.766+0000] {tiki_extract_dag.py:155} INFO - Extracted page 33/50 - dien-tu-dien-lanh, total items: 1320
+[2025-03-12T07:30:38.923+0000] {tiki_extract_dag.py:155} INFO - Extracted page 34/50 - dien-tu-dien-lanh, total items: 1360
+[2025-03-12T07:30:47.140+0000] {tiki_extract_dag.py:155} INFO - Extracted page 35/50 - dien-tu-dien-lanh, total items: 1400
+[2025-03-12T07:30:55.964+0000] {tiki_extract_dag.py:155} INFO - Extracted page 36/50 - dien-tu-dien-lanh, total items: 1440
+[2025-03-12T07:31:04.883+0000] {tiki_extract_dag.py:155} INFO - Extracted page 37/50 - dien-tu-dien-lanh, total items: 1480
+[2025-03-12T07:31:13.386+0000] {tiki_extract_dag.py:155} INFO - Extracted page 38/50 - dien-tu-dien-lanh, total items: 1520
+[2025-03-12T07:31:22.143+0000] {tiki_extract_dag.py:155} INFO - Extracted page 39/50 - dien-tu-dien-lanh, total items: 1560
+[2025-03-12T07:31:29.682+0000] {tiki_extract_dag.py:155} INFO - Extracted page 40/50 - dien-tu-dien-lanh, total items: 1600
+[2025-03-12T07:31:38.683+0000] {tiki_extract_dag.py:155} INFO - Extracted page 41/50 - dien-tu-dien-lanh, total items: 1640
+[2025-03-12T07:31:45.250+0000] {tiki_extract_dag.py:155} INFO - Extracted page 42/50 - dien-tu-dien-lanh, total items: 1680
+[2025-03-12T07:31:54.643+0000] {tiki_extract_dag.py:155} INFO - Extracted page 43/50 - dien-tu-dien-lanh, total items: 1720
+[2025-03-12T07:32:04.111+0000] {tiki_extract_dag.py:155} INFO - Extracted page 44/50 - dien-tu-dien-lanh, total items: 1760
+[2025-03-12T07:32:11.271+0000] {tiki_extract_dag.py:155} INFO - Extracted page 45/50 - dien-tu-dien-lanh, total items: 1800
+[2025-03-12T07:32:18.469+0000] {tiki_extract_dag.py:155} INFO - Extracted page 46/50 - dien-tu-dien-lanh, total items: 1840
+[2025-03-12T07:32:27.055+0000] {tiki_extract_dag.py:155} INFO - Extracted page 47/50 - dien-tu-dien-lanh, total items: 1880
+[2025-03-12T07:32:35.854+0000] {tiki_extract_dag.py:155} INFO - Extracted page 48/50 - dien-tu-dien-lanh, total items: 1920
+[2025-03-12T07:32:42.275+0000] {tiki_extract_dag.py:155} INFO - Extracted page 49/50 - dien-tu-dien-lanh, total items: 1960
+[2025-03-12T07:32:52.664+0000] {tiki_extract_dag.py:155} INFO - Extracted page 50/50 - dien-tu-dien-lanh, total items: 2000
+[2025-03-12T07:33:33.731+0000] {tiki_extract_dag.py:56} INFO - Updated crawled products at tiki-pipeline/tiki_crawled/crawled_products.json
+[2025-03-12T07:33:33.733+0000] {tiki_extract_dag.py:172} INFO - Uploaded raw data to tiki-pipeline/tiki_raw_data/raw_dien-tu-dien-lanh_20250312_073302.json, total items: 2000
+[2025-03-12T07:33:34.139+0000] {tiki_extract_dag.py:183} INFO - Saved metadata to tiki-pipeline/metadata/extract_run_metadata_dien-tu-dien-lanh_20250312_073302.json
+[2025-03-12T07:33:34.153+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-03-12T07:33:34.247+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-03-12T07:33:34.250+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=tiki_extract_dag, task_id=extract_dien-tu-dien-lanh, run_id=manual__2025-03-12T07:25:54.854919+00:00, execution_date=20250312T072554, start_date=20250312T072610, end_date=20250312T073334
+[2025-03-12T07:33:34.363+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-03-12T07:33:34.364+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-03-12T07:33:34.364+0000] {logging_mixin.py:190} INFO - Dag name:tiki_extract_dag queued_at:2025-03-12 07:25:54.899816+00:00
+[2025-03-12T07:33:34.365+0000] {logging_mixin.py:190} INFO - Task hostname:3905098656d4 operator:PythonOperator
+[2025-03-12T07:33:34.441+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-03-12T07:33:34.491+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

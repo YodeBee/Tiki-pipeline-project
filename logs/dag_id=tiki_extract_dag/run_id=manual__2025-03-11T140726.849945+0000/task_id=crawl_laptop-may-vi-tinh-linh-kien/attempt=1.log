@@ -1,0 +1,40 @@
+[2025-03-11T14:08:01.354+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-11T14:08:01.448+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: tiki_extract_dag.crawl_laptop-may-vi-tinh-linh-kien manual__2025-03-11T14:07:26.849945+00:00 [queued]>
+[2025-03-11T14:08:01.604+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: tiki_extract_dag.crawl_laptop-may-vi-tinh-linh-kien manual__2025-03-11T14:07:26.849945+00:00 [queued]>
+[2025-03-11T14:08:01.613+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 4
+[2025-03-11T14:08:02.036+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): crawl_laptop-may-vi-tinh-linh-kien> on 2025-03-11 14:07:26.849945+00:00
+[2025-03-11T14:08:02.185+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=2139) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-11T14:08:02.231+0000] {standard_task_runner.py:72} INFO - Started process 2175 to run task
+[2025-03-11T14:08:02.737+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'tiki_extract_dag', 'crawl_laptop-may-vi-tinh-linh-kien', 'manual__2025-03-11T14:07:26.849945+00:00', '--job-id', '597', '--raw', '--subdir', 'DAGS_FOLDER/tiki_extract_dag.py', '--cfg-path', '/tmp/tmpfxzctt4v']
+[2025-03-11T14:08:02.756+0000] {standard_task_runner.py:105} INFO - Job 597: Subtask crawl_laptop-may-vi-tinh-linh-kien
+[2025-03-11T14:08:11.283+0000] {task_command.py:467} INFO - Running <TaskInstance: tiki_extract_dag.crawl_laptop-may-vi-tinh-linh-kien manual__2025-03-11T14:07:26.849945+00:00 [running]> on host 5c8190d7da62
+[2025-03-11T14:08:12.654+0000] {job.py:229} INFO - Heartbeat recovered after 11.74 seconds
+[2025-03-11T14:08:13.680+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='tiki_extract_dag' AIRFLOW_CTX_TASK_ID='crawl_laptop-may-vi-tinh-linh-kien' AIRFLOW_CTX_EXECUTION_DATE='2025-03-11T14:07:26.849945+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-11T14:07:26.849945+00:00'
+[2025-03-11T14:08:13.691+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-03-11T14:08:13.709+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-03-11T14:08:13.714+0000] {logging_mixin.py:190} INFO - Current task name:crawl_laptop-may-vi-tinh-linh-kien state:running start_date:2025-03-11 14:08:01.529735+00:00
+[2025-03-11T14:08:13.716+0000] {logging_mixin.py:190} INFO - Dag name:tiki_extract_dag and current dag run status:running
+[2025-03-11T14:08:13.721+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-03-11T14:08:16.482+0000] {tiki_extract_dag.py:139} INFO - Starting crawl for category laptop-may-vi-tinh-linh-kien (ID: 1846)
+[2025-03-11T14:08:16.489+0000] {tiki_extract_dag.py:141} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 1, 'limit': 40, 'category': '1846'}
+[2025-03-11T14:08:18.893+0000] {tiki_extract_dag.py:150} INFO - Total pages for laptop-may-vi-tinh-linh-kien: 50 (limited to 50)
+[2025-03-11T14:08:18.965+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 2, 'limit': 40, 'category': '1846'}
+[2025-03-11T14:08:21.833+0000] {job.py:229} INFO - Heartbeat recovered after 13.39 seconds
+[2025-03-11T14:08:22.441+0000] {tiki_extract_dag.py:183} INFO - Extracted page 2/50 for category laptop-may-vi-tinh-linh-kien, total items: 0
+[2025-03-11T14:08:40.779+0000] {tiki_extract_dag.py:163} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 3, 'limit': 40, 'category': '1846'}
+[2025-03-11T14:08:41.336+0000] {tiki_extract_dag.py:186} ERROR - API error at page 3 in category laptop-may-vi-tinh-linh-kien on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T14:08:51.067+0000] {tiki_extract_dag.py:186} ERROR - API error at page 3 in category laptop-may-vi-tinh-linh-kien on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T14:08:58.687+0000] {tiki_extract_dag.py:186} ERROR - API error at page 3 in category laptop-may-vi-tinh-linh-kien on attempt 3/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-11T14:08:58.695+0000] {tiki_extract_dag.py:191} ERROR - Failed after 3 attempts for page 3 in category laptop-may-vi-tinh-linh-kien
+[2025-03-11T14:08:58.714+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-03-11T14:08:58.968+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-03-11T14:08:58.974+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=tiki_extract_dag, task_id=crawl_laptop-may-vi-tinh-linh-kien, run_id=manual__2025-03-11T14:07:26.849945+00:00, execution_date=20250311T140726, start_date=20250311T140801, end_date=20250311T140858
+[2025-03-11T14:08:59.177+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-03-11T14:08:59.178+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-03-11T14:08:59.179+0000] {logging_mixin.py:190} INFO - Dag name:tiki_extract_dag queued_at:2025-03-11 14:07:27.008557+00:00
+[2025-03-11T14:08:59.180+0000] {logging_mixin.py:190} INFO - Task hostname:5c8190d7da62 operator:PythonOperator
+[2025-03-11T14:08:59.328+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-03-11T14:08:59.498+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-03-11T14:08:59.507+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

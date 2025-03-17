@@ -1,0 +1,164 @@
+[2025-03-10T08:36:45.813+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-10T08:36:45.829+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: tiki_extract_dag.extract_data manual__2025-03-10T08:26:31.847733+00:00 [queued]>
+[2025-03-10T08:36:45.838+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: tiki_extract_dag.extract_data manual__2025-03-10T08:26:31.847733+00:00 [queued]>
+[2025-03-10T08:36:45.839+0000] {taskinstance.py:2867} INFO - Starting attempt 3 of 4
+[2025-03-10T08:36:45.853+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): extract_data> on 2025-03-10 08:26:31.847733+00:00
+[2025-03-10T08:36:45.862+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1005) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-10T08:36:45.863+0000] {standard_task_runner.py:72} INFO - Started process 1007 to run task
+[2025-03-10T08:36:45.863+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'tiki_extract_dag', 'extract_data', 'manual__2025-03-10T08:26:31.847733+00:00', '--job-id', '339', '--raw', '--subdir', 'DAGS_FOLDER/tiki_extract_dag.py', '--cfg-path', '/tmp/tmpi99wie7z']
+[2025-03-10T08:36:45.865+0000] {standard_task_runner.py:105} INFO - Job 339: Subtask extract_data
+[2025-03-10T08:36:45.908+0000] {task_command.py:467} INFO - Running <TaskInstance: tiki_extract_dag.extract_data manual__2025-03-10T08:26:31.847733+00:00 [running]> on host c77555d100c4
+[2025-03-10T08:36:45.989+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='tiki_extract_dag' AIRFLOW_CTX_TASK_ID='extract_data' AIRFLOW_CTX_EXECUTION_DATE='2025-03-10T08:26:31.847733+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-10T08:26:31.847733+00:00'
+[2025-03-10T08:36:45.990+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-03-10T08:36:45.991+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-03-10T08:36:45.992+0000] {logging_mixin.py:190} INFO - Current task name:extract_data state:running start_date:2025-03-10 08:36:45.829951+00:00
+[2025-03-10T08:36:45.992+0000] {logging_mixin.py:190} INFO - Dag name:tiki_extract_dag and current dag run status:running
+[2025-03-10T08:36:45.992+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-03-10T08:36:46.553+0000] {tiki_extract_dag.py:147} INFO - Starting crawl for category nha-sach-tiki (ID: 8322)
+[2025-03-10T08:36:47.435+0000] {tiki_extract_dag.py:154} INFO - Total pages for nha-sach-tiki: 30 (limited to 30)
+[2025-03-10T08:36:47.645+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 276159943: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/276159943
+[2025-03-10T08:36:47.836+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 275702538: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/275702538
+[2025-03-10T08:36:47.992+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 275406600: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/275406600
+[2025-03-10T08:36:48.124+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 273844978: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/273844978
+[2025-03-10T08:36:48.270+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 263070154: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/263070154
+[2025-03-10T08:36:48.402+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 225269677: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/225269677
+[2025-03-10T08:36:48.594+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 209389165: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/209389165
+[2025-03-10T08:36:48.746+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 196932307: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/196932307
+[2025-03-10T08:36:48.884+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 195801686: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/195801686
+[2025-03-10T08:36:49.016+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 194960721: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/194960721
+[2025-03-10T08:36:49.174+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 194959173: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/194959173
+[2025-03-10T08:36:49.301+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 193614514: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/193614514
+[2025-03-10T08:36:49.687+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 193151000: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/193151000
+[2025-03-10T08:36:49.813+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 190861557: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/190861557
+[2025-03-10T08:36:49.990+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 189643105: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/189643105
+[2025-03-10T08:36:50.131+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 188940817: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/188940817
+[2025-03-10T08:36:50.293+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 184466860: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/184466860
+[2025-03-10T08:36:50.459+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 171556602: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/171556602
+[2025-03-10T08:36:50.600+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 170708233: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/170708233
+[2025-03-10T08:36:50.732+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 168283405: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/168283405
+[2025-03-10T08:36:50.919+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 161310103: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/161310103
+[2025-03-10T08:36:51.083+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 161008715: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/161008715
+[2025-03-10T08:36:51.241+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 157432544: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/157432544
+[2025-03-10T08:36:51.375+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 145288029: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/145288029
+[2025-03-10T08:36:51.515+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 138107485: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/138107485
+[2025-03-10T08:36:51.656+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 114937969: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/114937969
+[2025-03-10T08:36:51.799+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 113530805: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/113530805
+[2025-03-10T08:36:51.941+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 106185389: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/106185389
+[2025-03-10T08:36:52.097+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 104769768: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/104769768
+[2025-03-10T08:36:52.301+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 103379147: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/103379147
+[2025-03-10T08:36:52.440+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 85763211: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/85763211
+[2025-03-10T08:36:52.587+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 78598381: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/78598381
+[2025-03-10T08:36:52.763+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 77774625: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/77774625
+[2025-03-10T08:36:52.907+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 74021317: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/74021317
+[2025-03-10T08:36:53.042+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 73787185: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/73787185
+[2025-03-10T08:36:53.170+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 72308265: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/72308265
+[2025-03-10T08:36:53.291+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 54614797: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/54614797
+[2025-03-10T08:36:53.434+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 53720978: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/53720978
+[2025-03-10T08:36:53.573+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 52788072: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/52788072
+[2025-03-10T08:36:53.711+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 8885995: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/8885995
+[2025-03-10T08:36:54.136+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 275599939: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/275599939
+[2025-03-10T08:36:54.282+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 275025208: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/275025208
+[2025-03-10T08:36:54.416+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 273844986: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/273844986
+[2025-03-10T08:36:54.542+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 272449818: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/272449818
+[2025-03-10T08:36:54.753+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 271379451: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/271379451
+[2025-03-10T08:36:54.934+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 270546273: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/270546273
+[2025-03-10T08:36:55.065+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 220665663: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/220665663
+[2025-03-10T08:36:55.229+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 202879294: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/202879294
+[2025-03-10T08:36:55.381+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 197353399: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/197353399
+[2025-03-10T08:36:55.611+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 196851308: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/196851308
+[2025-03-10T08:36:55.772+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 195885688: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/195885688
+[2025-03-10T08:36:55.923+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 194205620: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/194205620
+[2025-03-10T08:36:56.069+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 194205608: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/194205608
+[2025-03-10T08:36:56.203+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 192124399: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/192124399
+[2025-03-10T08:36:56.334+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 192115858: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/192115858
+[2025-03-10T08:36:56.483+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 190843478: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/190843478
+[2025-03-10T08:36:56.640+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 185071145: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/185071145
+[2025-03-10T08:36:56.786+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 181699664: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/181699664
+[2025-03-10T08:36:56.897+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 177487151: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/177487151
+[2025-03-10T08:36:57.043+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 173882437: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/173882437
+[2025-03-10T08:36:57.191+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 173763072: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/173763072
+[2025-03-10T08:36:57.366+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 163703151: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/163703151
+[2025-03-10T08:36:57.498+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 140416370: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/140416370
+[2025-03-10T08:36:57.620+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 127844385: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/127844385
+[2025-03-10T08:36:57.777+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 120219394: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/120219394
+[2025-03-10T08:36:57.909+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 105483727: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/105483727
+[2025-03-10T08:36:58.097+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 104741661: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/104741661
+[2025-03-10T08:36:58.280+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 76013378: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/76013378
+[2025-03-10T08:36:58.425+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 70224520: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/70224520
+[2025-03-10T08:36:58.566+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 69219919: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/69219919
+[2025-03-10T08:36:58.693+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 52789367: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/52789367
+[2025-03-10T08:36:58.853+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 52329763: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/52329763
+[2025-03-10T08:36:59.022+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 23416722: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/23416722
+[2025-03-10T08:36:59.188+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 21367457: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/21367457
+[2025-03-10T08:36:59.389+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 14508205: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/14508205
+[2025-03-10T08:36:59.504+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 13419678: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/13419678
+[2025-03-10T08:36:59.694+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 8886007: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/8886007
+[2025-03-10T08:36:59.848+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 7718737: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/7718737
+[2025-03-10T08:37:00.003+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 5067169: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/5067169
+[2025-03-10T08:37:00.167+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 3304875: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/3304875
+[2025-03-10T08:37:00.168+0000] {tiki_extract_dag.py:182} INFO - Extracted page 2/30 - nha-sach-tiki, total items: 80
+[2025-03-10T08:37:09.898+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 277357535: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/277357535
+[2025-03-10T08:37:10.021+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 276313958: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/276313958
+[2025-03-10T08:37:10.190+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 274363543: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/274363543
+[2025-03-10T08:37:10.330+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 273819808: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/273819808
+[2025-03-10T08:37:10.454+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 273114488: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/273114488
+[2025-03-10T08:37:10.582+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 272000024: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/272000024
+[2025-03-10T08:37:10.717+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 270114030: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/270114030
+[2025-03-10T08:37:10.904+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 262977989: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/262977989
+[2025-03-10T08:37:11.079+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 262590428: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/262590428
+[2025-03-10T08:37:11.216+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 212213013: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/212213013
+[2025-03-10T08:37:11.346+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 196515668: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/196515668
+[2025-03-10T08:37:11.494+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 190238356: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/190238356
+[2025-03-10T08:37:11.627+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 176909221: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/176909221
+[2025-03-10T08:37:11.742+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 174842858: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/174842858
+[2025-03-10T08:37:11.877+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 170772575: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/170772575
+[2025-03-10T08:37:12.017+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 162844699: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/162844699
+[2025-03-10T08:37:12.172+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 159004131: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/159004131
+[2025-03-10T08:37:12.302+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 158019964: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/158019964
+[2025-03-10T08:37:12.440+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 126743464: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/126743464
+[2025-03-10T08:37:12.636+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 115266692: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/115266692
+[2025-03-10T08:37:12.784+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 110448022: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/110448022
+[2025-03-10T08:37:12.912+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 102629318: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/102629318
+[2025-03-10T08:37:13.115+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 95218451: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/95218451
+[2025-03-10T08:37:13.266+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 87226756: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/87226756
+[2025-03-10T08:37:13.397+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 86517373: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/86517373
+[2025-03-10T08:37:13.529+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 73878873: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/73878873
+[2025-03-10T08:37:13.694+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 73515859: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/73515859
+[2025-03-10T08:37:13.901+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 53532186: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/53532186
+[2025-03-10T08:37:14.040+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 52785564: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/52785564
+[2025-03-10T08:37:14.198+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 52584834: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/52584834
+[2025-03-10T08:37:14.363+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 50414368: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/50414368
+[2025-03-10T08:37:14.512+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 35191892: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/35191892
+[2025-03-10T08:37:14.638+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 21130350: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/21130350
+[2025-03-10T08:37:14.791+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 10005245: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/10005245
+[2025-03-10T08:37:14.924+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 7982628: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/7982628
+[2025-03-10T08:37:15.075+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 3954355: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/3954355
+[2025-03-10T08:37:15.229+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 3608623: 404 Client Error: Not Found for url: https://tiki.vn/api/api/v2/products/3608623
+[2025-03-10T08:37:15.526+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 828621: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T08:37:15.700+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 540040: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T08:37:15.938+0000] {tiki_extract_dag.py:116} ERROR - Error fetching details for product 378448: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T08:37:15.941+0000] {tiki_extract_dag.py:182} INFO - Extracted page 3/30 - nha-sach-tiki, total items: 120
+[2025-03-10T08:37:24.503+0000] {tiki_extract_dag.py:185} ERROR - API error at page 4 - nha-sach-tiki: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T08:37:24.504+0000] {tiki_extract_dag.py:147} INFO - Starting crawl for category dien-thoai-may-tinh-bang (ID: 1789)
+[2025-03-10T08:37:24.643+0000] {tiki_extract_dag.py:188} ERROR - Failed to crawl category dien-thoai-may-tinh-bang: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T08:37:24.643+0000] {tiki_extract_dag.py:147} INFO - Starting crawl for category dien-tu-dien-lanh (ID: 1846)
+[2025-03-10T08:37:24.787+0000] {tiki_extract_dag.py:188} ERROR - Failed to crawl category dien-tu-dien-lanh: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T08:37:24.788+0000] {tiki_extract_dag.py:147} INFO - Starting crawl for category lam-dep-suc-khoe (ID: 1520)
+[2025-03-10T08:37:24.928+0000] {tiki_extract_dag.py:188} ERROR - Failed to crawl category lam-dep-suc-khoe: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T08:37:24.929+0000] {tiki_extract_dag.py:147} INFO - Starting crawl for category thoi-trang-nu (ID: 931)
+[2025-03-10T08:37:25.070+0000] {tiki_extract_dag.py:188} ERROR - Failed to crawl category thoi-trang-nu: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T08:37:27.755+0000] {tiki_extract_dag.py:50} INFO - Updated crawled products at tiki-pipeline/tiki_crawled/crawled_products.json
+[2025-03-10T08:37:27.756+0000] {tiki_extract_dag.py:199} INFO - Uploaded raw data to tiki-pipeline/tiki_raw_data/raw_20250310_083725.json, total items: 120
+[2025-03-10T08:37:28.087+0000] {tiki_extract_dag.py:209} INFO - Saved metadata to tiki-pipeline/metadata/extract_run_metadata_20250310_083725.json
+[2025-03-10T08:37:28.090+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-03-10T08:37:28.102+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-03-10T08:37:28.102+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=tiki_extract_dag, task_id=extract_data, run_id=manual__2025-03-10T08:26:31.847733+00:00, execution_date=20250310T082631, start_date=20250310T083645, end_date=20250310T083728
+[2025-03-10T08:37:28.132+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-03-10T08:37:28.133+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-03-10T08:37:28.134+0000] {logging_mixin.py:190} INFO - Dag name:tiki_extract_dag queued_at:2025-03-10 08:26:31.875903+00:00
+[2025-03-10T08:37:28.134+0000] {logging_mixin.py:190} INFO - Task hostname:c77555d100c4 operator:PythonOperator
+[2025-03-10T08:37:28.189+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-03-10T08:37:28.210+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-03-10T08:37:28.213+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

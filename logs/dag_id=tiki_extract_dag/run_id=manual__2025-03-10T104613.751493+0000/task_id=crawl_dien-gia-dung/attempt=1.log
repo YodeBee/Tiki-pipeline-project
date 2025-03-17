@@ -1,0 +1,93 @@
+[2025-03-10T10:46:53.647+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-10T10:46:53.789+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: tiki_extract_dag.crawl_dien-gia-dung manual__2025-03-10T10:46:13.751493+00:00 [queued]>
+[2025-03-10T10:46:53.871+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: tiki_extract_dag.crawl_dien-gia-dung manual__2025-03-10T10:46:13.751493+00:00 [queued]>
+[2025-03-10T10:46:53.874+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 4
+[2025-03-10T10:46:54.988+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): crawl_dien-gia-dung> on 2025-03-10 10:46:13.751493+00:00
+[2025-03-10T10:46:55.061+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=327) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-10T10:46:55.126+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'tiki_extract_dag', 'crawl_dien-gia-dung', 'manual__2025-03-10T10:46:13.751493+00:00', '--job-id', '476', '--raw', '--subdir', 'DAGS_FOLDER/tiki_extract_dag.py', '--cfg-path', '/tmp/tmpj6atlgpg']
+[2025-03-10T10:46:55.173+0000] {standard_task_runner.py:72} INFO - Started process 377 to run task
+[2025-03-10T10:46:55.176+0000] {standard_task_runner.py:105} INFO - Job 476: Subtask crawl_dien-gia-dung
+[2025-03-10T10:46:55.974+0000] {task_command.py:467} INFO - Running <TaskInstance: tiki_extract_dag.crawl_dien-gia-dung manual__2025-03-10T10:46:13.751493+00:00 [running]> on host 0c9fb3f19112
+[2025-03-10T10:47:13.164+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='tiki_extract_dag' AIRFLOW_CTX_TASK_ID='crawl_dien-gia-dung' AIRFLOW_CTX_EXECUTION_DATE='2025-03-10T10:46:13.751493+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-10T10:46:13.751493+00:00'
+[2025-03-10T10:47:13.199+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-03-10T10:47:13.204+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-03-10T10:47:13.208+0000] {logging_mixin.py:190} INFO - Current task name:crawl_dien-gia-dung state:running start_date:2025-03-10 10:46:53.805573+00:00
+[2025-03-10T10:47:13.227+0000] {logging_mixin.py:190} INFO - Dag name:tiki_extract_dag and current dag run status:running
+[2025-03-10T10:47:13.239+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-03-10T10:47:14.408+0000] {job.py:229} INFO - Heartbeat recovered after 21.12 seconds
+[2025-03-10T10:47:58.814+0000] {job.py:229} INFO - Heartbeat recovered after 44.45 seconds
+[2025-03-10T10:47:59.706+0000] {tiki_extract_dag.py:137} INFO - Starting crawl for category dien-gia-dung (ID: 1882)
+[2025-03-10T10:47:59.707+0000] {tiki_extract_dag.py:139} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 1, 'limit': 40, 'category': '1882'}
+[2025-03-10T10:48:00.940+0000] {tiki_extract_dag.py:148} INFO - Total pages for dien-gia-dung: 50 (limited to 50)
+[2025-03-10T10:48:00.941+0000] {tiki_extract_dag.py:161} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 2, 'limit': 40, 'category': '1882'}
+[2025-03-10T10:48:03.595+0000] {tiki_extract_dag.py:181} INFO - Extracted page 2/50 for category dien-gia-dung, total items: 0
+[2025-03-10T10:48:18.301+0000] {job.py:229} INFO - Heartbeat recovered after 14.13 seconds
+[2025-03-10T10:48:21.096+0000] {tiki_extract_dag.py:161} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 3, 'limit': 40, 'category': '1882'}
+[2025-03-10T10:48:26.386+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 276093772 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:48:33.997+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 276093772 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:48:43.944+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 276093772 on attempt 3/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:48:44.087+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 276031734 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:48:51.764+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 276031734 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:48:57.565+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 276031734 on attempt 3/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:48:57.729+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 275123782 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:49:20.414+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 163170724 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:49:29.993+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 163170724 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:49:39.149+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 163170724 on attempt 3/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:49:39.289+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 163170723 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:49:44.799+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 163170723 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:49:52.235+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 163170723 on attempt 3/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:49:52.373+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 147356515 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:50:16.475+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 82605269 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:50:24.450+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 82605269 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:50:31.270+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 82605269 on attempt 3/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:50:31.434+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 80964740 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:50:36.959+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 80964740 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:50:42.578+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 80964740 on attempt 3/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:50:42.716+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 77767851 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:50:50.629+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 77767851 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:51:19.626+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 392729 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:51:27.151+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 392729 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:51:33.742+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 392729 on attempt 3/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:51:33.743+0000] {tiki_extract_dag.py:181} INFO - Extracted page 3/50 for category dien-gia-dung, total items: 40
+[2025-03-10T10:51:52.875+0000] {tiki_extract_dag.py:161} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 4, 'limit': 40, 'category': '1882'}
+[2025-03-10T10:51:53.030+0000] {tiki_extract_dag.py:184} ERROR - API error at page 4 in category dien-gia-dung on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:51:58.523+0000] {tiki_extract_dag.py:184} ERROR - API error at page 4 in category dien-gia-dung on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:52:23.738+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 118137722 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:52:30.065+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 118137722 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:52:35.885+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 118137722 on attempt 3/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:52:36.046+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 116971817 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:52:44.970+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 116971817 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:52:53.625+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 116971817 on attempt 3/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:52:53.782+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 112694371 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:53:18.780+0000] {tiki_extract_dag.py:181} INFO - Extracted page 4/50 for category dien-gia-dung, total items: 80
+[2025-03-10T10:53:34.235+0000] {tiki_extract_dag.py:161} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 5, 'limit': 40, 'category': '1882'}
+[2025-03-10T10:53:35.970+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 275087496 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:53:44.382+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 275087496 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:53:54.543+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 275087496 on attempt 3/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:53:54.701+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 275087255 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:54:18.452+0000] {tiki_extract_dag.py:181} INFO - Extracted page 5/50 for category dien-gia-dung, total items: 120
+[2025-03-10T10:54:33.871+0000] {tiki_extract_dag.py:161} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 6, 'limit': 40, 'category': '1882'}
+[2025-03-10T10:54:47.442+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 26078293 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:54:55.214+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 26078293 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:55:07.647+0000] {tiki_extract_dag.py:181} INFO - Extracted page 6/50 for category dien-gia-dung, total items: 160
+[2025-03-10T10:55:22.800+0000] {tiki_extract_dag.py:161} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 7, 'limit': 40, 'category': '1882'}
+[2025-03-10T10:55:44.442+0000] {tiki_extract_dag.py:181} INFO - Extracted page 7/50 for category dien-gia-dung, total items: 200
+[2025-03-10T10:56:01.751+0000] {tiki_extract_dag.py:161} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 8, 'limit': 40, 'category': '1882'}
+[2025-03-10T10:56:17.468+0000] {tiki_extract_dag.py:181} INFO - Extracted page 8/50 for category dien-gia-dung, total items: 240
+[2025-03-10T10:56:35.984+0000] {tiki_extract_dag.py:161} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 9, 'limit': 40, 'category': '1882'}
+[2025-03-10T10:56:47.058+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 33494720 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:56:53.540+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 33494720 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:57:04.468+0000] {tiki_extract_dag.py:181} INFO - Extracted page 9/50 for category dien-gia-dung, total items: 280
+[2025-03-10T10:57:22.848+0000] {tiki_extract_dag.py:161} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 10, 'limit': 40, 'category': '1882'}
+[2025-03-10T10:57:37.981+0000] {tiki_extract_dag.py:181} INFO - Extracted page 10/50 for category dien-gia-dung, total items: 320
+[2025-03-10T10:57:56.332+0000] {tiki_extract_dag.py:161} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 11, 'limit': 40, 'category': '1882'}
+[2025-03-10T10:57:56.477+0000] {tiki_extract_dag.py:184} ERROR - API error at page 11 in category dien-gia-dung on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:58:16.461+0000] {tiki_extract_dag.py:181} INFO - Extracted page 11/50 for category dien-gia-dung, total items: 360
+[2025-03-10T10:58:31.641+0000] {tiki_extract_dag.py:161} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 12, 'limit': 40, 'category': '1882'}
+[2025-03-10T10:58:44.508+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 36364168 on attempt 1/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:58:51.318+0000] {tiki_extract_dag.py:120} ERROR - Error fetching details for product 36364168 on attempt 2/3: Expecting value: line 1 column 1 (char 0)
+[2025-03-10T10:59:02.039+0000] {tiki_extract_dag.py:181} INFO - Extracted page 12/50 for category dien-gia-dung, total items: 400
+[2025-03-10T10:59:20.054+0000] {tiki_extract_dag.py:161} INFO - Calling API: https://tiki.vn/api/v2/products with params: {'page': 13, 'limit': 40, 'category': '1882'}
+[2025-03-10T10:59:32.965+0000] {tiki_extract_dag.py:181} INFO - Extracted page 13/50 for category dien-gia-dung, total items: 440

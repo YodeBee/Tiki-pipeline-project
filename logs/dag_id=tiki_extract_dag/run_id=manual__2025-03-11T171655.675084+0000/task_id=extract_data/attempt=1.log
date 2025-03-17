@@ -1,0 +1,451 @@
+[2025-03-11T17:16:59.239+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-11T17:16:59.257+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: tiki_extract_dag.extract_data manual__2025-03-11T17:16:55.675084+00:00 [queued]>
+[2025-03-11T17:16:59.266+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: tiki_extract_dag.extract_data manual__2025-03-11T17:16:55.675084+00:00 [queued]>
+[2025-03-11T17:16:59.267+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 4
+[2025-03-11T17:16:59.280+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): extract_data> on 2025-03-11 17:16:55.675084+00:00
+[2025-03-11T17:16:59.290+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=619) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-11T17:16:59.293+0000] {standard_task_runner.py:72} INFO - Started process 621 to run task
+[2025-03-11T17:16:59.292+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'tiki_extract_dag', 'extract_data', 'manual__2025-03-11T17:16:55.675084+00:00', '--job-id', '612', '--raw', '--subdir', 'DAGS_FOLDER/tiki_extract_dag.py', '--cfg-path', '/tmp/tmpsnxsq0gi']
+[2025-03-11T17:16:59.293+0000] {standard_task_runner.py:105} INFO - Job 612: Subtask extract_data
+[2025-03-11T17:16:59.350+0000] {task_command.py:467} INFO - Running <TaskInstance: tiki_extract_dag.extract_data manual__2025-03-11T17:16:55.675084+00:00 [running]> on host 5c8190d7da62
+[2025-03-11T17:17:00.486+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='tiki_extract_dag' AIRFLOW_CTX_TASK_ID='extract_data' AIRFLOW_CTX_EXECUTION_DATE='2025-03-11T17:16:55.675084+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-11T17:16:55.675084+00:00'
+[2025-03-11T17:17:00.490+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-03-11T17:17:00.491+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-03-11T17:17:00.491+0000] {logging_mixin.py:190} INFO - Current task name:extract_data state:running start_date:2025-03-11 17:16:59.258358+00:00
+[2025-03-11T17:17:00.491+0000] {logging_mixin.py:190} INFO - Dag name:tiki_extract_dag and current dag run status:running
+[2025-03-11T17:17:00.492+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-03-11T17:17:01.603+0000] {tiki_extract_dag.py:119} INFO - Starting crawl for category lam-dep-suc-khoe
+[2025-03-11T17:17:02.342+0000] {tiki_extract_dag.py:126} INFO - Total pages for lam-dep-suc-khoe: 50
+[2025-03-11T17:17:02.711+0000] {tiki_extract_dag.py:152} INFO - Extracted page 2/50 - lam-dep-suc-khoe, total items: 40
+[2025-03-11T17:17:08.309+0000] {tiki_extract_dag.py:152} INFO - Extracted page 3/50 - lam-dep-suc-khoe, total items: 80
+[2025-03-11T17:17:18.733+0000] {tiki_extract_dag.py:152} INFO - Extracted page 4/50 - lam-dep-suc-khoe, total items: 120
+[2025-03-11T17:17:28.116+0000] {tiki_extract_dag.py:152} INFO - Extracted page 5/50 - lam-dep-suc-khoe, total items: 160
+[2025-03-11T17:17:38.060+0000] {tiki_extract_dag.py:152} INFO - Extracted page 6/50 - lam-dep-suc-khoe, total items: 200
+[2025-03-11T17:17:48.274+0000] {tiki_extract_dag.py:152} INFO - Extracted page 7/50 - lam-dep-suc-khoe, total items: 240
+[2025-03-11T17:17:56.826+0000] {tiki_extract_dag.py:152} INFO - Extracted page 8/50 - lam-dep-suc-khoe, total items: 280
+[2025-03-11T17:18:03.209+0000] {tiki_extract_dag.py:152} INFO - Extracted page 9/50 - lam-dep-suc-khoe, total items: 320
+[2025-03-11T17:18:12.624+0000] {tiki_extract_dag.py:152} INFO - Extracted page 10/50 - lam-dep-suc-khoe, total items: 360
+[2025-03-11T17:18:21.906+0000] {tiki_extract_dag.py:152} INFO - Extracted page 11/50 - lam-dep-suc-khoe, total items: 400
+[2025-03-11T17:18:31.644+0000] {tiki_extract_dag.py:152} INFO - Extracted page 12/50 - lam-dep-suc-khoe, total items: 440
+[2025-03-11T17:18:39.832+0000] {tiki_extract_dag.py:152} INFO - Extracted page 13/50 - lam-dep-suc-khoe, total items: 480
+[2025-03-11T17:18:47.921+0000] {tiki_extract_dag.py:152} INFO - Extracted page 14/50 - lam-dep-suc-khoe, total items: 520
+[2025-03-11T17:18:53.839+0000] {tiki_extract_dag.py:152} INFO - Extracted page 15/50 - lam-dep-suc-khoe, total items: 560
+[2025-03-11T17:19:01.673+0000] {tiki_extract_dag.py:152} INFO - Extracted page 16/50 - lam-dep-suc-khoe, total items: 600
+[2025-03-11T17:19:11.742+0000] {tiki_extract_dag.py:152} INFO - Extracted page 17/50 - lam-dep-suc-khoe, total items: 640
+[2025-03-11T17:19:20.932+0000] {tiki_extract_dag.py:152} INFO - Extracted page 18/50 - lam-dep-suc-khoe, total items: 680
+[2025-03-11T17:19:29.071+0000] {tiki_extract_dag.py:152} INFO - Extracted page 19/50 - lam-dep-suc-khoe, total items: 720
+[2025-03-11T17:19:36.390+0000] {tiki_extract_dag.py:152} INFO - Extracted page 20/50 - lam-dep-suc-khoe, total items: 760
+[2025-03-11T17:19:43.104+0000] {tiki_extract_dag.py:152} INFO - Extracted page 21/50 - lam-dep-suc-khoe, total items: 800
+[2025-03-11T17:19:49.283+0000] {tiki_extract_dag.py:152} INFO - Extracted page 22/50 - lam-dep-suc-khoe, total items: 840
+[2025-03-11T17:19:55.339+0000] {tiki_extract_dag.py:152} INFO - Extracted page 23/50 - lam-dep-suc-khoe, total items: 880
+[2025-03-11T17:20:05.348+0000] {tiki_extract_dag.py:152} INFO - Extracted page 24/50 - lam-dep-suc-khoe, total items: 920
+[2025-03-11T17:20:15.158+0000] {tiki_extract_dag.py:152} INFO - Extracted page 25/50 - lam-dep-suc-khoe, total items: 960
+[2025-03-11T17:20:22.229+0000] {tiki_extract_dag.py:152} INFO - Extracted page 26/50 - lam-dep-suc-khoe, total items: 1000
+[2025-03-11T17:20:28.055+0000] {tiki_extract_dag.py:152} INFO - Extracted page 27/50 - lam-dep-suc-khoe, total items: 1040
+[2025-03-11T17:20:38.229+0000] {tiki_extract_dag.py:152} INFO - Extracted page 28/50 - lam-dep-suc-khoe, total items: 1080
+[2025-03-11T17:20:46.565+0000] {tiki_extract_dag.py:152} INFO - Extracted page 29/50 - lam-dep-suc-khoe, total items: 1120
+[2025-03-11T17:20:52.996+0000] {tiki_extract_dag.py:152} INFO - Extracted page 30/50 - lam-dep-suc-khoe, total items: 1160
+[2025-03-11T17:20:59.272+0000] {tiki_extract_dag.py:152} INFO - Extracted page 31/50 - lam-dep-suc-khoe, total items: 1200
+[2025-03-11T17:21:05.902+0000] {tiki_extract_dag.py:152} INFO - Extracted page 32/50 - lam-dep-suc-khoe, total items: 1240
+[2025-03-11T17:21:13.619+0000] {tiki_extract_dag.py:152} INFO - Extracted page 33/50 - lam-dep-suc-khoe, total items: 1280
+[2025-03-11T17:21:20.475+0000] {tiki_extract_dag.py:152} INFO - Extracted page 34/50 - lam-dep-suc-khoe, total items: 1320
+[2025-03-11T17:21:29.698+0000] {tiki_extract_dag.py:152} INFO - Extracted page 35/50 - lam-dep-suc-khoe, total items: 1360
+[2025-03-11T17:21:39.472+0000] {tiki_extract_dag.py:152} INFO - Extracted page 36/50 - lam-dep-suc-khoe, total items: 1400
+[2025-03-11T17:21:47.979+0000] {tiki_extract_dag.py:152} INFO - Extracted page 37/50 - lam-dep-suc-khoe, total items: 1440
+[2025-03-11T17:21:56.997+0000] {tiki_extract_dag.py:152} INFO - Extracted page 38/50 - lam-dep-suc-khoe, total items: 1480
+[2025-03-11T17:22:05.055+0000] {tiki_extract_dag.py:152} INFO - Extracted page 39/50 - lam-dep-suc-khoe, total items: 1520
+[2025-03-11T17:22:11.228+0000] {tiki_extract_dag.py:152} INFO - Extracted page 40/50 - lam-dep-suc-khoe, total items: 1560
+[2025-03-11T17:22:20.374+0000] {tiki_extract_dag.py:152} INFO - Extracted page 41/50 - lam-dep-suc-khoe, total items: 1600
+[2025-03-11T17:22:27.550+0000] {tiki_extract_dag.py:152} INFO - Extracted page 42/50 - lam-dep-suc-khoe, total items: 1640
+[2025-03-11T17:22:36.111+0000] {tiki_extract_dag.py:152} INFO - Extracted page 43/50 - lam-dep-suc-khoe, total items: 1680
+[2025-03-11T17:22:45.955+0000] {tiki_extract_dag.py:152} INFO - Extracted page 44/50 - lam-dep-suc-khoe, total items: 1720
+[2025-03-11T17:22:56.286+0000] {tiki_extract_dag.py:152} INFO - Extracted page 45/50 - lam-dep-suc-khoe, total items: 1760
+[2025-03-11T17:23:02.693+0000] {tiki_extract_dag.py:152} INFO - Extracted page 46/50 - lam-dep-suc-khoe, total items: 1800
+[2025-03-11T17:23:10.833+0000] {tiki_extract_dag.py:152} INFO - Extracted page 47/50 - lam-dep-suc-khoe, total items: 1840
+[2025-03-11T17:23:17.957+0000] {tiki_extract_dag.py:152} INFO - Extracted page 48/50 - lam-dep-suc-khoe, total items: 1880
+[2025-03-11T17:23:26.624+0000] {tiki_extract_dag.py:152} INFO - Extracted page 49/50 - lam-dep-suc-khoe, total items: 1920
+[2025-03-11T17:23:35.877+0000] {tiki_extract_dag.py:152} INFO - Extracted page 50/50 - lam-dep-suc-khoe, total items: 1960
+[2025-03-11T17:23:41.333+0000] {tiki_extract_dag.py:119} INFO - Starting crawl for category dien-thoai-may-tinh-bang
+[2025-03-11T17:23:41.660+0000] {tiki_extract_dag.py:126} INFO - Total pages for dien-thoai-may-tinh-bang: 9
+[2025-03-11T17:23:42.171+0000] {tiki_extract_dag.py:152} INFO - Extracted page 2/9 - dien-thoai-may-tinh-bang, total items: 2040
+[2025-03-11T17:23:50.045+0000] {tiki_extract_dag.py:152} INFO - Extracted page 3/9 - dien-thoai-may-tinh-bang, total items: 2080
+[2025-03-11T17:23:56.845+0000] {tiki_extract_dag.py:152} INFO - Extracted page 4/9 - dien-thoai-may-tinh-bang, total items: 2120
+[2025-03-11T17:24:02.745+0000] {tiki_extract_dag.py:152} INFO - Extracted page 5/9 - dien-thoai-may-tinh-bang, total items: 2160
+[2025-03-11T17:24:09.535+0000] {tiki_extract_dag.py:152} INFO - Extracted page 6/9 - dien-thoai-may-tinh-bang, total items: 2200
+[2025-03-11T17:24:15.633+0000] {tiki_extract_dag.py:152} INFO - Extracted page 7/9 - dien-thoai-may-tinh-bang, total items: 2240
+[2025-03-11T17:24:23.389+0000] {tiki_extract_dag.py:152} INFO - Extracted page 8/9 - dien-thoai-may-tinh-bang, total items: 2280
+[2025-03-11T17:24:32.743+0000] {tiki_extract_dag.py:152} INFO - Extracted page 9/9 - dien-thoai-may-tinh-bang, total items: 2320
+[2025-03-11T17:24:41.635+0000] {tiki_extract_dag.py:119} INFO - Starting crawl for category laptop-may-vi-tinh-linh-kien
+[2025-03-11T17:24:42.110+0000] {tiki_extract_dag.py:126} INFO - Total pages for laptop-may-vi-tinh-linh-kien: 50
+[2025-03-11T17:24:42.530+0000] {tiki_extract_dag.py:152} INFO - Extracted page 2/50 - laptop-may-vi-tinh-linh-kien, total items: 2320
+[2025-03-11T17:24:49.844+0000] {tiki_extract_dag.py:152} INFO - Extracted page 3/50 - laptop-may-vi-tinh-linh-kien, total items: 2320
+[2025-03-11T17:24:56.258+0000] {tiki_extract_dag.py:152} INFO - Extracted page 4/50 - laptop-may-vi-tinh-linh-kien, total items: 2320
+[2025-03-11T17:25:03.239+0000] {tiki_extract_dag.py:152} INFO - Extracted page 5/50 - laptop-may-vi-tinh-linh-kien, total items: 2320
+[2025-03-11T17:25:10.891+0000] {tiki_extract_dag.py:152} INFO - Extracted page 6/50 - laptop-may-vi-tinh-linh-kien, total items: 2320
+[2025-03-11T17:25:19.897+0000] {tiki_extract_dag.py:152} INFO - Extracted page 7/50 - laptop-may-vi-tinh-linh-kien, total items: 2320
+[2025-03-11T17:25:25.566+0000] {tiki_extract_dag.py:152} INFO - Extracted page 8/50 - laptop-may-vi-tinh-linh-kien, total items: 2320
+[2025-03-11T17:25:33.382+0000] {tiki_extract_dag.py:152} INFO - Extracted page 9/50 - laptop-may-vi-tinh-linh-kien, total items: 2320
+[2025-03-11T17:25:43.411+0000] {tiki_extract_dag.py:152} INFO - Extracted page 10/50 - laptop-may-vi-tinh-linh-kien, total items: 2320
+[2025-03-11T17:25:50.996+0000] {tiki_extract_dag.py:152} INFO - Extracted page 11/50 - laptop-may-vi-tinh-linh-kien, total items: 2321
+[2025-03-11T17:25:56.778+0000] {tiki_extract_dag.py:152} INFO - Extracted page 12/50 - laptop-may-vi-tinh-linh-kien, total items: 2321
+[2025-03-11T17:26:06.278+0000] {tiki_extract_dag.py:152} INFO - Extracted page 13/50 - laptop-may-vi-tinh-linh-kien, total items: 2321
+[2025-03-11T17:26:12.009+0000] {tiki_extract_dag.py:152} INFO - Extracted page 14/50 - laptop-may-vi-tinh-linh-kien, total items: 2321
+[2025-03-11T17:26:22.048+0000] {tiki_extract_dag.py:152} INFO - Extracted page 15/50 - laptop-may-vi-tinh-linh-kien, total items: 2321
+[2025-03-11T17:26:32.070+0000] {tiki_extract_dag.py:152} INFO - Extracted page 16/50 - laptop-may-vi-tinh-linh-kien, total items: 2321
+[2025-03-11T17:26:40.768+0000] {tiki_extract_dag.py:152} INFO - Extracted page 17/50 - laptop-may-vi-tinh-linh-kien, total items: 2321
+[2025-03-11T17:26:47.148+0000] {tiki_extract_dag.py:152} INFO - Extracted page 18/50 - laptop-may-vi-tinh-linh-kien, total items: 2321
+[2025-03-11T17:26:54.311+0000] {tiki_extract_dag.py:152} INFO - Extracted page 19/50 - laptop-may-vi-tinh-linh-kien, total items: 2321
+[2025-03-11T17:26:59.821+0000] {tiki_extract_dag.py:152} INFO - Extracted page 20/50 - laptop-may-vi-tinh-linh-kien, total items: 2321
+[2025-03-11T17:27:07.823+0000] {tiki_extract_dag.py:152} INFO - Extracted page 21/50 - laptop-may-vi-tinh-linh-kien, total items: 2321
+[2025-03-11T17:27:17.845+0000] {tiki_extract_dag.py:152} INFO - Extracted page 22/50 - laptop-may-vi-tinh-linh-kien, total items: 2321
+[2025-03-11T17:27:24.446+0000] {tiki_extract_dag.py:152} INFO - Extracted page 23/50 - laptop-may-vi-tinh-linh-kien, total items: 2322
+[2025-03-11T17:27:33.473+0000] {tiki_extract_dag.py:152} INFO - Extracted page 24/50 - laptop-may-vi-tinh-linh-kien, total items: 2322
+[2025-03-11T17:27:42.382+0000] {tiki_extract_dag.py:152} INFO - Extracted page 25/50 - laptop-may-vi-tinh-linh-kien, total items: 2322
+[2025-03-11T17:27:45.881+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to None. Terminating instance.
+[2025-03-11T17:27:45.890+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-03-11T17:27:45.896+0000] {process_utils.py:132} INFO - Sending 15 to group 621. PIDs of all processes in the group: [621]
+[2025-03-11T17:27:45.898+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 621
+[2025-03-11T17:27:45.900+0000] {taskinstance.py:3094} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-03-11T17:27:45.934+0000] {taskinstance.py:3095} ERROR - Stacktrace: 
+  File "/home/***/.local/bin/***", line 8, in <module>
+    sys.exit(main())
+  File "/home/***/.local/lib/python3.12/site-packages/***/__main__.py", line 62, in main
+    args.func(args)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/providers/celery/cli/celery_command.py", line 64, in wrapper
+    providers_configuration_loaded(func)(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/providers_configuration_loader.py", line 55, in wrapped_function
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/providers/celery/cli/celery_command.py", line 237, in worker
+    _run_command_with_daemon_option(
+  File "/home/***/.local/lib/python3.12/site-packages/***/providers/celery/cli/celery_command.py", line 50, in _run_command_with_daemon_option
+    run_command_with_daemon_option(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/daemon_utils.py", line 86, in run_command_with_daemon_option
+    callback()
+  File "/home/***/.local/lib/python3.12/site-packages/***/providers/celery/cli/celery_command.py", line 230, in run_celery_worker
+    celery_app.worker_main(options)
+  File "/home/***/.local/lib/python3.12/site-packages/celery/app/base.py", line 391, in worker_main
+    self.start(argv=argv)
+  File "/home/***/.local/lib/python3.12/site-packages/celery/app/base.py", line 371, in start
+    celery.main(args=argv, standalone_mode=False)
+  File "/home/***/.local/lib/python3.12/site-packages/click/core.py", line 1082, in main
+    rv = self.invoke(ctx)
+  File "/home/***/.local/lib/python3.12/site-packages/click/core.py", line 1697, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/***/.local/lib/python3.12/site-packages/click/core.py", line 1443, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/***/.local/lib/python3.12/site-packages/click/core.py", line 788, in invoke
+    return __callback(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/click/decorators.py", line 33, in new_func
+    return f(get_current_context(), *args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/celery/bin/base.py", line 135, in caller
+    return f(ctx, *args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/celery/bin/worker.py", line 356, in worker
+    worker.start()
+  File "/home/***/.local/lib/python3.12/site-packages/celery/worker/worker.py", line 202, in start
+    self.blueprint.start(self)
+  File "/home/***/.local/lib/python3.12/site-packages/celery/bootsteps.py", line 116, in start
+    step.start(parent)
+  File "/home/***/.local/lib/python3.12/site-packages/celery/bootsteps.py", line 365, in start
+    return self.obj.start()
+  File "/home/***/.local/lib/python3.12/site-packages/celery/concurrency/base.py", line 130, in start
+    self.on_start()
+  File "/home/***/.local/lib/python3.12/site-packages/celery/concurrency/prefork.py", line 109, in on_start
+    P = self._pool = Pool(processes=self.limit,
+  File "/home/***/.local/lib/python3.12/site-packages/celery/concurrency/asynpool.py", line 464, in __init__
+    super().__init__(processes, *args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/billiard/pool.py", line 1046, in __init__
+    self._create_worker_process(i)
+  File "/home/***/.local/lib/python3.12/site-packages/celery/concurrency/asynpool.py", line 482, in _create_worker_process
+    return super()._create_worker_process(i)
+  File "/home/***/.local/lib/python3.12/site-packages/billiard/pool.py", line 1158, in _create_worker_process
+    w.start()
+  File "/home/***/.local/lib/python3.12/site-packages/billiard/process.py", line 120, in start
+    self._popen = self._Popen(self)
+  File "/home/***/.local/lib/python3.12/site-packages/billiard/context.py", line 331, in _Popen
+    return Popen(process_obj)
+  File "/home/***/.local/lib/python3.12/site-packages/billiard/popen_fork.py", line 22, in __init__
+    self._launch(process_obj)
+  File "/home/***/.local/lib/python3.12/site-packages/billiard/popen_fork.py", line 77, in _launch
+    code = process_obj._bootstrap()
+  File "/home/***/.local/lib/python3.12/site-packages/billiard/process.py", line 323, in _bootstrap
+    self.run()
+  File "/home/***/.local/lib/python3.12/site-packages/billiard/process.py", line 110, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/billiard/pool.py", line 292, in __call__
+    sys.exit(self.workloop(pid=pid))
+  File "/home/***/.local/lib/python3.12/site-packages/billiard/pool.py", line 362, in workloop
+    result = (True, prepare_result(fun(*args, **kwargs)))
+  File "/home/***/.local/lib/python3.12/site-packages/celery/app/trace.py", line 651, in fast_trace_task
+    R, I, T, Rstr = tasks[task].__trace__(
+  File "/home/***/.local/lib/python3.12/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/providers/celery/executors/celery_executor_utils.py", line 139, in execute_command
+    _execute_in_fork(command_to_exec, celery_task_id)
+  File "/home/***/.local/lib/python3.12/site-packages/***/providers/celery/executors/celery_executor_utils.py", line 171, in _execute_in_fork
+    args.func(args)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 254, in _run_task_by_selected_method
+    return _run_task_by_local_task_job(args, ti)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 322, in _run_task_by_local_task_job
+    ret = run_job(job=job_runner.job, execute_callable=job_runner._execute)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/jobs/job.py", line 421, in run_job
+    return execute_job(job, execute_callable=execute_callable)
+  File "/home/***/.local/lib/python3.12/site-packages/***/jobs/job.py", line 450, in execute_job
+    ret = execute_callable()
+  File "/home/***/.local/lib/python3.12/site-packages/***/jobs/local_task_job_runner.py", line 171, in _execute
+    self.task_runner.start()
+  File "/home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py", line 55, in start
+    self.process = self._start_by_fork()
+  File "/home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+  File "/home/***/.local/lib/python3.12/site-packages/***/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 3006, in _run_raw_task
+    return _run_raw_task(
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 274, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 3161, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 3185, in _execute_task
+    return _execute_task(self, context, task_orig)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+  File "/home/***/.local/lib/python3.12/site-packages/***/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+  File "/home/***/.local/lib/python3.12/site-packages/***/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/opt/***/dags/tiki_extract_dag.py", line 153, in extract_data
+    time.sleep(random.uniform(5, 10))
+  File "/home/***/.local/lib/python3.12/site-packages/***/models/taskinstance.py", line 3095, in signal_handler
+    self.log.error("Stacktrace: \n%s", "".join(traceback.format_stack()))
+
+[2025-03-11T17:27:45.994+0000] {taskinstance.py:3313} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/tiki_extract_dag.py", line 153, in extract_data
+    time.sleep(random.uniform(5, 10))
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3097, in signal_handler
+    raise AirflowTaskTerminated("Task received SIGTERM signal")
+airflow.exceptions.AirflowTaskTerminated: Task received SIGTERM signal
+[2025-03-11T17:27:46.010+0000] {logging_mixin.py:190} INFO - Task instance in failure state
+[2025-03-11T17:27:46.011+0000] {logging_mixin.py:190} INFO - Task start:2025-03-11 17:16:59.258358+00:00 end:2025-03-11 17:27:46.004061+00:00 duration:646.745703
+[2025-03-11T17:27:46.013+0000] {logging_mixin.py:190} INFO - Task:<Task(PythonOperator): extract_data> dag:<DAG: tiki_extract_dag> dagrun:<DagRun tiki_extract_dag @ 2025-03-11 17:16:55.675084+00:00: manual__2025-03-11T17:16:55.675084+00:00, state:running, queued_at: 2025-03-11 17:16:55.706479+00:00. externally triggered: True>
+[2025-03-11T17:27:46.013+0000] {logging_mixin.py:190} INFO - Failure caused by Task received SIGTERM signal
+[2025-03-11T17:27:46.014+0000] {taskinstance.py:1226} INFO - Marking task as UP_FOR_RETRY. dag_id=tiki_extract_dag, task_id=extract_data, run_id=manual__2025-03-11T17:16:55.675084+00:00, execution_date=20250311T171655, start_date=20250311T171659, end_date=20250311T172746
+[2025-03-11T17:27:46.039+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-03-11T17:27:46.042+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 612 for task extract_data ((psycopg2.errors.ForeignKeyViolation) insert or update on table "task_fail" violates foreign key constraint "task_fail_ti_fkey"
+DETAIL:  Key (dag_id, task_id, run_id, map_index)=(tiki_extract_dag, extract_data, manual__2025-03-11T17:16:55.675084+00:00, -1) is not present in table "task_instance".
+
+[SQL: INSERT INTO task_fail (task_id, dag_id, run_id, map_index, start_date, end_date, duration) VALUES (%(task_id)s, %(dag_id)s, %(run_id)s, %(map_index)s, %(start_date)s, %(end_date)s, %(duration)s) RETURNING task_fail.id]
+[parameters: {'task_id': 'extract_data', 'dag_id': 'tiki_extract_dag', 'run_id': 'manual__2025-03-11T17:16:55.675084+00:00', 'map_index': -1, 'start_date': datetime.datetime(2025, 3, 11, 17, 16, 59, 258358, tzinfo=Timezone('UTC')), 'end_date': datetime.datetime(2025, 3, 11, 17, 27, 46, 4061, tzinfo=Timezone('UTC')), 'duration': 646}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj); 621)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 274, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3161, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3185, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/tiki_extract_dag.py", line 153, in extract_data
+    time.sleep(random.uniform(5, 10))
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3097, in signal_handler
+    raise AirflowTaskTerminated("Task received SIGTERM signal")
+airflow.exceptions.AirflowTaskTerminated: Task received SIGTERM signal
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+    self.dialect.do_execute(
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.ForeignKeyViolation: insert or update on table "task_fail" violates foreign key constraint "task_fail_ti_fkey"
+DETAIL:  Key (dag_id, task_id, run_id, map_index)=(tiki_extract_dag, extract_data, manual__2025-03-11T17:16:55.675084+00:00, -1) is not present in table "task_instance".
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3006, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 328, in _run_raw_task
+    ti.handle_failure(e, test_mode, context, session=session)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3434, in handle_failure
+    _handle_failure(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/api_internal/internal_api_call.py", line 166, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 1244, in _handle_failure
+    TaskInstance.save_to_db(task_instance, session)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/api_internal/internal_api_call.py", line 166, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3402, in save_to_db
+    ti.get_dagrun().refresh_from_db()
+    ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 96, in wrapper
+    with create_session() as session:
+         ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/contextlib.py", line 144, in __exit__
+    next(self.gen)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 57, in create_session
+    session.commit()
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1454, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 832, in commit
+    self._prepare_impl()
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 811, in _prepare_impl
+    self.session.flush()
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 3449, in flush
+    self._flush(objects)
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 3588, in _flush
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 3549, in _flush
+    flush_context.execute()
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py", line 456, in execute
+    rec.execute(self)
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py", line 630, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
+    _emit_insert_statements(
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 1238, in _emit_insert_statements
+    result = connection._execute_20(
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1710, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 334, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1577, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1953, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2134, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+    self.dialect.do_execute(
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (psycopg2.errors.ForeignKeyViolation) insert or update on table "task_fail" violates foreign key constraint "task_fail_ti_fkey"
+DETAIL:  Key (dag_id, task_id, run_id, map_index)=(tiki_extract_dag, extract_data, manual__2025-03-11T17:16:55.675084+00:00, -1) is not present in table "task_instance".
+
+[SQL: INSERT INTO task_fail (task_id, dag_id, run_id, map_index, start_date, end_date, duration) VALUES (%(task_id)s, %(dag_id)s, %(run_id)s, %(map_index)s, %(start_date)s, %(end_date)s, %(duration)s) RETURNING task_fail.id]
+[parameters: {'task_id': 'extract_data', 'dag_id': 'tiki_extract_dag', 'run_id': 'manual__2025-03-11T17:16:55.675084+00:00', 'map_index': -1, 'start_date': datetime.datetime(2025, 3, 11, 17, 16, 59, 258358, tzinfo=Timezone('UTC')), 'end_date': datetime.datetime(2025, 3, 11, 17, 27, 46, 4061, tzinfo=Timezone('UTC')), 'duration': 646}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+[2025-03-11T17:27:46.112+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=621, status='terminated', exitcode=1, started='17:16:59') (621) terminated with exit code 1
