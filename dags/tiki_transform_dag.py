@@ -117,7 +117,7 @@ def transform_data(**kwargs):
 
 with DAG(
     'tiki_transform_dag',
-    start_date=datetime(2025, 3, 7),
+    start_date=datetime(2025, 3, 1),
     schedule_interval=None,
     catchup=False,
     description='Transform raw data from multiple JSON files and save as CSV to GCS',
