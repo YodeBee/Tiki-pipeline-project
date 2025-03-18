@@ -17,7 +17,7 @@ logging.basicConfig(level=logging.INFO)
 
 def clean_data(df):
     if df is not None and not df.empty:
-        df = df.dropna(subset=['id'])  
+        df = df.dropna(subset=['id'])
     return df
 
 def transform_data(**kwargs):
@@ -64,31 +64,37 @@ def transform_data(**kwargs):
     logging.info(f"After deduplication across all categories: {len(df)} rows")
 
     df = clean_data(df)
-
     if df is None or df.empty:
         logging.error("DataFrame is None or empty after clean_data.")
         raise ValueError("DataFrame is None or empty after clean_data.")
 
-  
-    dim_product_cols = [field.name for field in SCHEMAS['dim_product']] 
-    fact_cols = ['id', 'seller_id', 'price', 'original_price', 'discount',
+    # Định nghĩa danh sách cột cho Star Schema
+    fact_cols = ['id', 'seller_id', 'brand_id', 'category_ids', 'price', 'original_price', 'discount',
                  'discount_rate', 'quantity_sold', 'review_count', 'rating_average']
+    dim_product_cols = [field.name for field in SCHEMAS['dim_product']]
+    dim_seller_cols = [field.name for field in SCHEMAS['dim_seller']]
+    dim_category_cols = [field.name for field in SCHEMAS['dim_category']]
+    dim_brand_cols = [field.name for field in SCHEMAS['dim_brand']]
 
-   
-    fact_df = df[[col for col in fact_cols if col in df.columns]].rename(columns={'id': 'product_id'}).drop_duplicates()
+    # Tạo fact_df với brand_id và category_id
+    fact_df = df[[col for col in fact_cols if col in df.columns]].rename(columns={'id': 'product_id'})
+    # Chọn category_id từ category_ids (lấy phần tử đầu tiên trong danh sách)
+    fact_df['category_id'] = fact_df['category_ids'].apply(lambda x: x[0] if isinstance(x, list) and x else None)
+    fact_df = fact_df.drop(columns=['category_ids'])  # Loại bỏ cột danh sách
 
- 
-    dim_product_input_cols = ['id'] + [col for col in dim_product_cols if col != 'product_id' and col in df.columns]
-    dim_product_df = df[dim_product_input_cols].rename(columns={'id': 'product_id'}).drop_duplicates(subset=['product_id'])
+    # Tạo dim_product_df
+    dim_product_df = df[[col for col in dim_product_cols if col in df.columns]].drop_duplicates(subset=['product_id'])
 
-    dim_seller_cols = ['seller_id', 'seller_name']
+    # Tạo dim_seller_df
     dim_seller_df = df[[col for col in dim_seller_cols if col in df.columns]].drop_duplicates(subset=['seller_id'])
 
-    dim_category_df = df[['category_ids', 'primary_category_name']].explode('category_ids').drop_duplicates() if 'category_ids' in df.columns else pd.DataFrame(columns=['category_id', 'category_name'])
-    dim_category_df.columns = ['category_id', 'category_name']
+    # Tạo dim_category_df
+    dim_category_df = df.explode('category_ids')[['category_ids', 'primary_category_name']].drop_duplicates()
+    dim_category_df.columns = ['category_id', 'primary_category_name']
     dim_category_df = dim_category_df[dim_category_df['category_id'].notnull()]
+    # Thêm category_name nếu cần từ dữ liệu khác (hiện tại dùng primary_category_name)
 
-    dim_brand_cols = ['brand_id', 'brand_name']
+    # Tạo dim_brand_df
     dim_brand_df = df[[col for col in dim_brand_cols if col in df.columns]].drop_duplicates(subset=['brand_id']).dropna(subset=['brand_id'])
 
     timestamp = datetime.utcnow().strftime('%Y%m%d_%H%M%S')
@@ -111,7 +117,7 @@ def transform_data(**kwargs):
 
 with DAG(
     'tiki_transform_dag',
-    start_date=datetime(2025, 3, 1),
+    start_date=datetime(2025, 3, 7),
     schedule_interval=None,
     catchup=False,
     description='Transform raw data from multiple JSON files and save as CSV to GCS',
