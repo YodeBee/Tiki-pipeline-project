@@ -16,7 +16,6 @@ SCHEMAS = {
         bigquery.SchemaField("product_id", "STRING", mode="REQUIRED"),
         bigquery.SchemaField("sku", "STRING", mode="NULLABLE"),
         bigquery.SchemaField("name", "STRING", mode="NULLABLE"),
-        bigquery.SchemaField("brand_id", "STRING", mode="NULLABLE"),  
         bigquery.SchemaField("availability", "INTEGER", mode="NULLABLE"),
         bigquery.SchemaField("is_tikinow", "BOOLEAN", mode="NULLABLE"),
         bigquery.SchemaField("is_authentic", "BOOLEAN", mode="NULLABLE"),
@@ -30,18 +29,18 @@ SCHEMAS = {
         bigquery.SchemaField("freeship_campaign", "STRING", mode="NULLABLE"),
         bigquery.SchemaField("product_url", "STRING", mode="NULLABLE"),
         bigquery.SchemaField("product_image_url", "STRING", mode="NULLABLE"),
-        bigquery.SchemaField("primary_category_name", "STRING", mode="NULLABLE"),
-        bigquery.SchemaField("origin", "STRING", mode="NULLABLE"),
-        bigquery.SchemaField("seller_product_id", "STRING", mode="NULLABLE"),
-        bigquery.SchemaField("seller_product_sku", "STRING", mode="NULLABLE")
+        bigquery.SchemaField("origin", "STRING", mode="NULLABLE")
     ],
     'dim_seller': [
         bigquery.SchemaField("seller_id", "STRING", mode="REQUIRED"),
-        bigquery.SchemaField("seller_name", "STRING", mode="NULLABLE")
+        bigquery.SchemaField("seller_name", "STRING", mode="NULLABLE"),
+        bigquery.SchemaField("seller_product_id", "STRING", mode="NULLABLE"),
+        bigquery.SchemaField("seller_product_sku", "STRING", mode="NULLABLE")
     ],
     'dim_category': [
         bigquery.SchemaField("category_id", "STRING", mode="REQUIRED"),
-        bigquery.SchemaField("category_name", "STRING", mode="NULLABLE")
+        bigquery.SchemaField("category_name", "STRING", mode="NULLABLE"),
+        bigquery.SchemaField("primary_category_name", "STRING", mode="NULLABLE")
     ],
     'dim_brand': [
         bigquery.SchemaField("brand_id", "STRING", mode="REQUIRED"),
