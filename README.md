@@ -3,7 +3,7 @@
 - **Author:** Phi Hai Viet
 - **GitHub:** [https://github.com/YodeBee/Tiki-pipeline-project]  
 - **Tools:** Python, Apache Airflow, Google Cloud Platform, Looker Studio  
-**Data pipeline achitecture **
+# Data Pipeline Achitecture 
   
 ![ETL design](https://github.com/YodeBee/Tiki-pipeline-project/blob/6f8cf0c63a2fb80493826f14f8576e17bae20b8c/Tiki%20Data%20Pipeline%20Architecture.png)
 
