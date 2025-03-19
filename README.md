@@ -1,6 +1,6 @@
 # Tiki Product Analytics Pipeline
 
-- **Author:** [Your Name]  
+- **Author:** Phi Hai Viet
 - **GitHub:** [https://github.com/YodeBee/Tiki-pipeline-project]  
 - **Tools:** Python, Apache Airflow, Google Cloud Platform, Looker Studio  
 
@@ -57,7 +57,7 @@ This project follows a structured ETL pipeline orchestrated by Apache Airflow, w
     - `Dim_Seller`: Seller info.
     - `Dim_Category`: Category mappings.
     - `Dim_Brand`: Brand details.
-- **Diagram:** !([Star schema.png](https://github.com/YodeBee/Tiki-pipeline-project/blob/5f8a33d36135cb529c97f1f2c39cf455c982ea6b/Star%20schema.png))
+- **Diagram:** ![Star schema.png](https://github.com/YodeBee/Tiki-pipeline-project/blob/5f8a33d36135cb529c97f1f2c39cf455c982ea6b/Star%20schema.png)
 
 ### 4. Analysis & Visualization
 - **SQL Queries:** Defined in `sql/` 
