@@ -57,7 +57,7 @@ This project follows a structured ETL pipeline orchestrated by Apache Airflow, w
     - `Dim_Seller`: Seller info.
     - `Dim_Category`: Category mappings.
     - `Dim_Brand`: Brand details.
-- **Diagram:** ![Star Schema](star_schema.png)
+- **Diagram:** ![Star Schema](Star schema.png)
 
 ### 4. Analysis & Visualization
 - **SQL Queries:** Defined in `sql/` 
