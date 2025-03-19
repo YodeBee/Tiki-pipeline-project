@@ -100,6 +100,7 @@ This project successfully implemented an automated ETL pipeline for Tiki product
 ## Appendix
 
 - **Full Collected Data Fields:**
+
 | Field Name                | Data Type    | Description                                                                 |
 |---------------------------|--------------|-----------------------------------------------------------------------------|
 | `id`                      | String       | Unique identifier of the product (Product ID).                              |
