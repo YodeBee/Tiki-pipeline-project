@@ -60,11 +60,8 @@ This project follows a structured ETL pipeline orchestrated by Apache Airflow, w
 - **Diagram:** ![Star schema.png](https://github.com/YodeBee/Tiki-pipeline-project/blob/5f8a33d36135cb529c97f1f2c39cf455c982ea6b/Star%20schema.png)
 
 ### 4. Analysis & Visualization
-- **SQL Queries:** Defined in `sql/` 
+- **SQL Queries:** Defined in `SQL query/` 
 - **Tool:** Looker Studio:
-  - **Overview:** KPIs (revenue, units sold), category/brand breakdowns.
-  - **Details:** Seller performance, top products by origin.
-
 ---
 
 ## Results
@@ -100,7 +97,6 @@ This project successfully implemented an automated ETL pipeline for Tiki product
 ## Appendix
 
 - **Full Collected Data Fields:**
-  ```markdown
 | Field Name                | Data Type    | Description                                                                 |
 |---------------------------|--------------|-----------------------------------------------------------------------------|
 | `id`                      | String       | Unique identifier of the product (Product ID).                              |
