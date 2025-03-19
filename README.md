@@ -3,8 +3,9 @@
 - **Author:** Phi Hai Viet
 - **GitHub:** [https://github.com/YodeBee/Tiki-pipeline-project]  
 - **Tools:** Python, Apache Airflow, Google Cloud Platform, Looker Studio  
-
-![ETL design](https://github.com/YodeBee/Tiki-pipeline-project/blob/056a3bfc755da107514ad061ff69832b28d28e7f/ETL%20design.png)
+**Data pipeline achitecture **
+  
+![ETL design](https://github.com/YodeBee/Tiki-pipeline-project/blob/6f8cf0c63a2fb80493826f14f8576e17bae20b8c/Tiki%20Data%20Pipeline%20Architecture.png)
 
 ## Introduction
 
@@ -57,7 +58,9 @@ This project follows a structured ETL pipeline orchestrated by Apache Airflow, w
     - `Dim_Seller`: Seller info.
     - `Dim_Category`: Category mappings.
     - `Dim_Brand`: Brand details.
-- **Diagram:** ![Star schema.png](https://github.com/YodeBee/Tiki-pipeline-project/blob/5f8a33d36135cb529c97f1f2c39cf455c982ea6b/Star%20schema.png)
+- **Diagram:** 
+
+![Star schema.png](https://github.com/YodeBee/Tiki-pipeline-project/blob/5f8a33d36135cb529c97f1f2c39cf455c982ea6b/Star%20schema.png)
 
 ### 4. Analysis & Visualization
 - **SQL Queries:** Defined in `SQL query/` 
