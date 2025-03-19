@@ -4,7 +4,7 @@
 - **GitHub:** [https://github.com/YodeBee/Tiki-pipeline-project]  
 - **Tools:** Python, Apache Airflow, Google Cloud Platform, Looker Studio  
 
----
+![ETL design](https://github.com/YodeBee/Tiki-pipeline-project/blob/056a3bfc755da107514ad061ff69832b28d28e7f/ETL%20design.png)
 
 ## Introduction
 
