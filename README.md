@@ -26,11 +26,17 @@ These fields were selected for their analytical value and scalability, enabling 
 - **Business Goal:** Provide insights into product performance, seller efficiency, and service impacts to optimize Tiki’s offerings.
 - **Technical Goal:** Build an automated pipeline integrating data warehousing and BI, using modern tools.
 - **Key Questions:**
-  1. What are the total revenue and units sold across products?
-  2. Which categories and brands drive the most revenue?
-  3. How does TikiNOW affect product sales and ratings?
-  4. What are the top-performing products by origin?
-  5. Which sellers underperform and need support?
+ Descriptive (Hindsight)
+1. What is the overall performance of Tiki’s product portfolio?
+2. Which categories, brands, and sellers contribute most to revenue?
+Diagnostic (Insight)
+3. What factors drive product sales and customer satisfaction?
+4. Why do some products or sellers underperform despite high ratings?
+Predictive (Foresight)
+5. Which product attributes are likely to boost future sales?
+Prescriptive (Action - Recommended)
+6. How can Tiki optimize its product strategy and seller support?
+
 
 ---
 
