@@ -26,17 +26,17 @@ These fields were selected for their analytical value and scalability, enabling 
 - **Business Goal:** Provide insights into product performance, seller efficiency, and service impacts to optimize Tiki’s offerings.
 - **Technical Goal:** Build an automated pipeline integrating data warehousing and BI, using modern tools.
 - **Key Questions:**
- Descriptive (Hindsight)
-1. What is the overall performance of Tiki’s product portfolio?
-2. Which categories, brands, and sellers contribute most to revenue?
+Descriptive (Hindsight)
+What is the overall performance of Tiki’s product portfolio?
+Which categories, brands, and sellers contribute most to revenue?
+Xác định các yếu tố chính tạo nên hiệu suất.
 Diagnostic (Insight)
-3. What factors drive product sales and customer satisfaction?
-4. Why do some products or sellers underperform despite high ratings?
+What factors drive product sales and customer satisfaction?
+Why do some products or sellers underperform despite high ratings?
 Predictive (Foresight)
-5. Which product attributes are likely to boost future sales?
-Prescriptive (Action - Recommended)
-6. How can Tiki optimize its product strategy and seller support?
-
+Which product attributes are likely to boost future sales?
+Prescriptive (Hành động)
+How can Tiki optimize its product strategy and seller support?
 
 ---
 
@@ -73,16 +73,32 @@ This project follows a structured ETL pipeline orchestrated by Apache Airflow, w
 - **Tool:** Looker Studio:
 ---
 
-## Results
+# Key Insights and Strategic Recommendations 
 
-- **Metrics:** 
-  - Total Revenue: 2,524,673,426,420 VND.
-  - Units Sold: 10,398,482.
-  - Unique Products: 20,357.
-- **Insights:**
-  - TikiNOW products (18.7%, 3,808) significantly boost sales.
-  - "China" dominates revenue by origin.
-  - Top sellers drive most revenue; some high-rated sellers underperform in sales.
+## 1. Maximizing Revenue Through Quality and Trust
+- **Insight**: Electronics (smartphones) and Self-help Books are the primary drivers of Tiki’s revenue, accounting for a significant portion of the total **2.58T VND** revenue. Tiki’s **4.6 rating** is central to its reputation, offering **authenticity** and **speed** (TikiNOW), crucial for customer loyalty.
+- **Impact**: Maintaining quality is critical—any decline in product quality or delivery service risks undermining Tiki’s market position.
+
+## 2. Optimal Discounting Strategy
+- **Insight**: Discounts in the range of **20%-30%** maintain a strong sales volume (10.7M units) and protect Tiki’s **premium image**. Discounts beyond **40%** spike sales but negatively affect product ratings, indicating customer concerns about quality.
+- **Recommendation**: Implement a **tiered discount strategy**—**10%-15%** for new customers, **25%-30%** for loyal customers, and **40%-44%** for seasonal clearance—while keeping the **4.6 rating** intact.
+
+## 3. Growth Opportunities in Wellness and Beauty Products
+- **Insight**: Categories like **Self-help Books**, **Face Wash**, and **Shampoos** show significant growth potential. These products address the **wellness** and **self-care** needs of Vietnam's **urban consumers**, with a focus on skincare and mental well-being.
+- **Recommendation**: Invest **50B VND** into targeted campaigns to increase sales in these categories and introduce **300 new SKUs** over the next year, aiming for **+15% revenue growth** (~200B VND).
+
+## 4. Enhancing Customer Service as a Competitive Advantage
+- **Insight**: Superior customer service, especially with **TikiNOW** (1-hour delivery), can drive customer loyalty and repeat sales. Small sellers like **HappyLive** show that exceptional service can compensate for lower sales volumes.
+- **Recommendation**: Pilot **1-hour delivery** in **Ho Chi Minh City** and incentivize reviews with points, aiming to improve the **rating to 4.7** and increase **repeat sales by +10%** (1.07M units).
+
+---
+
+## Impactful Results and Strategic Achievements:
+- Optimized pricing and discount strategy resulting in a **+10% revenue increase** (2.838T VND).
+- Tapped into emerging trends like **wellness** and **beauty** with a **15% growth** in related product categories.
+- Improved **customer service** with **TikiNOW**, boosting customer satisfaction and loyalty by enhancing delivery speed and reviews management.
+
+For more check Insights and Recommendations.pdf
 
 ---
 
