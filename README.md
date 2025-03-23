@@ -25,17 +25,16 @@ These fields were selected for their analytical value and scalability, enabling 
 - **Business Goal:** Provide insights into product performance, seller efficiency, and service impacts to optimize Tiki’s offerings.
 - **Technical Goal:** Build an automated pipeline integrating data warehousing and BI, using modern tools.
 - **Key Questions:**
-Descriptive (Hindsight)
-What is the overall performance of Tiki’s product portfolio?
-Which categories, brands, and sellers contribute most to revenue?
-Xác định các yếu tố chính tạo nên hiệu suất.
-Diagnostic (Insight)
-What factors drive product sales and customer satisfaction?
-Why do some products or sellers underperform despite high ratings?
-Predictive (Foresight)
-Which product attributes are likely to boost future sales?
-Prescriptive (Hành động)
-How can Tiki optimize its product strategy and seller support?
+**Descriptive (Hindsight)**
+- What is the overall performance of Tiki’s product portfolio?
+- Which categories, brands, and sellers contribute most to revenue?
+**Diagnostic (Insight)**
+- What factors drive product sales and customer satisfaction?
+- Why do some products or sellers underperform despite high ratings?
+**Predictive (Foresight)**
+- Which product attributes are likely to boost future sales?
+**Prescriptive (Hành động)**
+- How can Tiki optimize its product strategy and seller support?
 
 ---
 
