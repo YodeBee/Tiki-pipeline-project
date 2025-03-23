@@ -68,8 +68,9 @@ This project follows a structured ETL pipeline orchestrated by Apache Airflow, w
 ![Star schema.png](https://github.com/YodeBee/Tiki-pipeline-project/blob/5f8a33d36135cb529c97f1f2c39cf455c982ea6b/Star%20schema.png)
 
 ### 4. Analysis & Visualization
-- **SQL Queries:** Defined in `SQL query/` 
-- **Tool:** Looker Studio:
+- **SQL Queries:** Defined in `Tiki_ query/` 
+- **Tool:** Looker Studio: https://lookerstudio.google.com/reporting/f781db5e-890e-4b57-b732-9960467678d7 
+
 ---
 
 # Key Insights and Strategic Recommendations 
