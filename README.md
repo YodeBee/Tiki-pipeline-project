@@ -1,7 +1,6 @@
 # Tiki Product Analytics Pipeline
 
 - **Author:** Phi Hai Viet
-- **GitHub:** [https://github.com/YodeBee/Tiki-pipeline-project]  
 - **Tools:** Python, Apache Airflow, Google Cloud Platform, Looker Studio  
 # Data Pipeline Achitecture 
   
