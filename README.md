@@ -24,7 +24,8 @@ These fields were selected for their analytical value and scalability, enabling 
 
 - **Business Goal:** Provide insights into product performance, seller efficiency, and service impacts to optimize Tiki’s offerings.
 - **Technical Goal:** Build an automated pipeline integrating data warehousing and BI, using modern tools.
-- **Key Questions:**
+  **Key Questions:**
+  
 **Descriptive (Hindsight)**
 - What is the overall performance of Tiki’s product portfolio?
 - Which categories, brands, and sellers contribute most to revenue?
