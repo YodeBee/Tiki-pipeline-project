@@ -102,7 +102,6 @@ This project follows a structured ETL pipeline orchestrated by Apache Airflow, w
 - Tapped into emerging trends like **wellness** and **beauty** with a **15% growth** in related product categories.
 - Improved **customer service** with **TikiNOW**, boosting customer satisfaction and loyalty by enhancing delivery speed and reviews management.
 
-For more check Insights and Recommendations.pdf
 
 ---
 
